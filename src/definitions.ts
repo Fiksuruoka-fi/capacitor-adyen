@@ -153,60 +153,6 @@ export interface AdyenPlugin {
   addListener(eventName: 'onError', listenerFunc: (data: PaymentErrorEventData) => void): Promise<PluginListenerHandle>;
 
   /**
-   * Listens for component `action` events.
-   *
-   * @since 7.0.0
-   * @example
-   * ```typescript
-   * import { Adyen } from '@foodello/capacitor-adyen';
-   * Adyen.addListener('onAction', async (data) => {
-   *   // Handle the action event, e.g., process additional details
-   *   console.log('Payment action required:', data);
-   * });
-   * ```
-   */
-  addListener(
-    eventName: 'onAction',
-    listenerFunc: (data: PaymentActionEventData) => void,
-  ): Promise<PluginListenerHandle>;
-
-  /**
-   * Listens for component `complete` events.
-   *
-   * @since 7.0.0
-   * @example
-   * ```typescript
-   * import { Adyen } from '@foodello/capacitor-adyen';
-   * Adyen.addListener('onComplete', async (data) => {
-   *   // Handle the complete event, e.g., show a success message to the user
-   *   console.log('Payment completed:', data);
-   * });
-   * ```
-   */
-  addListener(
-    eventName: 'onComplete',
-    listenerFunc: (data: PaymentCompleteEventData) => void,
-  ): Promise<PluginListenerHandle>;
-
-  /**
-   * Listens for component `cancel` events.
-   *
-   * @since 7.0.0
-   * @example
-   * ```typescript
-   * import { Adyen } from '@foodello/capacitor-adyen';
-   * Adyen.addListener('onCancel', async (data) => {
-   *   // Handle the cancel event, e.g., navigate back or reset the UI
-   *   console.log('Payment cancelled:', data);
-   * });
-   * ```
-   */
-  addListener(
-    eventName: 'onCancel',
-    listenerFunc: (data: PaymentCancelEventData) => void,
-  ): Promise<PluginListenerHandle>;
-
-  /**
    * Listens for component `dismiss` events.
    *
    * @since 7.0.0
@@ -449,7 +395,7 @@ export type PaymentSubmitEventData = {
   paymentMethod: {
     [key: string]: any;
   };
-  componentType: 'card' | 'dropIn' | 'ideal' | 'paypal' | 'bcmcMobile';
+  componentType: 'card';
   browserInfo?: {
     userAgent: string;
   };
@@ -472,25 +418,6 @@ export type PaymentErrorEventData = {
   details?: string;
   componentName?: string;
   source?: string;
-};
-
-export type PaymentActionEventData = {
-  componentType: 'dropIn';
-  actionType: 'additionalDetails';
-  details: {
-    [key: string]: any;
-  };
-};
-
-export type PaymentCompleteEventData = {
-  componentType: 'dropIn';
-  action: 'actionCompleted' | 'completed';
-  componentName?: string;
-};
-
-export type PaymentCancelEventData = {
-  componentType: 'dropIn';
-  action: 'cancelled';
 };
 
 export type ComponentDissmissEventData = {

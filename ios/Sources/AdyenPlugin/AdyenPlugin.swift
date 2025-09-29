@@ -12,10 +12,6 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "setCurrentPaymentMethods", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "presentCardComponent", returnType: CAPPluginReturnPromise),
-        CAPPluginMethod(name: "presentDropInComponent", returnType: CAPPluginReturnPromise),
-        CAPPluginMethod(name: "presentIdealComponent", returnType: CAPPluginReturnPromise),
-        CAPPluginMethod(name: "presentPayPalComponent", returnType: CAPPluginReturnPromise),
-        CAPPluginMethod(name: "presentBancontactComponent", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "hideComponent", returnType: CAPPluginReturnPromise)
     ]
     private var implementation: AdyenBridge?
