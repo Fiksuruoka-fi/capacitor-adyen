@@ -316,7 +316,7 @@ JSON response from [Adyen API call](https://docs.adyen.com/api-explorer/Checkout
 
 Options for creating a Adyen Card component.
 
-<code><a href="#baseadyencomponentoptions">BaseAdyenComponentOptions</a> & { amount?: number; countryCode?: string; currencyCode?: string; configuration?: <a href="#cardcomponentconfiguration">CardComponentConfiguration</a>; style?: <a href="#formcomponentstyle">FormComponentStyle</a>; viewOptions?: { title?: string; titleColor?: string; titleBackgroundColor?: string; titleTintColor?: string; showsCloseButton?: boolean; closeButtonText?: string; ios?: { titleColor?: string; titleBackgroundColor?: string; titleTintColor?: string; }; }; }</code>
+<code><a href="#baseadyencomponentoptions">BaseAdyenComponentOptions</a> & { amount?: number; countryCode?: string; currencyCode?: string; configuration?: <a href="#cardcomponentconfiguration">CardComponentConfiguration</a>; style?: <a href="#formcomponentstyle">FormComponentStyle</a>; viewOptions?: <a href="#componentviewoptions">ComponentViewOptions</a>; }</code>
 
 
 #### BaseAdyenComponentOptions
@@ -379,6 +379,13 @@ Defines the styling for a button. These definitions map to
 `FormButtonItemStyle.main` in the iOS SDK. All fields are optional.
 
 <code>{ /** Font used for the button's title. */ font?: <a href="#fontdefinition">FontDefinition</a>; /** Colour of the button title text. */ textColor?: string; /** Main background colour of the button. */ backgroundColor?: string; /** Corner radius to round the button's corners. */ cornerRadius?: number; }</code>
+
+
+#### ComponentViewOptions
+
+Options for customizing the appearance of the component navbar's view.
+
+<code>{ /** Custom text for the title */ title?: string; /** Color for the title text */ titleColor?: string; /** Title bar's background color */ titleBackgroundColor?: string; /** Tint color for buttons in the title bar */ titleTintColor?: string; /** Whether to show a close button in the title bar */ showsCloseButton?: boolean; /** Custom text for the close button */ closeButtonText?: string; /** iOS specific styling options to override defaults */ ios?: { titleColor?: string; titleBackgroundColor?: string; titleTintColor?: string; }; }</code>
 
 
 #### PaymentSubmitEventData
