@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-adyen",
+  "name": "@foodello/capacitor-adyen",
   "version": "0.0.1",
   "description": "Adyen Web component integration for Capacitor.js",
   "main": "dist/plugin.cjs.js",
@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@capacitor/android": "^7.0.0",
+    "@capacitor/cli": "^7.4.3",
     "@capacitor/core": "^7.0.0",
     "@capacitor/docgen": "^0.3.0",
     "@capacitor/ios": "^7.0.0",
