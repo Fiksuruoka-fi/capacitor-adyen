@@ -170,12 +170,18 @@ function App() {
             <CardContent className="pt-0">
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 <Button
-                  onClick={() => presentCardComponent({})}
+                  onClick={() =>
+                    presentCardComponent({
+                      amount: 0, // Preauthorizing card requires zero amount
+                      countryCode: 'NL',
+                      currencyCode: 'EUR',
+                    })
+                  }
                   disabled={!Capacitor.isNativePlatform()}
                   className="h-auto py-4 px-6 flex-col items-start text-left bg-slate-900 hover:bg-slate-800"
                 >
                   <span className="font-semibold text-white">Default</span>
-                  <span className="text-xs text-slate-300 mt-1">Standard Adyen styling</span>
+                  <span className="text-xs text-slate-300 mt-1">Pre-authorize card only</span>
                 </Button>
 
                 <Button
@@ -183,7 +189,12 @@ function App() {
                     presentCardComponent({
                       amount: 2500,
                       currencyCode: 'EUR',
-                      countryCode: 'NL',
+                      countryCode: 'FI',
+                      configuration: {
+                        localizationParameters: {
+                          languageOverride: 'fi',
+                        },
+                      },
                       viewOptions: {
                         title: 'Quick Payment',
                         titleColor: '#1e293b',
@@ -197,6 +208,10 @@ function App() {
                         textField: {
                           titleColor: '#1e293b',
                           textColor: '#0f172a',
+                          tintColor: '#3b82f6',
+                        },
+                        switch: {
+                          titleColor: '#1e293b',
                           tintColor: '#3b82f6',
                         },
                       },
@@ -234,6 +249,10 @@ function App() {
                           backgroundColor: '#334155',
                           tintColor: '#10b981',
                           separatorColor: '#475569',
+                        },
+                        switch: {
+                          titleColor: '#f1f5f9',
+                          tintColor: '#10b981',
                         },
                         button: {
                           backgroundColor: '#10b981',
@@ -285,6 +304,10 @@ function App() {
                             weight: 'medium',
                           },
                         },
+                        switch: {
+                          titleColor: '#92400e',
+                          tintColor: '#f59e0b',
+                        },
                         button: {
                           backgroundColor: '#f59e0b',
                           textColor: '#ffffff',
@@ -311,10 +334,6 @@ function App() {
                       amount: 9999,
                       currencyCode: 'EUR',
                       countryCode: 'BE',
-                      configuration: {
-                        showsSecurityCodeField: false,
-                        supportedCardTypes: ['visa', 'mc'],
-                      },
                       viewOptions: {
                         title: 'Sky Theme Payment',
                         titleColor: '#0c4a6e',
@@ -363,9 +382,7 @@ function App() {
                   onClick={() =>
                     presentCardComponent({
                       configuration: {
-                        showsHolderNameField: false,
-                        showsSecurityCodeField: true,
-                        supportedCardTypes: ['visa'],
+                        allowedCardTypes: ['visa'],
                       },
                       viewOptions: {
                         title: 'Pink Theme',
@@ -391,6 +408,10 @@ function App() {
                             size: 16,
                             weight: 'regular',
                           },
+                        },
+                        switch: {
+                          titleColor: '#be185d',
+                          tintColor: '#ec4899',
                         },
                         hint: {
                           color: '#be185d',

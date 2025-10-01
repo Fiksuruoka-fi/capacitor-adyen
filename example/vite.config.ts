@@ -1,10 +1,10 @@
-import path from 'path';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import { defineConfig, loadEnv } from 'vite';
+import path from 'path';
+import { defineConfig, loadEnv, type UserConfig } from 'vite';
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode }): UserConfig => {
   const env = loadEnv(mode, process.cwd(), '');
 
   const host = env.VITE_ADYEN_TEST_DOMAIN || 'localhost';

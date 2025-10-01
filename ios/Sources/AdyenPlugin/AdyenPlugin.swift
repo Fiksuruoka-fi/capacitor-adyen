@@ -15,7 +15,7 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
         CAPPluginMethod(name: "hideComponent", returnType: CAPPluginReturnPromise)
     ]
     private var implementation: AdyenBridge?
-    private var componentViewController: UIViewController?
+    internal var componentViewController: UIViewController?
     
     override public func load() {
         super.load()
@@ -35,7 +35,7 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
             return
         }
         
-        let enableAnalytics = getConfig().getBoolean("enableAnalytics", true)
+        let enableAnalytics = getConfig().getBoolean("enableAnalytics", false)
         
         
         do {
@@ -86,21 +86,40 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
     }
     
     @objc public func presentCardComponent(_ call: CAPPluginCall) {
-        let configuration = call.getObject("configuration")
-        let style = call.getObject("style")
+        guard let implementation = self.implementation else {
+            call.reject("Adyen not initialized")
+            return
+        }
         
-        let extras: [String: Any] = [
-            "configuration": configuration as Any,
-            "style": style as Any
-        ]
-
-        presentComponent(call: call, componentType: "card", extras: extras)
+        DispatchQueue.main.async { [weak self] in
+            let amount = call.getInt("amount")
+            let countryCode = call.getString("countryCode")
+            let currencyCode = call.getString("currencyCode")
+            let viewOptions = call.getObject("viewOptions")
+            let configuration = call.getObject("configuration")
+            let style = call.getObject("style")
+            
+            do {
+                let componentViewController = try implementation.createCardComponent(
+                    amount: amount,
+                    countryCode: countryCode,
+                    currencyCode: currencyCode,
+                    configuration: configuration,
+                    style: style
+                )
+                
+                self?.presentWithTracking(componentViewController, viewOptions: viewOptions) {
+                    call.resolve()
+                }
+            } catch {
+                call.reject(error.localizedDescription)
+            }
+        }
     }
     
     @objc public func hideComponent(_ call: CAPPluginCall) {
-        DispatchQueue.main.async {
-            self.componentViewController?.dismiss(animated: true)
-        }
+        hideWithTracking()
+        call.resolve()
     }
     
     /**

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="adyen_primary">#E0E0E0</color>
+    <color name="adyen_on_primary">#111315</color>
+
+    <color name="adyen_surface">#1A1C1E</color>
+    <color name="adyen_on_surface">#FFFFFF</color>
+    <color name="adyen_on_surface_variant">#CDD1D6</color>
+
+    <color name="adyen_outline">#4B4F54</color>
+    <color name="adyen_outline_variant">#5A5F65</color>
+
+    <color name="adyen_error">#FF6B6B</color>
+    <color name="adyen_disabled_text">#8F9398</color>
+    <color name="adyen_disabled_bg">#2A2E33</color>
+
+    <color name="adyen_scrim">#99000000</color>
+</resources>

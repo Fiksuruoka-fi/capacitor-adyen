@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Rounded, high-contrast surface -->
+    <style name="AdyenBottomSheetTheme" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AdyenBottomSheet</item>
+    </style>
+
+    <style name="AdyenBottomSheet" parent="Widget.Material3.BottomSheet">
+        <item name="android:background">@color/adyen_surface</item>
+        <item name="shapeAppearanceLargeComponent">@style/AdyenBottomSheetShape</item>
+        <item name="android:elevation">8dp</item>
+    </style>
+
+    <style name="AdyenBottomSheetShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/adyen_corner_radius</item>
+    </style>
+</resources>

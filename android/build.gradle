@@ -3,6 +3,7 @@ ext {
     androidxAppCompatVersion = project.hasProperty('androidxAppCompatVersion') ? rootProject.ext.androidxAppCompatVersion : '1.7.0'
     androidxJunitVersion = project.hasProperty('androidxJunitVersion') ? rootProject.ext.androidxJunitVersion : '1.2.1'
     androidxEspressoCoreVersion = project.hasProperty('androidxEspressoCoreVersion') ? rootProject.ext.androidxEspressoCoreVersion : '3.6.1'
+    adyenVersion = project.hasProperty('adyenVersion') ? rootProject.ext.adyenVersion : '5.14.0'
 }
 
 buildscript {
@@ -12,7 +13,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.7.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.0"
     }
 }
 
@@ -20,7 +21,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace "com.capacitor.community.adyen"
+    namespace "com.foodello.adyen"
     compileSdk project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 35
     defaultConfig {
         minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 23
@@ -59,14 +60,15 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     
     // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.20"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
-    
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.2.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2"
+
+    // Material theme
+    implementation 'com.google.android.material:material:1.13.0'
+
     // Adyen Android SDK
-    implementation "com.adyen.checkout:drop-in:5.7.0"
-    implementation "com.adyen.checkout:card:5.7.0"
-    implementation "com.adyen.checkout:core:5.7.0"
-    
+    implementation "com.adyen.checkout:card:$adyenVersion"
+
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"

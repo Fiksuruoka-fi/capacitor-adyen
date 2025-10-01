@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true, // avoids lib clashes
+    "types": [], // start clean; add one side as needed
+    "lib": ["ES2022", "DOM"], // if your API targets browsers; remove "DOM" if not
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["**/__tests__/**", "**/*.spec.ts", "node_modules"]
+}

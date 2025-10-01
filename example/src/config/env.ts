@@ -8,7 +8,7 @@ export const envConfig = {
 };
 
 // Validate on app startup
-export const validateEnv = () => {
+export const validateEnv = (): void => {
   const missing = [];
   if (!envConfig.adyen.environment) missing.push('VITE_ADYEN_ENVIRONMENT');
   if (!envConfig.adyen.clientKey) missing.push('VITE_ADYEN_CLIENT_KEY');

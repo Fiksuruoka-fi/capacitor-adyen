@@ -103,7 +103,7 @@ extension UIViewController {
      */
     private func adyenLocalizationBundle() -> Bundle {
         // Framework bundle where the code lives
-        let framework = Bundle(for: AdyenSession.self)
+        let framework = Bundle(for: CardComponent.self)
 
         // If Adyen ships a separate resource bundle, load it. Works for SPM/CocoaPods.
         if let bundleURL = framework.url(forResource: "Adyen", withExtension: "bundle"),

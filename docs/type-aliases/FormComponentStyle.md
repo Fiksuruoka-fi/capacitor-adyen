@@ -1,0 +1,179 @@
+# Type Alias: FormComponentStyle
+
+```ts
+type FormComponentStyle = {
+  backgroundColor?: string;
+  tintColor?: string;
+  separatorColor?: string;
+  header?: TextStyleDefinition;
+  textField?: TextFieldStyleDefinition;
+  switch?: SwitchStyleDefinition;
+  toggle?: SwitchStyleDefinition;
+  hint?: TextStyleDefinition;
+  footnote?: TextStyleDefinition;
+  linkText?: TextStyleDefinition;
+  button?: ButtonStyleDefinition;
+  mainButton?: ButtonStyleDefinition;
+  secondaryButton?: ButtonStyleDefinition;
+};
+```
+
+Defined in: [styles.ts:148](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L148)
+
+Combined style configuration for forms. Includes top-level colours and
+nested sub-styles for various form elements. All keys are optional and
+unknown keys are ignored.
+
+## Properties
+
+### backgroundColor?
+
+```ts
+optional backgroundColor: string;
+```
+
+Defined in: [styles.ts:150](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L150)
+
+Background colour applied to the entire form.
+
+***
+
+### tintColor?
+
+```ts
+optional tintColor: string;
+```
+
+Defined in: [styles.ts:152](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L152)
+
+Tint colour applied to accent elements within the form.
+
+***
+
+### separatorColor?
+
+```ts
+optional separatorColor: string;
+```
+
+Defined in: [styles.ts:154](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L154)
+
+Colour of separators between form rows.
+
+***
+
+### header?
+
+```ts
+optional header: TextStyleDefinition;
+```
+
+Defined in: [styles.ts:157](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L157)
+
+Styling for the header text (section title).
+
+***
+
+### textField?
+
+```ts
+optional textField: TextFieldStyleDefinition;
+```
+
+Defined in: [styles.ts:159](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L159)
+
+Styling for text input fields.
+
+***
+
+### switch?
+
+```ts
+optional switch: SwitchStyleDefinition;
+```
+
+Defined in: [styles.ts:162](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L162)
+
+Styling for toggle rows. Both `switch` and `toggle` keys are supported.
+
+***
+
+### toggle?
+
+```ts
+optional toggle: SwitchStyleDefinition;
+```
+
+Defined in: [styles.ts:163](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L163)
+
+***
+
+### hint?
+
+```ts
+optional hint: TextStyleDefinition;
+```
+
+Defined in: [styles.ts:166](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L166)
+
+Styling for hint labels (usually under a field).
+
+***
+
+### footnote?
+
+```ts
+optional footnote: TextStyleDefinition;
+```
+
+Defined in: [styles.ts:168](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L168)
+
+Styling for footnote labels at the bottom of the form.
+
+***
+
+### linkText?
+
+```ts
+optional linkText: TextStyleDefinition;
+```
+
+Defined in: [styles.ts:170](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L170)
+
+Styling for inline link text in informational messages.
+
+***
+
+### button?
+
+```ts
+optional button: ButtonStyleDefinition;
+```
+
+Defined in: [styles.ts:173](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L173)
+
+Styling for the primary action button. You may use either `button` or `mainButton`.
+
+***
+
+### mainButton?
+
+```ts
+optional mainButton: ButtonStyleDefinition;
+```
+
+Defined in: [styles.ts:175](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L175)
+
+Styling for the primary action button. Same as `button`.
+
+***
+
+### secondaryButton?
+
+```ts
+optional secondaryButton: ButtonStyleDefinition;
+```
+
+Defined in: [styles.ts:177](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/styles.ts#L177)
+
+Styling for a secondary action button.
