@@ -29,9 +29,10 @@ class AdyenImplementation(
         val adyenEnvironment =
                 when (environment.lowercase()) {
                     "test" -> Environment.TEST
-                    "liveeurope", "liveeu" -> Environment.EUROPE
-                    "liveunitedstates", "liveus" -> Environment.UNITED_STATES
-                    "liveaustralia", "liveaus", "liveapac" -> Environment.APSE
+                    "liveeu" -> Environment.EUROPE
+                    "liveus" -> Environment.UNITED_STATES
+                    "liveapse" -> Environment.APSE
+                    "liveau" -> Environment.AUSTRALIA
                     else -> Environment.TEST
                 }
 

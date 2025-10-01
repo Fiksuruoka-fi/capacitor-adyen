@@ -21,6 +21,14 @@ declare module '@capacitor/cli' {
        * @example "test"
        */
       environment: 'test' | 'liveApse' | 'liveUs' | 'liveEu' | 'liveAu';
+
+      /**
+       * Enable or disable Adyen's analytics feature.
+       *
+       * @since 7.0.0
+       * @default false
+       */
+      enableAnalytics: boolean;
     };
   }
 }

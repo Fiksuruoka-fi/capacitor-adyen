@@ -1,6 +1,7 @@
 package com.foodello.adyen
 
 import com.getcapacitor.JSObject
+import com.getcapacitor.Logger
 import com.getcapacitor.Plugin
 import com.getcapacitor.PluginCall
 import com.getcapacitor.PluginMethod
@@ -17,17 +18,17 @@ class AdyenPlugin : Plugin() {
         
         // Initialize Adyen SDK with configuration
         val clientKey = config.getString("clientKey")
-        val environment = config.getString("environment", "test")
+        val environment = config.getString("environment")
         val enableAnalytics = config.getBoolean("enableAnalytics", false)
         
         if (clientKey != null && environment != null) {
             try {
                 implementation.start(clientKey, environment, enableAnalytics)
             } catch (e: Exception) {
-                android.util.Log.e("AdyenPlugin", "Failed to initialize Adyen: ${e.message}")
+                Logger.error("AdyenPlugin", "Failed to initialize Adyen: ${e.message}", e)
             }
         } else {
-            android.util.Log.e("AdyenPlugin", "Missing required configuration: clientKey or environment")
+            Logger.error("AdyenPlugin", "Missing required configuration: clientKey or environment", null)
         }
     }
 

@@ -110,7 +110,8 @@ class AdyenCardComponent(
     private fun createCardCallback(): ComponentCallback<CardComponentState> {
         return object : ComponentCallback<CardComponentState> {
             override fun onAdditionalDetails(actionComponentData: ActionComponentData) {
-                TODO("Not implemented")
+                // TODO("Not implemented")
+                Logger.warn(TAG, "onAdditionalDetails called, but not implemented.")
             }
 
             override fun onError(componentError: ComponentError) {
@@ -133,7 +134,7 @@ class AdyenCardComponent(
 
                     val onCardSubmitData = JSObject()
                     onCardSubmitData.put("lastFour", state.lastFourDigits)
-                    onCardSubmitData.put("finalBin", state.binValue)
+                    onCardSubmitData.put("finalBIN", state.binValue)
 
                     adyenPlugin.onEvent("onCardSubmit", onCardSubmitData)
                     adyenPlugin.onEvent("onSubmit", onSubmitData)
