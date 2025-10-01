@@ -54,7 +54,7 @@ export interface CardComponentConfiguration {
 
   /**
    * Display submit button
-   * @default `true``
+   * @default true
    */
   showsSubmitButton?: boolean;
 
