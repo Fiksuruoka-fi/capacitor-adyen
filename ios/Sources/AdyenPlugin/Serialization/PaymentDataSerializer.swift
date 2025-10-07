@@ -6,9 +6,9 @@ import Capacitor
  * Handles conversion between native Adyen objects and JavaScript-compatible dictionaries.
  */
 internal struct PaymentDataSerializer {
-    
+
     // MARK: - JSON Encoders & Decoders
-    
+
     private static let jsonEncoder: JSONEncoder = {
         let encoder = JSONEncoder()
         encoder.outputFormatting = []
@@ -19,9 +19,9 @@ internal struct PaymentDataSerializer {
         let decoder = JSONDecoder()
         return decoder
     }()
-    
+
     // MARK: - Payment Methods Handling
-    
+
     /**
      * Decodes payment methods from JSON data received from the server.
      * **Performance**: Uses cached decoder for efficiency.
@@ -37,9 +37,9 @@ internal struct PaymentDataSerializer {
             throw AdyenError.invalidPaymentMethods(decodingError.localizedDescription)
         }
     }
-    
+
     // MARK: - Payment Component Data Serialization
-    
+
     /**
      * Serializes PaymentComponentData to a dictionary for JavaScript bridge.
      * **Style Consistency**: Converts all nested objects to compatible formats.
@@ -50,47 +50,47 @@ internal struct PaymentDataSerializer {
      */
     static func serialize(_ data: PaymentComponentData) throws -> [String: Any] {
         var jsonData: [String: Any] = [:]
-        
+
         do {
             // Serialize payment method data
             let paymentMethodData = try JSONSerialization.jsonObject(
                 with: jsonEncoder.encode(data.paymentMethod.encodable),
                 options: []
             )
-            
+
             if let paymentMethodDict = paymentMethodData as? [String: Any] {
                 jsonData["paymentMethod"] = paymentMethodDict
             }
-            
+
             // Add browser info if available
             if let browserInfo = data.browserInfo {
                 jsonData["browserInfo"] = serializeBrowserInfo(browserInfo)
             }
-            
+
             // Add order information if available
             if let order = data.order {
                 jsonData["order"] = serializeOrder(order)
             }
-            
+
             // Add amount if available
             if let amount = data.amount {
                 jsonData["amount"] = serializeAmount(amount)
             }
-            
+
             // Add store payment method preference if available
             if let storePaymentMethod = data.storePaymentMethod {
                 jsonData["storePaymentMethod"] = storePaymentMethod
             }
-            
+
             return jsonData
-            
+
         } catch {
             throw AdyenError.serializationFailed("Failed to serialize PaymentComponentData: \(error.localizedDescription)")
         }
     }
-    
+
     // MARK: - Action Component Data Serialization
-    
+
     /**
      * Serializes ActionComponentData for additional payment actions.
      *
@@ -104,20 +104,20 @@ internal struct PaymentDataSerializer {
                 with: jsonEncoder.encode(data.details),
                 options: []
             )
-            
+
             return [
                 "details": actionData,
                 "timestamp": Date().timeIntervalSince1970,
                 "actionType": "additionalDetails"
             ]
-            
+
         } catch {
             throw AdyenError.serializationFailed("Failed to serialize ActionComponentData: \(error.localizedDescription)")
         }
     }
-    
+
     // MARK: - Private Helper Methods
-    
+
     /**
      * Serializes browser information for payment context.
      */
@@ -125,10 +125,10 @@ internal struct PaymentDataSerializer {
         let info: [String: Any] = [
             "userAgent": browserInfo.userAgent ?? ""
         ]
-        
+
         return info
     }
-    
+
     /**
      * Serializes order information for payment tracking.
      */
@@ -137,15 +137,15 @@ internal struct PaymentDataSerializer {
             "orderData": order.orderData ?? [:],
             "pspReference": order.pspReference
         ]
-        
+
         // Add remaining amount if available
         if let remainingAmount = order.remainingAmount {
             orderInfo["remainingAmount"] = serializeAmount(remainingAmount)
         }
-        
+
         return orderInfo
     }
-    
+
     /**
      * Serializes amount information consistently across all payment data.
      */
@@ -155,9 +155,9 @@ internal struct PaymentDataSerializer {
             "currency": amount.currencyCode
         ]
     }
-    
+
     // MARK: - Validation Helpers
-    
+
     /**
      * Validates PaymentComponentData before serialization.
      * Ensures data integrity before expensive serialization operations.
@@ -168,12 +168,12 @@ internal struct PaymentDataSerializer {
             guard amount.value >= 0 else {
                 throw AdyenError.invalidPaymentParameters("Amount value must be greater than or equal to zero")
             }
-            
+
             guard amount.currencyCode.count == 3 else {
                 throw AdyenError.invalidPaymentParameters("Currency code must be 3 characters (ISO 4217)")
             }
         }
-        
+
         // Validate browser info if present
         if let browserInfo = data.browserInfo {
             guard browserInfo.userAgent == nil else {
@@ -181,9 +181,9 @@ internal struct PaymentDataSerializer {
             }
         }
     }
-    
+
     // MARK: - Error Recovery Helpers
-    
+
     /**
      * Creates a safe serialization of payment data when full serialization fails.
      * Provides fallback data for error reporting.
@@ -198,7 +198,7 @@ internal struct PaymentDataSerializer {
             "fallbackSerialization": true
         ]
     }
-    
+
     /**
      * Attempts to serialize with fallback to safe summary on failure.
      * **DRY**: Prevents duplicate error handling in calling code.
@@ -217,7 +217,7 @@ internal struct PaymentDataSerializer {
 // MARK: - Extensions for Additional Serialization
 
 extension PaymentDataSerializer {
-    
+
     /**
      * Serializes payment component state for debugging purposes.
      */
@@ -228,19 +228,19 @@ extension PaymentDataSerializer {
             "timestamp": Date().timeIntervalSince1970
         ]
     }
-    
+
     /**
      * Creates structured error data for payment failures.
      */
     static func serializePaymentError(_ error: Error, component: PaymentComponent) -> [String: Any] {
         let adyenError = AdyenError.from(error, context: "Payment processing")
-        
+
         var errorData = adyenError.toCapacitorErrorData()
         errorData["componentType"] = component.paymentMethod.type.rawValue
         errorData["componentName"] = String(describing: type(of: component))
         errorData["nativeErrorCode"] = (error as NSError).code
         errorData["nativeErrorDomain"] = (error as NSError).domain
-        
+
         return errorData
     }
 }

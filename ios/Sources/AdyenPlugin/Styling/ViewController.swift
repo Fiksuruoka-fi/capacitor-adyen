@@ -5,7 +5,7 @@ import Capacitor
 // MARK: - UIViewController Extension
 
 extension UIViewController {
-    
+
     /**
      * Applies presentation configuration from view options dictionary.
      * Centralized presentation configuration for all components.
@@ -18,7 +18,7 @@ extension UIViewController {
             applyAdditionalViewOptions(options)
         }
     }
-    
+
     /**
      * Applies additional view configuration options.
      */
@@ -29,17 +29,17 @@ extension UIViewController {
             self.navigationItem.title = title
             CAPLog.print(PluginConstants.identifier, "Set new title for view: \(title)")
         }
-        
+
         // Configure close button visibility
         if let showsCloseButton = viewOptions["showsCloseButton"] as? Bool {
             configureCloseButton(showsCloseButton, viewOptions: viewOptions)
             CAPLog.print(PluginConstants.identifier, "Configure close button")
         }
-        
+
         // Apply navigation bar title color if specified
         configureNavigationBarAppearance(from: viewOptions)
     }
-    
+
     /**
      * Extracts title color from view options.
      */
@@ -49,12 +49,12 @@ extension UIViewController {
            let titleColorHex = iosOptions["titleColor"] as? String {
             return UIColor(hexString: titleColorHex)
         }
-        
+
         // Check for direct titleColor
         if let titleColorHex = viewOptions["titleColor"] as? String {
             return UIColor(hexString: titleColorHex)
         }
-        
+
         return nil
     }
 
@@ -82,15 +82,15 @@ extension UIViewController {
     private func extractTintColor(from viewOptions: [String: Any]) -> UIColor? {
         // Check for iOS-specific navigation bar tint color
         if let iosOptions = viewOptions["ios"] as? [String: Any],
-        let tintColorHex = iosOptions["tintColor"] as? String {
+           let tintColorHex = iosOptions["tintColor"] as? String {
             return UIColor(hexString: tintColorHex)
         }
-        
+
         // Check for direct navigationBarTintColor
         if let tintColorHex = viewOptions["tintColor"] as? String {
             return UIColor(hexString: tintColorHex)
         }
-        
+
         // Fallback to titleColor for consistency (close button matches title)
         return extractTitleColor(from: viewOptions)
     }
@@ -114,7 +114,7 @@ extension UIViewController {
         // Otherwise strings are directly inside the framework bundle
         return framework
     }
-    
+
     /**
      * Extracts navigation bar tint color (for buttons/icons).
      */
@@ -122,7 +122,7 @@ extension UIViewController {
         if let closeButtonText = viewOptions["closeButtonText"] as? String {
             return closeButtonText
         }
-        
+
         let localizedText = NSLocalizedString(
             "adyen.cancelButton",
             tableName: "Adyen",
@@ -133,7 +133,7 @@ extension UIViewController {
 
         return localizedText
     }
-    
+
     /**
      * Configures navigation bar title color.
      */
@@ -142,17 +142,17 @@ extension UIViewController {
             CAPLog.print(PluginConstants.identifier, "Could not configure navigation bar appearance: No navigation controller")
             return
         }
-        
+
         let appearance = UINavigationBarAppearance()
         appearance.configureWithDefaultBackground()
-        
+
         // Apply title color
         if let titleColor = extractTitleColor(from: viewOptions) {
             appearance.titleTextAttributes = [.foregroundColor: titleColor]
             appearance.largeTitleTextAttributes = [.foregroundColor: titleColor]
             CAPLog.print(PluginConstants.identifier, "Applied title color: \(titleColor)")
         }
-        
+
         // Apply background color
         if let backgroundColor = extractTitleBackgroundColor(from: viewOptions) {
             appearance.backgroundColor = backgroundColor
@@ -164,15 +164,15 @@ extension UIViewController {
             navigationController.navigationBar.tintColor = tintColor
             CAPLog.print(PluginConstants.identifier, "Applied navigation bar tint color: \(tintColor)")
         }
-        
+
         navigationController.navigationBar.standardAppearance = appearance
         navigationController.navigationBar.scrollEdgeAppearance = appearance
         navigationController.navigationBar.compactAppearance = appearance
-        
+
         // Force update appearance
         navigationController.navigationBar.setNeedsLayout()
     }
-    
+
     /**
      * Configures close button based on configuration.
      */
@@ -186,13 +186,13 @@ extension UIViewController {
                 target: self,
                 action: #selector(dismissViewController)
             )
-            
+
             navigationItem.leftBarButtonItem = closeButton
         } else {
             navigationItem.leftBarButtonItem = nil
         }
     }
-    
+
     @objc private func dismissViewController() {
         dismiss(animated: true)
     }
@@ -201,7 +201,7 @@ extension UIViewController {
 // MARK: - UINavigationController Extension
 
 extension UINavigationController {
-    
+
     /**
      * Applies presentation configuration specifically for navigation controllers.
      * Delegates styling to the root view controller while handling modal presentation.

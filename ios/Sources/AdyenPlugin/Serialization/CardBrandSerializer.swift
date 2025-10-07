@@ -1,7 +1,7 @@
 import Foundation
 
 internal struct CardBrandSerializer {
-    
+
     static func serialize(brands: [CardBrand]?) -> [String: Any] {
         guard let cardBrands = brands, !cardBrands.isEmpty else {
             return [
@@ -24,7 +24,7 @@ internal struct CardBrandSerializer {
             "brandCount": serializedBrands.count
         ]
     }
-    
+
     private static func getDisplayName(for cardType: Adyen.CardType) -> String {
         switch cardType {
         case .visa: return "Visa"

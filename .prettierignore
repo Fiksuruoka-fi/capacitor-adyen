@@ -1,1 +1,20 @@
-example-app
+# Build outputs
+dist/
+build/
+
+# Example app (generated files)
+example/android/app/src/main/assets/
+example/ios/App/App/public/
+example/src/index.css
+
+# Generated and vendor files
+node_modules/
+*.log
+*.d.ts
+
+# Platform-specific
+android/build/
+ios/build/
+
+# Documentation
+docs/

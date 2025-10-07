@@ -5,7 +5,7 @@ import Foundation
  * Provides reusable context creation with proper error handling.
  */
 extension AdyenContext {
-    
+
     /**
      * Factory method to create an AdyenContext with standardized configuration.
      *
@@ -22,18 +22,18 @@ extension AdyenContext {
         payment: Payment? = nil,
         analyticsConfiguration: AnalyticsConfiguration? = nil
     ) throws -> AdyenContext {
-        
+
         guard let analytics = analyticsConfiguration else {
             throw AdyenError.contextNotInitialized
         }
-        
+
         return AdyenContext(
             apiContext: apiContext,
             payment: payment,
             analyticsConfiguration: analytics
         )
     }
-    
+
     /**
      * Creates an AdyenContext with payment details from individual components.
      * Convenience method when you have separate amount/currency/country values.
@@ -55,10 +55,10 @@ extension AdyenContext {
         countryCode: String,
         analyticsConfiguration: AnalyticsConfiguration
     ) throws -> AdyenContext {
-        
+
         let adyenAmount = Amount(value: amount, currencyCode: currencyCode)
         let payment = Payment(amount: adyenAmount, countryCode: countryCode)
-        
+
         return AdyenContext(
             apiContext: apiContext,
             payment: payment,
@@ -72,7 +72,7 @@ extension AdyenContext {
  * Follows the factory pattern used throughout the codebase.
  */
 internal struct AdyenContextFactory {
-    
+
     /**
      * Creates an AdyenContext using the bridge's current configuration.
      * This is the primary method used by ComponentFactory.
@@ -90,19 +90,19 @@ internal struct AdyenContextFactory {
         analyticsConfig: AnalyticsConfiguration?,
         payment: Payment? = nil
     ) throws -> AdyenContext {
-        
+
         guard let apiContext = apiContext,
               let analyticsConfig = analyticsConfig else {
             throw AdyenError.contextNotInitialized
         }
-        
+
         return try AdyenContext.create(
             apiContext: apiContext,
             payment: payment,
             analyticsConfiguration: analyticsConfig
         )
     }
-    
+
     /**
      * Creates a context with payment information when all components are available.
      * Used when creating components that need amount/currency context.
@@ -114,12 +114,12 @@ internal struct AdyenContextFactory {
         currencyCode: String,
         countryCode: String
     ) throws -> AdyenContext {
-        
+
         guard let apiContext = apiContext,
               let analyticsConfig = analyticsConfig else {
             throw AdyenError.contextNotInitialized
         }
-        
+
         return try AdyenContext.createWithPayment(
             apiContext: apiContext,
             amount: amount,
@@ -134,7 +134,7 @@ internal struct AdyenContextFactory {
  * Validation helpers for context creation parameters.
  */
 internal struct AdyenContextValidator {
-    
+
     /**
      * Validates that payment parameters are valid before context creation.
      *
@@ -150,15 +150,15 @@ internal struct AdyenContextValidator {
         currencyCode: String,
         countryCode: String
     ) throws {
-        
+
         guard amount > 0 else {
             throw AdyenError.invalidPaymentParameters("Amount must be greater than zero")
         }
-        
+
         guard currencyCode.count == 3 else {
             throw AdyenError.invalidPaymentParameters("Currency code must be 3 characters (ISO 4217)")
         }
-        
+
         guard countryCode.count == 2 else {
             throw AdyenError.invalidPaymentParameters("Country code must be 2 characters (ISO 3166)")
         }
