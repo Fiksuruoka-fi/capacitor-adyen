@@ -6,9 +6,9 @@ import UIKit
  * Centralized style creation with validation and fallback mechanisms.
  */
 internal struct StyleBuilder {
-    
+
     // MARK: - Main Builder Method
-    
+
     /**
      * Creates a complete FormComponentStyle from a dictionary configuration.
      * Handles all form component styling in one centralized location.
@@ -64,13 +64,13 @@ internal struct StyleBuilder {
 
         return style
     }
-    
+
     /**
      * Creates navigation style from view options using Adyen's official NavigationStyle.
      */
     static func createNavigationStyle(from dict: [String: Any]) -> NavigationStyle {
         var navigationStyle = NavigationStyle()
-        
+
         if let backgroundColorString = dict["backgroundColor"] as? String {
             navigationStyle.backgroundColor = UIColor(hexString: backgroundColorString)
         }
@@ -79,11 +79,11 @@ internal struct StyleBuilder {
             let barTitle = StyleBuilder.createTextStyle(from: barTitleOptions)
             navigationStyle.barTitle = barTitle
         }
-        
+
         if let tintColorString = dict["tintColor"] as? String {
             navigationStyle.tintColor = UIColor(hexString: tintColorString)
         }
-        
+
         if let toolbarMode = dict["toolbarMode"] as? String {
             switch toolbarMode {
             case "leftCancel":
@@ -96,58 +96,58 @@ internal struct StyleBuilder {
                 navigationStyle.toolbarMode = .natural
             }
         }
-        
+
         return navigationStyle
     }
-    
+
     /**
      * Creates list component style for payment method selection.
      */
     private static func createListComponentStyle(from dict: [String: Any]) -> ListComponentStyle {
         var listStyle = ListComponentStyle()
-        
+
         if let backgroundColorString = dict["backgroundColor"] as? String {
             listStyle.backgroundColor = UIColor(hexString: backgroundColorString)
         }
-        
+
         // List item styling
         if let listItemDict = dict["listItem"] as? [String: Any] {
             listStyle.listItem = createListItemStyle(from: listItemDict)
         }
-        
+
         // Section header styling
         if let sectionHeaderDict = dict["sectionHeader"] as? [String: Any] {
             listStyle.sectionHeader = ListSectionHeaderStyle(title: StyleBuilder.createTextStyle(from: sectionHeaderDict))
         }
-        
+
         return listStyle
     }
-    
+
     /**
      * Creates individual list item style.
      */
     private static func createListItemStyle(from dict: [String: Any]) -> ListItemStyle {
         var itemStyle = ListItemStyle()
-        
+
         if let titleDict = dict["title"] as? [String: Any] {
             itemStyle.title = StyleBuilder.createTextStyle(from: titleDict)
         }
-        
+
         if let subtitleDict = dict["subtitle"] as? [String: Any] {
             itemStyle.subtitle = StyleBuilder.createTextStyle(from: subtitleDict)
         }
-        
+
         if let backgroundColorString = dict["backgroundColor"] as? String {
             itemStyle.backgroundColor = UIColor(hexString: backgroundColorString)
         }
-        
+
         if let imageDict = dict["image"] as? [String: Any] {
             itemStyle.image = createImageStyle(from: imageDict)
         }
-        
+
         return itemStyle
     }
-    
+
     /**
      * Creates image style for payment method icons.
      */
@@ -159,34 +159,34 @@ internal struct StyleBuilder {
             clipsToBounds: true,
             contentMode: .scaleAspectFit
         )
-        
+
         if let tintColorString = dict["tintColor"] as? String {
             imageStyle.tintColor = UIColor(hexString: tintColorString)
         }
-        
+
         if let backgroundColorString = dict["backgroundColor"] as? String {
             imageStyle.backgroundColor = UIColor(hexString: backgroundColorString)
         }
-        
+
         if let borderColorString = dict["borderColor"] as? String {
             imageStyle.borderColor = UIColor(hexString: borderColorString)
         }
-        
+
         if let borderWidth = dict["borderWidth"] as? CGFloat {
             imageStyle.borderWidth = borderWidth
         }
-        
+
         if let cornerRounding = dict["cornerRounding"] as? CGFloat {
             imageStyle.cornerRounding = .fixed(cornerRounding)
         } else if let cornerRoundingString = dict["cornerRounding"] as? String {
             imageStyle.cornerRounding = CornerRoundingBuilder.create(from: cornerRoundingString)
         }
-        
+
         return imageStyle
     }
-    
+
     // MARK: - Text Field Style Creation
-    
+
     /**
      * Creates FormTextItemStyle with comprehensive configuration support.
      * Handles nested styling configurations and legacy flat key support.
@@ -256,7 +256,7 @@ internal struct StyleBuilder {
     }
 
     // MARK: - Toggle Style Creation
-    
+
     /**
      * Creates FormToggleItemStyle for switches and checkboxes.
      */
@@ -291,7 +291,7 @@ internal struct StyleBuilder {
     }
 
     // MARK: - Text Style Creation
-    
+
     /**
      * Creates generic TextStyle from dictionary configuration.
      * Reusable text styling for labels, headers, and other text elements.
@@ -324,7 +324,7 @@ internal struct StyleBuilder {
     }
 
     // MARK: - Button Style Creation
-    
+
     /**
      * Creates FormButtonItemStyle with font, color, and corner radius support.
      */
@@ -369,10 +369,10 @@ internal struct StyleBuilder {
  * Specialized font builder for consistent font creation.
  */
 internal struct FontBuilder {
-    
+
     static func createFont(size: CGFloat, weight: String) -> UIFont {
         let fontWeight: UIFont.Weight
-        
+
         switch weight.lowercased() {
         case "thin": fontWeight = .thin
         case "light": fontWeight = .light
@@ -384,10 +384,10 @@ internal struct FontBuilder {
         case "black": fontWeight = .black
         default: fontWeight = .regular
         }
-        
+
         return UIFont.systemFont(ofSize: size, weight: fontWeight)
     }
-    
+
     /**
      * Creates font from nested dictionary configuration.
      */
@@ -396,7 +396,7 @@ internal struct FontBuilder {
               let weightString = dict["weight"] as? String else {
             return nil
         }
-        
+
         return createFont(size: size, weight: weightString)
     }
 }
@@ -405,7 +405,7 @@ internal struct FontBuilder {
  * Text alignment builder for consistent alignment handling.
  */
 internal struct TextAlignmentBuilder {
-    
+
     static func create(from alignment: String) -> NSTextAlignment {
         switch alignment.lowercased() {
         case "left": return .left
@@ -422,7 +422,7 @@ internal struct TextAlignmentBuilder {
  * Image style builder for icons and graphics.
  */
 internal struct ImageStyleBuilder {
-    
+
     static func create(from dict: [String: Any]) -> ImageStyle {
         var imageStyle = ImageStyle(
             borderColor: nil,
@@ -431,33 +431,33 @@ internal struct ImageStyleBuilder {
             clipsToBounds: true,
             contentMode: .scaleAspectFit
         )
-        
+
         if let tintColorString = dict["tintColor"] as? String {
             imageStyle.tintColor = UIColor(hexString: tintColorString)
         }
-        
+
         if let backgroundColorString = dict["backgroundColor"] as? String {
             imageStyle.backgroundColor = UIColor(hexString: backgroundColorString)
         }
-        
+
         if let borderColorString = dict["borderColor"] as? String {
             imageStyle.borderColor = UIColor(hexString: borderColorString)
         }
-        
+
         if let borderWidth = dict["borderWidth"] as? CGFloat {
             imageStyle.borderWidth = borderWidth
         }
-        
+
         if let cornerRounding = dict["cornerRounding"] as? CGFloat {
             imageStyle.cornerRounding = .fixed(cornerRounding)
         } else if let cornerRoundingString = dict["cornerRounding"] as? String {
             imageStyle.cornerRounding = CornerRoundingBuilder.create(from: cornerRoundingString)
         }
-        
+
         if let contentModeString = dict["contentMode"] as? String {
             imageStyle.contentMode = ContentModeBuilder.create(from: contentModeString)
         }
-        
+
         return imageStyle
     }
 }
@@ -466,7 +466,7 @@ internal struct ImageStyleBuilder {
  * Content mode builder for image rendering options.
  */
 internal struct ContentModeBuilder {
-    
+
     static func create(from mode: String) -> UIView.ContentMode {
         switch mode.lowercased() {
         case "scaletofill": return .scaleToFill
@@ -491,7 +491,7 @@ internal struct ContentModeBuilder {
  * Corner rounding builder for consistent rounding handling.
  */
 internal struct CornerRoundingBuilder {
-    
+
     static func create(from rounding: String) -> CornerRounding {
         switch rounding.lowercased() {
         case "none":
@@ -506,7 +506,7 @@ internal struct CornerRoundingBuilder {
             return .fixed(8) // Default fallback
         }
     }
-    
+
     static func create(from value: CGFloat) -> CornerRounding {
         return .fixed(value)
     }

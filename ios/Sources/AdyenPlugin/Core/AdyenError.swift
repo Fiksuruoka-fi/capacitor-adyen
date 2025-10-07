@@ -17,7 +17,7 @@ enum AdyenError: Error, LocalizedError {
     case missingRequiredData(String)
     case networkError(String)
     case authenticationFailed(String)
-    
+
     var errorDescription: String? {
         switch self {
         case .sdkInitializationFailed(let details):
@@ -44,7 +44,7 @@ enum AdyenError: Error, LocalizedError {
             return "Authentication failed: \(details)"
         }
     }
-    
+
     var errorCode: Int {
         switch self {
         case .sdkInitializationFailed:
@@ -71,11 +71,11 @@ enum AdyenError: Error, LocalizedError {
             return 1011
         }
     }
-    
+
     var errorDomain: String {
         return "com.adyen.capacitor.plugin"
     }
-    
+
     /**
      * Convert to NSError for Capacitor compatibility
      */
@@ -89,7 +89,7 @@ enum AdyenError: Error, LocalizedError {
             ]
         )
     }
-    
+
     private var failureReason: String {
         switch self {
         case .sdkInitializationFailed:
@@ -122,7 +122,7 @@ enum AdyenError: Error, LocalizedError {
  * Error handling utilities for consistent error reporting
  */
 extension AdyenError {
-    
+
     /**
      * Create AdyenError from system Error with context
      */
@@ -130,20 +130,20 @@ extension AdyenError {
         if let adyenError = error as? AdyenError {
             return adyenError
         }
-        
+
         // Map common system errors to appropriate AdyenError cases
         if error is DecodingError {
             return .serializationFailed("\(context): \(error.localizedDescription)")
         }
-        
+
         if (error as NSError).domain == NSURLErrorDomain {
             return .networkError("\(context): \(error.localizedDescription)")
         }
-        
+
         // Default to generic error with context
         return .componentCreationFailed("\(context): \(error.localizedDescription)")
     }
-    
+
     /**
      * Create structured error data for JavaScript bridge
      */
@@ -162,7 +162,7 @@ extension AdyenError {
  * Validation helpers that throw appropriate AdyenError cases
  */
 struct AdyenValidator {
-    
+
     /**
      * Validate payment parameters before component creation
      */
@@ -171,26 +171,26 @@ struct AdyenValidator {
         currencyCode: String?,
         countryCode: String?
     ) throws {
-        
+
         if let amount = amount {
             guard amount > 0 else {
                 throw AdyenError.invalidPaymentParameters("Amount must be greater than zero")
             }
         }
-        
+
         if let currencyCode = currencyCode {
             guard currencyCode.count == 3 else {
                 throw AdyenError.invalidPaymentParameters("Currency code must be 3 characters (ISO 4217)")
             }
         }
-        
+
         if let countryCode = countryCode {
             guard countryCode.count == 2 else {
                 throw AdyenError.invalidPaymentParameters("Country code must be 2 characters (ISO 3166)")
             }
         }
     }
-    
+
     /**
      * Validate required SDK initialization state
      */
@@ -199,15 +199,15 @@ struct AdyenValidator {
         analyticsConfig: AnalyticsConfiguration?,
         paymentMethods: PaymentMethods?
     ) throws {
-        
+
         guard context != nil else {
             throw AdyenError.contextNotInitialized
         }
-        
+
         guard analyticsConfig != nil else {
             throw AdyenError.contextNotInitialized
         }
-        
+
         guard paymentMethods != nil else {
             throw AdyenError.missingRequiredData("Payment methods must be set before creating components")
         }
@@ -218,7 +218,7 @@ struct AdyenValidator {
  * Error logging utilities with consistent formatting
  */
 extension AdyenError {
-    
+
     /**
      * Log error with consistent format for debugging
      */
@@ -230,7 +230,7 @@ extension AdyenError {
         Code: \(errorCode)
         Location: \(fileName):\(line) in \(function)
         """
-        
+
         CAPLog.print(
             PluginConstants.identifier,
             errorMessage

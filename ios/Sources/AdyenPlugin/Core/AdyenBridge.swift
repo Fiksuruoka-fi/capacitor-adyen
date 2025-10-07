@@ -7,12 +7,12 @@ import Capacitor
     private var context: APIContext?
     private var analyticsConfiguration: AnalyticsConfiguration?
     private var paymentMethods: PaymentMethods?
-    
+
     private var activePaymentComponent: PaymentComponent?
     private lazy var cardComponent = AdyenCardComponent(bridge: self)
-    
+
     // MARK: - Initialization
-    public override init() {
+    override public init() {
         super.init()
     }
 
@@ -25,10 +25,10 @@ import Capacitor
         self.context = try APIContext(environment: componentsEnvironment, clientKey: clientKey)
         self.analyticsConfiguration = AnalyticsConfiguration()
         self.analyticsConfiguration?.isEnabled = enableAnalytics
-        
+
         CAPLog.print(PluginConstants.identifier, "Adyen SDK initialized successfully")
     }
-    
+
     private func serializePaymentData(_ data: PaymentComponentData) throws -> [String: Any] {
         return try PaymentDataSerializer.serialize(data)
     }
@@ -38,9 +38,9 @@ import Capacitor
         let paymentMethods = try PaymentDataSerializer.decodePaymentMethods(from: paymentMethodsJson)
         self.paymentMethods = paymentMethods
     }
-    
+
     // MARK: - Component Creation
-    
+
     public func createCardComponent(
         amount: Int?,
         countryCode: String?,
@@ -56,33 +56,33 @@ import Capacitor
             style: style
         )
     }
-    
+
     internal func setActivePaymentComponent(_ component: PaymentComponent) {
         clearActiveComponents()
         activePaymentComponent = component
         component.delegate = self
     }
-    
+
     private func clearActiveComponents() {
         activePaymentComponent?.stopLoadingIfNeeded()
         activePaymentComponent = nil
     }
-    
+
     // MARK: - Internal accessors for factories
-        
+
     internal var currentContext: APIContext? { context }
     internal var currentAnalyticsConfig: AnalyticsConfiguration? { analyticsConfiguration }
     internal var currentPaymentMethods: PaymentMethods? { paymentMethods }
     internal var currentActivePaymentComponent: PaymentComponent? { activePaymentComponent }
-        
+
     // MARK: - Helper Methods
-    
+
     internal func createAdyenContext(with payment: Payment?) throws -> AdyenContext {
         guard let context = self.context,
               let analyticsConfiguration = self.analyticsConfiguration else {
             throw AdyenError.contextNotInitialized
         }
-        
+
         return AdyenContext(
             apiContext: context,
             payment: payment,

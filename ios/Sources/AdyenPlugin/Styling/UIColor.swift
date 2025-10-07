@@ -21,16 +21,16 @@ extension UIColor {
 // MARK: - Validation Helpers
 
 extension UIColor {
-    
+
     /**
      * Validates if a string is a valid hex color format.
      */
     static func isValidHexString(_ hexString: String) -> Bool {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        
+
         // Check valid lengths
         guard [3, 6, 8].contains(hex.count) else { return false }
-        
+
         // Check all characters are valid hex
         let hexCharacterSet = CharacterSet(charactersIn: "0123456789ABCDEFabcdef")
         return hex.rangeOfCharacter(from: hexCharacterSet.inverted) == nil

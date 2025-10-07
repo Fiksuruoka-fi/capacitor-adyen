@@ -1,7 +1,7 @@
 /// <reference types="@capacitor/cli" />
+import type { PluginListenerHandle } from '@capacitor/core';
 
 import type Card from '../components/card/Card';
-import type { PluginListenerHandle } from '@capacitor/core';
 
 import type { CardComponentEvents, CardComponentMethods } from './components/card';
 

@@ -1,4 +1,5 @@
-import { CardConfiguration } from '@adyen/adyen-web';
+import type { CardConfiguration } from '@adyen/adyen-web';
+
 import type { BaseAdyenComponentOptions } from '..';
 import type { ComponentViewOptions, FormComponentStyle } from '../styles';
 

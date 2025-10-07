@@ -6,7 +6,7 @@ import Capacitor
  * Handles payment submission and error events from all payment components.
  */
 extension AdyenBridge: PaymentComponentDelegate {
-    
+
     /**
      * Called when a payment component submits payment data.
      * Serializes the payment data and forwards it to the JavaScript bridge.
@@ -20,19 +20,19 @@ extension AdyenBridge: PaymentComponentDelegate {
             CAPLog.print(PluginConstants.identifier, "Plugin reference is nil")
             return
         }
-        
+
         do {
             let jsonData = try PaymentDataSerializer.serialize(data)
             let eventData = jsonData
-        
+
             CAPLog.print(PluginConstants.identifier, "Payment data submitted")
-            
+
             plugin.notifyListeners("onSubmit", data: eventData)
-            
+
         } catch {
             let adyenError = AdyenError.from(error, context: "Payment data serialization")
             adyenError.logError(context: "Failed to serialize payment data)")
-            
+
             plugin.notifyListeners("onError", data: adyenError.toCapacitorErrorData().merging([
                 "source": "paymentComponentDelegate"
             ]) { _, new in new })
@@ -52,17 +52,17 @@ extension AdyenBridge: PaymentComponentDelegate {
             CAPLog.print(PluginConstants.identifier, "Plugin reference is nil")
             return
         }
-        
+
         let adyenError = AdyenError.from(error, context: "Payment component failure")
-        
+
         adyenError.logError(context: "Payment failed")
-        
+
         let errorData = adyenError.toCapacitorErrorData().merging([
             "source": "paymentComponentDelegate",
             "nativeErrorCode": (error as NSError).code,
             "nativeErrorDomain": (error as NSError).domain
         ]) { _, new in new }
-        
+
         plugin.notifyListeners("onError", data: errorData)
     }
 }

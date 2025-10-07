@@ -7,7 +7,7 @@ public enum AdyenEnvironment: Int, CaseIterable {
     case liveUs
     case liveEu
     case liveAu
-    
+
     public var adyenEnvironment: Environment {
         switch self {
         case .test:
@@ -22,7 +22,7 @@ public enum AdyenEnvironment: Int, CaseIterable {
             return .liveAustralia
         }
     }
-    
+
     public var stringValue: String {
         switch self {
         case .test:
@@ -37,7 +37,7 @@ public enum AdyenEnvironment: Int, CaseIterable {
             return "liveAu"
         }
     }
-    
+
     public static func from(string: String) -> AdyenEnvironment? {
         switch string {
         case "test":

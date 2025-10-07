@@ -1,4 +1,5 @@
 import { registerPlugin } from '@capacitor/core';
+
 import type { AdyenPlugin } from './definitions';
 
 export const Adyen = registerPlugin<AdyenPlugin>('Adyen', {

@@ -16,7 +16,7 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
     ]
     private var implementation: AdyenBridge?
     internal var componentViewController: UIViewController?
-    
+
     override public func load() {
         super.load()
 
@@ -24,37 +24,36 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
             CAPLog.print(identifier, "❌ Missing environment configuration")
             return
         }
-        
+
         guard let environment = AdyenEnvironment.from(string: environmentString) else {
             CAPLog.print(identifier, "❌ Invalid environment: \(environmentString)")
             return
         }
-        
+
         guard let clientKey = getConfig().getString("clientKey") else {
             CAPLog.print(identifier, "❌ Missing clientKey configuration")
             return
         }
-        
+
         let enableAnalytics = getConfig().getBoolean("enableAnalytics", false)
-        
-        
+
         do {
             let implementation = AdyenBridge()
             implementation.plugin = self
-            
+
             try implementation.start(
                 componentsEnvironment: environment.adyenEnvironment,
                 clientKey: clientKey,
                 enableAnalytics: enableAnalytics
             )
-            
+
             self.implementation = implementation
         } catch {
             CAPLog.print(identifier, "❌ Failed to initialize Adyen: \(error.localizedDescription)")
             self.implementation = nil
         }
     }
-    
+
     /**
      * Set current payment methods for Adyen SDK
      */
@@ -64,15 +63,15 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
             call.reject("Adyen not initialized")
             return
         }
-        
+
         // Ensure valid data has been passed
         guard let paymentMethodsObject = call.getObject("paymentMethodsJson") else {
             call.reject("Invalid or missing payment methods json")
             return
         }
-        
+
         CAPLog.print(self.identifier, "Payment methods: \(paymentMethodsObject.description)")
-        
+
         do {
             let paymentMethodsData = try JSONSerialization.data(
                 withJSONObject: paymentMethodsObject,
@@ -84,13 +83,13 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
             call.reject(error.localizedDescription)
         }
     }
-    
+
     @objc public func presentCardComponent(_ call: CAPPluginCall) {
         guard let implementation = self.implementation else {
             call.reject("Adyen not initialized")
             return
         }
-        
+
         DispatchQueue.main.async { [weak self] in
             let amount = call.getInt("amount")
             let countryCode = call.getString("countryCode")
@@ -98,7 +97,7 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
             let viewOptions = call.getObject("viewOptions")
             let configuration = call.getObject("configuration")
             let style = call.getObject("style")
-            
+
             do {
                 let componentViewController = try implementation.createCardComponent(
                     amount: amount,
@@ -107,7 +106,7 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
                     configuration: configuration,
                     style: style
                 )
-                
+
                 self?.presentWithTracking(componentViewController, viewOptions: viewOptions) {
                     call.resolve()
                 }
@@ -116,12 +115,12 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
             }
         }
     }
-    
+
     @objc public func hideComponent(_ call: CAPPluginCall) {
         hideWithTracking()
         call.resolve()
     }
-    
+
     /**
      * Presents the specified Adyen component.
      *
@@ -139,14 +138,14 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
             call.reject("Adyen not initialized")
             return
         }
-        
+
         let amount = call.getInt("amount")
         let countryCode = call.getString("countryCode")
         let currencyCode = call.getString("currencyCode")
         let viewOptions = call.getObject("viewOptions")
-        
+
         CAPLog.print(self.identifier, "Amount: \(String(describing: amount)), Country code: \(String(describing: countryCode)), Currency code: \(String(describing: currencyCode))")
-        
+
         DispatchQueue.main.async { [weak self] in
             do {
                 self?.componentViewController = try {
@@ -164,19 +163,19 @@ public class AdyenPlugin: CAPPlugin, CAPBridgedPlugin {
                         return nil
                     }
                 }()
-            
+
                 guard let strongSelf = self,
-                    let componentVC = strongSelf.componentViewController,
-                    let presentingVC = strongSelf.bridge?.viewController else {
+                      let componentVC = strongSelf.componentViewController,
+                      let presentingVC = strongSelf.bridge?.viewController else {
                     call.reject("Failed to present \(componentType) component: view controller unavailable")
                     return
                 }
-                
+
                 let nav = UINavigationController(rootViewController: componentVC)
                 nav.navigationBar.prefersLargeTitles = false
-                
+
                 nav.applyNavigationPresentationConfiguration(from: viewOptions)
-                
+
                 presentingVC.present(nav, animated: true) {
                     call.resolve()
                 }
