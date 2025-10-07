@@ -9,7 +9,7 @@ type TextStyleDefinition = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:43](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L43)
+Defined in: [src/definitions/styles.ts:43](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L43)
 
 Describes common text styling. Applicable to labels, hints, footers, etc.
 You can combine colour, font, background and text alignment.
@@ -22,7 +22,7 @@ You can combine colour, font, background and text alignment.
 optional color: string;
 ```
 
-Defined in: [src/definitions/styles.ts:45](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L45)
+Defined in: [src/definitions/styles.ts:45](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L45)
 
 Hex colour string for the text (e.g. '#FF0000' or 'FFFFFF').
 
@@ -34,7 +34,7 @@ Hex colour string for the text (e.g. '#FF0000' or 'FFFFFF').
 optional font: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:47](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L47)
+Defined in: [src/definitions/styles.ts:47](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L47)
 
 Font specification for the text.
 
@@ -46,7 +46,7 @@ Font specification for the text.
 optional backgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:49](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L49)
+Defined in: [src/definitions/styles.ts:49](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L49)
 
 Background colour behind the text.
 
@@ -58,6 +58,6 @@ Background colour behind the text.
 optional textAlignment: "left" | "center" | "right" | "justified" | "natural";
 ```
 
-Defined in: [src/definitions/styles.ts:51](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L51)
+Defined in: [src/definitions/styles.ts:51](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L51)
 
 Alignment for the text within its container.

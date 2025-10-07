@@ -1,6 +1,6 @@
 # Interface: BaseAdyenPlugin
 
-Defined in: [src/definitions/index.ts:158](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/index.ts#L158)
+Defined in: [src/definitions/index.ts:158](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L158)
 
 ## Extended by
 
@@ -14,7 +14,7 @@ Defined in: [src/definitions/index.ts:158](https://github.com/Fiksuruoka-fi/capa
 setCurrentPaymentMethods(options): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/index.ts#L179)
+Defined in: [src/definitions/index.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L179)
 
 Set current available payment methods for the Adyen components.
 
@@ -60,7 +60,7 @@ await Adyen.setCurrentPaymentMethods({
 hideComponent(): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:193](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/index.ts#L193)
+Defined in: [src/definitions/index.ts:193](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L193)
 
 Hides the currently presented Adyen component, if any.
 
@@ -89,7 +89,7 @@ await Adyen.hideComponent();
 destroyComponent(): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/index.ts#L207)
+Defined in: [src/definitions/index.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L207)
 
 Destroys the currently selected Adyen component, if any.
 
@@ -118,7 +118,7 @@ await Adyen.destroyComponent();
 addListener<E>(eventName, listener): Promise<PluginListenerHandle>;
 ```
 
-Defined in: [src/definitions/index.ts:209](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/index.ts#L209)
+Defined in: [src/definitions/index.ts:209](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L209)
 
 #### Type Parameters
 

@@ -18,7 +18,7 @@ type FormComponentStyle = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:148](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L148)
+Defined in: [src/definitions/styles.ts:148](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L148)
 
 Combined style configuration for forms. Includes top-level colours and
 nested sub-styles for various form elements. All keys are optional and
@@ -32,7 +32,7 @@ unknown keys are ignored.
 optional backgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:150](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L150)
+Defined in: [src/definitions/styles.ts:150](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L150)
 
 Background colour applied to the entire form.
 
@@ -44,7 +44,7 @@ Background colour applied to the entire form.
 optional tintColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:152](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L152)
+Defined in: [src/definitions/styles.ts:152](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L152)
 
 Tint colour applied to accent elements within the form.
 
@@ -56,7 +56,7 @@ Tint colour applied to accent elements within the form.
 optional separatorColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:154](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L154)
+Defined in: [src/definitions/styles.ts:154](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L154)
 
 Colour of separators between form rows.
 
@@ -68,7 +68,7 @@ Colour of separators between form rows.
 optional header: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:157](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L157)
+Defined in: [src/definitions/styles.ts:157](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L157)
 
 Styling for the header text (section title).
 
@@ -80,7 +80,7 @@ Styling for the header text (section title).
 optional textField: TextFieldStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:159](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L159)
+Defined in: [src/definitions/styles.ts:159](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L159)
 
 Styling for text input fields.
 
@@ -92,7 +92,7 @@ Styling for text input fields.
 optional switch: SwitchStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:162](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L162)
+Defined in: [src/definitions/styles.ts:162](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L162)
 
 Styling for toggle rows. Both `switch` and `toggle` keys are supported.
 
@@ -104,7 +104,7 @@ Styling for toggle rows. Both `switch` and `toggle` keys are supported.
 optional toggle: SwitchStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:163](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L163)
+Defined in: [src/definitions/styles.ts:163](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L163)
 
 ***
 
@@ -114,7 +114,7 @@ Defined in: [src/definitions/styles.ts:163](https://github.com/Fiksuruoka-fi/cap
 optional hint: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:166](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L166)
+Defined in: [src/definitions/styles.ts:166](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L166)
 
 Styling for hint labels (usually under a field).
 
@@ -126,7 +126,7 @@ Styling for hint labels (usually under a field).
 optional footnote: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:168](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L168)
+Defined in: [src/definitions/styles.ts:168](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L168)
 
 Styling for footnote labels at the bottom of the form.
 
@@ -138,7 +138,7 @@ Styling for footnote labels at the bottom of the form.
 optional linkText: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:170](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L170)
+Defined in: [src/definitions/styles.ts:170](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L170)
 
 Styling for inline link text in informational messages.
 
@@ -150,7 +150,7 @@ Styling for inline link text in informational messages.
 optional button: ButtonStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:173](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L173)
+Defined in: [src/definitions/styles.ts:173](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L173)
 
 Styling for the primary action button. You may use either `button` or `mainButton`.
 
@@ -162,7 +162,7 @@ Styling for the primary action button. You may use either `button` or `mainButto
 optional mainButton: ButtonStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:175](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L175)
+Defined in: [src/definitions/styles.ts:175](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L175)
 
 Styling for the primary action button. Same as `button`.
 
@@ -174,6 +174,6 @@ Styling for the primary action button. Same as `button`.
 optional secondaryButton: ButtonStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:177](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/styles.ts#L177)
+Defined in: [src/definitions/styles.ts:177](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/styles.ts#L177)
 
 Styling for a secondary action button.

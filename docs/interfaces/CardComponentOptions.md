@@ -1,6 +1,6 @@
 # Interface: CardComponentOptions
 
-Defined in: [src/definitions/components/card.ts:10](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/components/card.ts#L10)
+Defined in: [src/definitions/components/card.ts:10](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/components/card.ts#L10)
 
 Options for creating a Adyen Card component.
 
@@ -16,7 +16,7 @@ Options for creating a Adyen Card component.
 optional amount: number;
 ```
 
-Defined in: [src/definitions/components/card.ts:12](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/components/card.ts#L12)
+Defined in: [src/definitions/components/card.ts:12](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/components/card.ts#L12)
 
 Payment amount in minor currency units (e.g., cents)
 
@@ -32,7 +32,7 @@ Payment amount in minor currency units (e.g., cents)
 optional countryCode: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:14](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/components/card.ts#L14)
+Defined in: [src/definitions/components/card.ts:14](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/components/card.ts#L14)
 
 ISO 3166-1 alpha-2 country code (e.g., 'US', 'NL')
 
@@ -48,7 +48,7 @@ ISO 3166-1 alpha-2 country code (e.g., 'US', 'NL')
 optional currencyCode: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:16](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/components/card.ts#L16)
+Defined in: [src/definitions/components/card.ts:16](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/components/card.ts#L16)
 
 ISO 4217 currency code (e.g., 'USD', 'EUR')
 
@@ -64,7 +64,7 @@ ISO 4217 currency code (e.g., 'USD', 'EUR')
 optional configuration: CardComponentConfiguration;
 ```
 
-Defined in: [src/definitions/components/card.ts:18](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/components/card.ts#L18)
+Defined in: [src/definitions/components/card.ts:18](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/components/card.ts#L18)
 
 Card component behaviour configuration
 
@@ -76,7 +76,7 @@ Card component behaviour configuration
 optional style: FormComponentStyle;
 ```
 
-Defined in: [src/definitions/components/card.ts:20](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/components/card.ts#L20)
+Defined in: [src/definitions/components/card.ts:20](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/components/card.ts#L20)
 
 Card-specific styling options
 
@@ -88,6 +88,6 @@ Card-specific styling options
 optional viewOptions: ComponentViewOptions;
 ```
 
-Defined in: [src/definitions/components/card.ts:22](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/components/card.ts#L22)
+Defined in: [src/definitions/components/card.ts:22](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/components/card.ts#L22)
 
 View options for the component's presentation layout
