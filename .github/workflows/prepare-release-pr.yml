@@ -57,25 +57,30 @@ jobs:
         run: |
           BUMP="${{ github.event.inputs.bump }}"
           PREID="${{ github.event.inputs.preid }}"
-          FLAGS="--no-verify --skip.tag"  # never tag in this workflow
+          # Skip tag AND commit so create-pull-request can handle the commit
+          FLAGS="--no-verify --skip.tag --skip.commit"
 
           if [ "$BUMP" = "patch" ] || [ "$BUMP" = "minor" ] || [ "$BUMP" = "major" ]; then
             FLAGS="$FLAGS --release-as $BUMP"
           elif [ "$BUMP" = "none" ]; then
-            # Document-only: update CHANGELOG from conventional commits without bumping version.
-            # We keep version as-is by telling standard-version to write changelog but not bump.
+            # Update changelog only; keep version as-is
             FLAGS="$FLAGS --skip.bump"
           fi
 
-          if [ -n "$PREID" ]; then
-            FLAGS="$FLAGS --prerelease $PREID"
-          fi
+            if [ -n "$PREID" ]; then
+              FLAGS="$FLAGS --prerelease $PREID"
+            fi
 
           echo "flags=$FLAGS" >> "$GITHUB_OUTPUT"
 
-      - name: Run standard-version (write files, no tag)
+      - name: Run standard-version (write files, no tag, no commit)
         run: |
-          npx standard-version ${{ steps.flags.outputs.flags }}
+          set -e
+          echo "Running: standard-version ${{ steps.flags.outputs.flags }}"
+          npx standard-version ${{ steps.flags.outputs.flags }} || {
+            echo "standard-version exited non-zero (likely no new conventional commits). Continuing."
+          }
+          echo "Resulting version: $(node -p "require('./package.json').version")"
 
       - name: Read version (post-change or existing)
         id: ver
@@ -93,11 +98,21 @@ jobs:
             p && /^## / {p=0}
             p
           ' CHANGELOG.md > RELEASE_NOTES.md || true
-          # Fallback if not found (e.g., notes-only with no new heading):
+
           if [ ! -s RELEASE_NOTES.md ]; then
             echo "No specific section found for $TAG; using top portion of CHANGELOG." >&2
             head -n 200 CHANGELOG.md > RELEASE_NOTES.md
           fi
+
+          # Provide file path as an output
+          echo "notes_file=RELEASE_NOTES.md" >> "$GITHUB_OUTPUT"
+
+          # Provide file contents as multi-line output (GitHub Actions safe)
+          {
+            echo 'release_notes<<EOF'
+            cat RELEASE_NOTES.md
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
 
       - name: Create PR with changes
         uses: peter-evans/create-pull-request@v6
@@ -115,7 +130,7 @@ jobs:
             ---
             **Proposed Release Notes (editable):**
             ```
-            ${{ steps.notes.outputs }}
+            ${{ steps.notes.outputs.release_notes }}
             ```
           commit-message: "chore(release): prepare v${{ steps.ver.outputs.version }} (no tag)"
           add-paths: |
