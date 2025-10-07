@@ -41,4 +41,4 @@ jobs:
             exit 0
           fi
 
-          npm publish --provenance
+          npm publish --access public --provenance

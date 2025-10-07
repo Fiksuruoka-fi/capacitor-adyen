@@ -25,10 +25,16 @@
     "url": "https://github.com/Fiksuruoka-fi/capacitor-adyen/issues"
   },
   "keywords": [
+    "adyen",
+    "components",
+    "payments",
     "capacitor",
     "plugin",
     "native"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
     "verify:ios": "xcodebuild -scheme CapacitorAdyen -destination generic/platform=iOS",
