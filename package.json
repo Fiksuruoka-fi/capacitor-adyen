@@ -1,6 +1,6 @@
 {
   "name": "@foodello/capacitor-adyen",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Adyen components integration for Capacitor.js",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",

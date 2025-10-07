@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.0.1](https://github.com/Fiksuruoka-fi/capacitor-adyen/compare/v7.0.0...v7.0.1) (2025-10-07)
+
+
+### Bug Fixes
+
+* fixes publish to npm ([ec0298b](https://github.com/Fiksuruoka-fi/capacitor-adyen/commit/ec0298b54122e01d83010c917a8a16a8b41bbdb4))
+* **ios:** adds missing podspec ([9d9656d](https://github.com/Fiksuruoka-fi/capacitor-adyen/commit/9d9656d97c3754f19cde2af725ed3ecc123dd37c))
+
 ## 7.0.0 (2025-10-07)
 
 Initial release to follow supported Capacitor version numbering.
