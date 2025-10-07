@@ -1,0 +1,67 @@
+name: Tag and Draft Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "CHANGELOG.md"
+      - "package.json"
+
+permissions:
+  contents: write
+
+jobs:
+  tag_and_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read version
+        id: ver
+        run: |
+          VER=$(node -p "require('./package.json').version")
+          echo "version=$VER" >> "$GITHUB_OUTPUT"
+          echo "tag=v$VER" >> "$GITHUB_OUTPUT"
+
+      - name: Create tag if missing
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.ver.outputs.tag }}"
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Tag $TAG already exists."
+          else
+            git tag -a "$TAG" -m "Release $TAG"
+            git push origin "$TAG"
+          fi
+
+      - name: Extract notes for this version
+        id: notes
+        shell: bash
+        run: |
+          TAG="v${{ steps.ver.outputs.version }}"
+          awk -v tag="## $TAG" '
+            $0 ~ tag {p=1; print; next}
+            p && /^## / {p=0}
+            p
+          ' CHANGELOG.md > RELEASE_NOTES.md || true
+          if [ ! -s RELEASE_NOTES.md ]; then
+            echo "CHANGELOG section not found for $TAG; using top portion." >&2
+            head -n 200 CHANGELOG.md > RELEASE_NOTES.md
+          fi
+          echo "notes_file=RELEASE_NOTES.md" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update draft GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.ver.outputs.tag }}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" --draft --notes-file "${{ steps.notes.outputs.notes_file }}" --title "$TAG"
+          else
+            gh release create "$TAG" --draft --notes-file "${{ steps.notes.outputs.notes_file }}" --title "$TAG"
+          fi
