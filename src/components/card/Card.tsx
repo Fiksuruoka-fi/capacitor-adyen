@@ -10,6 +10,7 @@ import type {
 } from '../../definitions';
 import CardDetails from './CardDetails';
 import { h } from 'preact';
+import { createConsola } from 'consola';
 
 import '@adyen/adyen-web/styles/adyen.css';
 import './styles.scss';
@@ -17,6 +18,7 @@ import './styles.scss';
 class Card extends AdyenCardComponent {
   declare public props: ExtendedCardConfiguration;
 
+  private logger = createConsola({ level: -999, defaults: { tag: 'adyen:card-with-native-support' } });
   private onSubmitListener?: PluginListenerHandle;
   private onCardSubmitListener?: PluginListenerHandle;
   private onCardChangeListener?: PluginListenerHandle;
@@ -40,11 +42,12 @@ class Card extends AdyenCardComponent {
     this.imageBaseUrl = `https://checkoutshopper-${checkoutCore.options.environment}.cdn.adyen.com/checkoutshopper/images`;
 
     if (isDev) {
-      console.log('CardWithNativeSupport instance assigned to window.adyenCard for debugging');
+      this.logger.level = 4; // Set to 'debug' level
+      this.logger.debug('Instance assigned to `window.adyenCard` for debugging');
       window.adyenCard = this;
 
       if (testNativePresentation && !this.isNative) {
-        console.warn(
+        this.logger.warn(
           'testNativePresentation is true but platform is not native - showing native card presentation anyway',
         );
         this.isNative = true;
@@ -74,12 +77,12 @@ class Card extends AdyenCardComponent {
     const { brandsConfiguration, nativeCard: { brandImages: nativeBrandImages } = {} } = this.props ?? {};
 
     if (nativeBrandImages) {
-      console.log('Using native brand images:', nativeBrandImages);
+      this.logger.debug('Using native brand images:', nativeBrandImages);
       return nativeBrandImages;
     }
 
     if (brandsConfiguration && Object.keys(brandsConfiguration ?? {}).length) {
-      console.log('Using brands configuration:', brandsConfiguration);
+      this.logger.debug('Using brands configuration:', brandsConfiguration);
       return Object.entries(brandsConfiguration).reduce(
         (acc, [brand, config]) => {
           if (config?.icon) acc[brand] = config.icon;
@@ -89,7 +92,7 @@ class Card extends AdyenCardComponent {
       );
     }
 
-    console.log('Using default brand images from Adyen CDN');
+    this.logger.debug('Using default brand images from Adyen CDN');
     return {
       amex: `${this.imageBaseUrl}/logos/amex.svg`,
       bcmc: `${this.imageBaseUrl}/logos/bcmc.svg`,
@@ -113,7 +116,7 @@ class Card extends AdyenCardComponent {
    * Updates native card state and triggers reactive re-render for presented component
    */
   private updateNativeCardState = (updates: Partial<NativeCardState>): void => {
-    console.log('Updating native card state:', updates);
+    this.logger.debug('Updating native card state:', updates);
 
     // Update the parent component's state first
     this.setState({
@@ -188,7 +191,7 @@ class Card extends AdyenCardComponent {
     } = this.props;
 
     try {
-      console.log('Presenting native card component');
+      this.logger.debug('Presenting native card component');
 
       this.updateNativeCard({
         state: 'loading',
@@ -222,7 +225,7 @@ class Card extends AdyenCardComponent {
 
       await Promise.all([this.setupListeners(), Adyen.presentCardComponent(options)]);
     } catch (error) {
-      console.error('Native component presentation error:', error);
+      this.logger.error('Native component presentation error:', error);
       throw error;
     }
   };
@@ -249,7 +252,7 @@ class Card extends AdyenCardComponent {
    * Handles Adyen native SDK `onSubmit` events
    */
   private onPaymentSubmitHandler = async (data: PaymentSubmitEventData): Promise<void> => {
-    console.log('Adyen native onSubmit', data);
+    this.logger.debug('onSubmit', data);
 
     this.setState({
       data: data.paymentMethod,
@@ -277,7 +280,7 @@ class Card extends AdyenCardComponent {
    * Handles Adyen native SDK `onCardSubmit` events
    */
   private onCardSubmitHandler = async (data: CardSubmitEventData): Promise<void> => {
-    console.log('Adyen native onCardSubmit', data);
+    this.logger.debug('onCardSubmit', data);
 
     this.updateNativeCard({
       lastFour: data.lastFour,
@@ -294,7 +297,7 @@ class Card extends AdyenCardComponent {
    * Handles Adyen native SDK `onShow` and `onHide` events
    */
   private onShowHandler = (): void => {
-    console.log(`Adyen native component's onShow`);
+    this.logger.debug(`onShow`);
     this.isNativeComponentOpen = true;
   };
 
@@ -302,7 +305,7 @@ class Card extends AdyenCardComponent {
    * Handles Adyen native SDK `onShow` and `onHide` events
    */
   private onHideHandler = (): void => {
-    console.log(`Adyen native component's onHide`);
+    this.logger.debug(`onHide`);
     this.isNativeComponentOpen = false;
   };
 
@@ -313,7 +316,7 @@ class Card extends AdyenCardComponent {
     const hasListenersSetAlready = this.onCardSubmitListener && this.onSubmitListener;
 
     if (!hasListenersSetAlready) {
-      console.log('Setting up native card component listeners');
+      this.logger.debug('Setting up native card component listeners');
 
       const [cardSubmitListener, submitListener, showListener, hideListener] = await Promise.all([
         this.onCardSubmitListener || Adyen.addListener('onCardSubmit', this.onCardSubmitHandler),
@@ -352,7 +355,7 @@ class Card extends AdyenCardComponent {
   mount(domNode: HTMLElement | string) {
     if (this.isNative && !this.isNativeComponentOpen) {
       this.presentNativeComponent().catch((error) => {
-        console.error('Native component mount error:', error);
+        this.logger.error('Native component mount error:', error);
         throw error;
       });
     }
@@ -367,7 +370,8 @@ class Card extends AdyenCardComponent {
           this.isNativeComponentOpen = false;
         })
         .catch((error) => {
-          console.error('Error hiding native component during unmount:', error);
+          this.logger.error('Error hiding native component during unmount:', error);
+          throw error;
         });
     }
 
