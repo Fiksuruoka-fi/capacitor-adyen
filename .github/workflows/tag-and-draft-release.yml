@@ -1,7 +1,8 @@
 name: Tag and Draft Release
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches: [main]
     paths:
       - "CHANGELOG.md"
@@ -13,8 +14,12 @@ permissions:
 
 jobs:
   tag_and_release:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'pull_request' &&
+       github.event.pull_request.merged == true &&
+       startsWith(github.event.pull_request.head.ref, 'release/'))
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
