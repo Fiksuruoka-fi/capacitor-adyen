@@ -1,6 +1,6 @@
 # Interface: AdyenEvents
 
-Defined in: [index.ts:126](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/index.ts#L126)
+Defined in: [src/definitions/index.ts:156](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L156)
 
 All available Adyen events
 
@@ -16,7 +16,7 @@ All available Adyen events
 onCardSubmit: (data) => void;
 ```
 
-Defined in: [components/card.ts:219](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/components/card.ts#L219)
+Defined in: [src/definitions/components/card.ts:220](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/components/card.ts#L220)
 
 Listens for Card component `submit` events.
 
@@ -56,7 +56,7 @@ Adyen.addListener('onCardSubmit', async (data) => {
 onCardChange: (data) => void;
 ```
 
-Defined in: [components/card.ts:234](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/components/card.ts#L234)
+Defined in: [src/definitions/components/card.ts:235](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/components/card.ts#L235)
 
 Listens for Card component's `change` events.
 
@@ -90,13 +90,53 @@ Adyen.addListener('onCardChange', async (data) => {
 
 ***
 
+### onAdditionalDetails()
+
+```ts
+onAdditionalDetails: (data) => void;
+```
+
+Defined in: [src/definitions/index.ts:90](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L90)
+
+Listens for payment `onAdditionalDetails` events.
+
+#### Parameters
+
+##### data
+
+[`AdditionalDetailsEventData`](AdditionalDetailsEventData.md)
+
+#### Returns
+
+`void`
+
+#### Since
+
+7.0.0
+
+#### Example
+
+```typescript
+import { Adyen } from '@foodello/capacitor-adyen';
+Adyen.addListener('onAdditionalDetails', async (data) => {
+  // Handle the additionalDetails event, e.g., send data to your server
+  console.log('Additional details:', data);
+});
+```
+
+#### Inherited from
+
+[`BaseEvents`](BaseEvents.md).[`onAdditionalDetails`](BaseEvents.md#onadditionaldetails)
+
+***
+
 ### onSubmit()
 
 ```ts
 onSubmit: (data) => void;
 ```
 
-Defined in: [index.ts:74](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/index.ts#L74)
+Defined in: [src/definitions/index.ts:104](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L104)
 
 Listens for payment `submit` events.
 
@@ -136,7 +176,7 @@ Adyen.addListener('onSubmit', async (data) => {
 onError: (data) => void;
 ```
 
-Defined in: [index.ts:89](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/index.ts#L89)
+Defined in: [src/definitions/index.ts:119](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L119)
 
 Listens for payment and component `error` events.
 
@@ -176,7 +216,7 @@ Adyen.addListener('onError', async (data) => {
 onShow: () => void;
 ```
 
-Defined in: [index.ts:104](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/index.ts#L104)
+Defined in: [src/definitions/index.ts:134](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L134)
 
 Listens for component `present` events.
 
@@ -210,7 +250,7 @@ Adyen.addListener('onShow', async () => {
 onHide: (data) => void;
 ```
 
-Defined in: [index.ts:119](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/index.ts#L119)
+Defined in: [src/definitions/index.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L149)
 
 Listens for component `dismiss` events.
 

@@ -14,7 +14,9 @@
     "pretty": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es2017"
+    "target": "es2017",
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   },
   "files": ["src/index.ts"],
   "exclude": ["node_modules", "dist", "example", "scripts", "test", "android", "ios"]

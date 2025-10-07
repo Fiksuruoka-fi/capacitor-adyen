@@ -1,4 +1,6 @@
 /// <reference types="@capacitor/cli" />
+
+import type Card from '../components/card/Card';
 import type { PluginListenerHandle } from '@capacitor/core';
 
 import type { CardComponentEvents, CardComponentMethods } from './components/card';
@@ -30,6 +32,12 @@ declare module '@capacitor/cli' {
        */
       enableAnalytics: boolean;
     };
+  }
+}
+
+declare global {
+  interface Window {
+    adyenCard?: Card;
   }
 }
 
@@ -67,6 +75,20 @@ export interface BaseAdyenComponentOptions {
  * @group Events
  */
 export interface BaseEvents {
+  /**
+   * Listens for payment `onAdditionalDetails` events.
+   * @since 7.0.0
+   * @example
+   * ```typescript
+   * import { Adyen } from '@foodello/capacitor-adyen';
+   * Adyen.addListener('onAdditionalDetails', async (data) => {
+   *   // Handle the additionalDetails event, e.g., send data to your server
+   *   console.log('Additional details:', data);
+   * });
+   * ```
+   */
+  onAdditionalDetails: (data: AdditionalDetailsEventData) => void;
+
   /**
    * Listens for payment `submit` events.
    * @since 7.0.0
@@ -170,6 +192,20 @@ export interface BaseAdyenPlugin {
    */
   hideComponent(): Promise<void>;
 
+  /**
+   * Destroys the currently selected Adyen component, if any.
+   *
+   * @returns A promise that resolves when the component is destroyed.
+   * @since 7.0.0
+   *
+   * @example
+   * ```typescript
+   * import { Adyen } from '@foodello/capacitor-adyen';
+   * await Adyen.destroyComponent();
+   * ```
+   */
+  destroyComponent(): Promise<void>;
+
   addListener<E extends keyof AdyenEvents>(eventName: E, listener: AdyenEvents[E]): Promise<PluginListenerHandle>;
 }
 
@@ -178,6 +214,10 @@ export * from './styles';
 export * from './components/card';
 
 // Event data types
+export interface AdditionalDetailsEventData {
+  [key: string]: any;
+}
+
 export interface PaymentSubmitEventData {
   paymentMethod: {
     [key: string]: any;

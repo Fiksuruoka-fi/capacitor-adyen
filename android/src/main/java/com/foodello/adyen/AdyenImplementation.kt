@@ -12,13 +12,10 @@ import com.foodello.adyen.components.AdyenCardComponent
 import com.getcapacitor.JSObject
 import org.json.JSONObject
 
-class AdyenImplementation(
-        private val plugin: AdyenPlugin,
-        private val activity: Activity
-) {
+class AdyenImplementation(private val plugin: AdyenPlugin, private val activity: Activity) {
     private var checkoutConfiguration: CheckoutConfiguration? = null
     private var paymentMethods: PaymentMethodsApiResponse? = null
-    private var cardComponent: AdyenCardComponent? = null
+    private var activeComponent: AdyenCardComponent? = null
 
     companion object {
         private const val TAG = "AdyenImplementation"
@@ -37,20 +34,21 @@ class AdyenImplementation(
                 }
 
         val analyticsConfiguration =
-            when (enableAnalytics) {
-                true -> AnalyticsConfiguration(AnalyticsLevel.ALL)
-                false -> AnalyticsConfiguration(AnalyticsLevel.NONE)
-            }
+                when (enableAnalytics) {
+                    true -> AnalyticsConfiguration(AnalyticsLevel.ALL)
+                    false -> AnalyticsConfiguration(AnalyticsLevel.NONE)
+                }
 
-        checkoutConfiguration = CheckoutConfiguration(
-            environment = adyenEnvironment,
-            clientKey = clientKey,
-            analyticsConfiguration = analyticsConfiguration,
-        )
+        checkoutConfiguration =
+                CheckoutConfiguration(
+                        environment = adyenEnvironment,
+                        clientKey = clientKey,
+                        analyticsConfiguration = analyticsConfiguration,
+                )
 
         // Initialize card component
         checkoutConfiguration?.let { config ->
-            cardComponent = AdyenCardComponent(activity, config, plugin)
+            activeComponent = AdyenCardComponent(activity, config, plugin)
         }
 
         Log.d(TAG, "Adyen SDK initialized successfully with environment: $environment")
@@ -71,12 +69,12 @@ class AdyenImplementation(
 
     /** Present the Card component for payment */
     fun presentCardComponent(
-        amount: Int?,
-        countryCode: String?,
-        currencyCode: String?,
-        configuration: JSObject?,
-        style: JSObject?,
-        viewOptions: JSObject?
+            amount: Int?,
+            countryCode: String?,
+            currencyCode: String?,
+            configuration: JSObject?,
+            style: JSObject?,
+            viewOptions: JSObject?
     ) {
         activity.runOnUiThread {
             hideComponent()
@@ -94,25 +92,26 @@ class AdyenImplementation(
 
             // Find card payment method
             val cardPaymentMethod =
-                methods.paymentMethods?.find { it.type == PaymentMethodTypes.SCHEME }
-                    ?: throw IllegalStateException("Card payment method not found")
+                    methods.paymentMethods?.find { it.type == PaymentMethodTypes.SCHEME }
+                            ?: throw IllegalStateException("Card payment method not found")
 
             // Always create fresh CardComponent instance to avoid cached configurations
             val cardComp = AdyenCardComponent(activity, config, plugin)
 
             // Create fresh component with current parameters
-            val component = cardComp.create(
-                amount = amount,
-                currencyCode = currencyCode,
-                paymentMethod = cardPaymentMethod,
-                countryCode = countryCode,
-                configuration = configuration
-            )
+            val component =
+                    cardComp.create(
+                            amount = amount,
+                            currencyCode = currencyCode,
+                            paymentMethod = cardPaymentMethod,
+                            countryCode = countryCode,
+                            configuration = configuration
+                    )
 
             cardComp.present(component, style, viewOptions)
 
             // Update reference to new component
-            cardComponent = cardComp
+            activeComponent = cardComp
 
             Log.d(TAG, "Card component created and presented")
         }
@@ -121,8 +120,15 @@ class AdyenImplementation(
     /** Hide the currently presented component */
     fun hideComponent() {
         activity.runOnUiThread {
-            cardComponent?.hide()
+            activeComponent?.hide()
             Log.d(TAG, "Component hidden")
+        }
+    }
+
+    fun destroyComponent() {
+        activity.runOnUiThread {
+            activeComponent?.destroy()
+            Log.d(TAG, "Component destroyed")
         }
     }
 }

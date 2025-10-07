@@ -15,12 +15,12 @@ class AdyenPlugin : Plugin() {
     override fun load() {
         super.load()
         implementation = AdyenImplementation(this, bridge.activity)
-        
+
         // Initialize Adyen SDK with configuration
         val clientKey = config.getString("clientKey")
         val environment = config.getString("environment")
         val enableAnalytics = config.getBoolean("enableAnalytics", false)
-        
+
         if (clientKey != null && environment != null) {
             try {
                 implementation.start(clientKey, environment, enableAnalytics)
@@ -28,19 +28,23 @@ class AdyenPlugin : Plugin() {
                 Logger.error("AdyenPlugin", "Failed to initialize Adyen: ${e.message}", e)
             }
         } else {
-            Logger.error("AdyenPlugin", "Missing required configuration: clientKey or environment", null)
+            Logger.error(
+                    "AdyenPlugin",
+                    "Missing required configuration: clientKey or environment",
+                    null
+            )
         }
     }
 
     @PluginMethod
     fun setCurrentPaymentMethods(call: PluginCall) {
         val paymentMethodsJson = call.getObject("paymentMethodsJson")
-        
+
         if (paymentMethodsJson == null) {
             call.reject("Invalid or missing payment methods json")
             return
         }
-        
+
         try {
             implementation.setPaymentMethods(paymentMethodsJson)
             call.resolve()
@@ -57,15 +61,15 @@ class AdyenPlugin : Plugin() {
         val configuration = call.getObject("configuration")
         val style = call.getObject("style")
         val viewOptions = call.getObject("viewOptions")
-        
+
         try {
             implementation.presentCardComponent(
-                amount = amount,
-                countryCode = countryCode,
-                currencyCode = currencyCode,
-                configuration = configuration,
-                style = style,
-                viewOptions = viewOptions
+                    amount = amount,
+                    countryCode = countryCode,
+                    currencyCode = currencyCode,
+                    configuration = configuration,
+                    style = style,
+                    viewOptions = viewOptions
             )
             call.resolve()
         } catch (e: Exception) {
@@ -80,6 +84,16 @@ class AdyenPlugin : Plugin() {
             call.resolve()
         } catch (e: Exception) {
             call.reject("Failed to hide component: ${e.message}")
+        }
+    }
+
+    @PluginMethod
+    fun destroyComponent(call: PluginCall) {
+        try {
+            implementation.destroyComponent()
+            call.resolve()
+        } catch (e: Exception) {
+            call.reject("Failed to destroy component: ${e.message}")
         }
     }
 

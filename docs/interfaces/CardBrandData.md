@@ -1,6 +1,6 @@
 # Interface: CardBrandData
 
-Defined in: [components/card.ts:155](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/components/card.ts#L155)
+Defined in: [src/definitions/components/card.ts:156](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/components/card.ts#L156)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [components/card.ts:155](https://github.com/Fiksuruoka-fi/capacitor-
 cardBrands: CardBrand | CardBrand[];
 ```
 
-Defined in: [components/card.ts:160](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/components/card.ts#L160)
+Defined in: [src/definitions/components/card.ts:161](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/components/card.ts#L161)
 
 iOS: List of detected card brands
 Android: Detected card brand
@@ -23,6 +23,6 @@ Android: Detected card brand
 primaryBrand: CardBrand;
 ```
 
-Defined in: [components/card.ts:165](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/components/card.ts#L165)
+Defined in: [src/definitions/components/card.ts:166](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/components/card.ts#L166)
 
 First card brand in the list (iOS) or the detected brand (Android)

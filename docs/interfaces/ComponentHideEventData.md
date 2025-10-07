@@ -1,6 +1,6 @@
 # Interface: ComponentHideEventData
 
-Defined in: [index.ts:189](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/index.ts#L189)
+Defined in: [src/definitions/index.ts:237](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L237)
 
 ## Properties
 
@@ -10,4 +10,4 @@ Defined in: [index.ts:189](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob
 reason: "user_gesture";
 ```
 
-Defined in: [index.ts:190](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/index.ts#L190)
+Defined in: [src/definitions/index.ts:238](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L238)

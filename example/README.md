@@ -17,7 +17,7 @@ This example demonstrates how to integrate the `@foodello/capacitor-adyen` plugi
 npm install
 
 # Install iOS native dependencies (if developing for iOS)
-cd ios/App && pod install && cd ../..
+cd ios/app && pod install && cd ../..
 ```
 
 ### 2. Configure Environment Variables
@@ -31,6 +31,7 @@ cp .env.example .env.local
 # Edit with your actual Adyen credentials
 # VITE_ADYEN_ENVIRONMENT=test
 # VITE_ADYEN_CLIENT_KEY=your_actual_client_key_here
+# ...
 ```
 
 Adyen keys requires a whitelisted domain to allow Card component rendering.

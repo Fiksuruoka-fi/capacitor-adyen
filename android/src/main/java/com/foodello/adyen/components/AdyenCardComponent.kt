@@ -9,6 +9,7 @@ import android.view.ContextThemeWrapper
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.ComponentActivity
@@ -48,7 +49,7 @@ class AdyenCardComponent(
     private val checkoutConfiguration: CheckoutConfiguration,
     private val adyenPlugin: AdyenPlugin
 ) {
-    private var activeComponent: CardComponent? = null
+    var component: CardComponent? = null
     private var dialog: BottomSheetDialog? = null
     private var paymentMethodName: String? = null
 
@@ -77,7 +78,7 @@ class AdyenCardComponent(
 
             val uniqueKey = "card_${SystemClock.uptimeMillis()}"
 
-            val component =
+            val cmp =
                 CardComponent.PROVIDER.get(
                     activity = activity as ComponentActivity,
                     paymentMethod = paymentMethod,
@@ -88,10 +89,10 @@ class AdyenCardComponent(
                 )
 
             paymentMethodName = paymentMethod.name
-            activeComponent = component
+            component = cmp
 
             Logger.debug(TAG, "Card component created: ${cardConfiguration.toDebugString()}")
-            return component
+            return cmp
         } catch (e: Exception) {
             Logger.error(TAG, "Failed to create card component", e)
             throw e
@@ -110,8 +111,9 @@ class AdyenCardComponent(
     private fun createCardCallback(): ComponentCallback<CardComponentState> {
         return object : ComponentCallback<CardComponentState> {
             override fun onAdditionalDetails(actionComponentData: ActionComponentData) {
-                // TODO("Not implemented")
-                Logger.warn(TAG, "onAdditionalDetails called, but not implemented.")
+                val actionComponentJson = JSObject.fromJSONObject(ActionComponentData.SERIALIZER.serialize(actionComponentData))
+                Logger.debug(TAG, "onAdditionalDetails: $actionComponentData")
+                adyenPlugin.onEvent("onAdditionalDetails", actionComponentJson)
             }
 
             override fun onError(componentError: ComponentError) {
@@ -168,14 +170,14 @@ class AdyenCardComponent(
     }
 
     @Throws(Exception::class)
-    fun present(component: CardComponent, style: JSObject?, viewOptions: JSObject? = null) {
+    fun present(cmp: CardComponent, style: JSObject?, viewOptions: JSObject? = null) {
         try {
             val act = activity as ComponentActivity
 
             // Create fresh themed context each time to avoid cached button text
             val themed = ContextThemeWrapper(act, R.style.AdyenNeutralTheme)
 
-            val adyenView = AdyenComponentView(themed).apply { attach(component, act) }
+            val adyenView = AdyenComponentView(themed).apply { attach(cmp, act) }
 
             // Style the *inner form* after it's attached
             adyenView.post { FormStyleApplier.apply(adyenView, style) }
@@ -186,7 +188,7 @@ class AdyenCardComponent(
 
             dialog!!.show()
 
-            activeComponent = component
+            component = cmp
             adyenPlugin.onEvent("onShow", JSObject())
             Logger.debug(TAG, "Card component presented with fresh context")
         } catch (e: Exception) {
@@ -210,17 +212,15 @@ class AdyenCardComponent(
             LinearLayout(themedContext).apply {
                 orientation = LinearLayout.HORIZONTAL
                 gravity = Gravity.CENTER_VERTICAL
-                setPadding(
-                    dp(themedContext, 16),
-                    dp(themedContext, 12),
-                    dp(themedContext, 8),
-                    dp(themedContext, 12)
+                setPaddingRelative(0,0,0,0)
+                // DON'T set background here - let SheetChromeApplier handle it
+                layoutParams = ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
                 )
-                layoutParams =
-                    ViewGroup.LayoutParams(
-                        ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT
-                    )
+                // Allow corners to show through
+                clipToPadding = false
+                clipChildren = false
             }
 
         val titleView =
@@ -228,15 +228,31 @@ class AdyenCardComponent(
                 text = paymentMethodName ?: context.getString(R.string.cardComponentTitle)
                 setTextSize(TypedValue.COMPLEX_UNIT_SP, 18f)
                 setTypeface(typeface, Typeface.BOLD)
+                setPadding(dp(themedContext, 16), dp(themedContext, 12), 0, dp(themedContext, 12))
                 layoutParams =
                     LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
             }
 
         val closeBtn =
             ImageButton(themedContext).apply {
-                setImageResource(android.R.drawable.ic_menu_close_clear_cancel)
+                setImageResource(R.drawable.close_24px)
                 background = null
                 contentDescription = "Close"
+
+                layoutParams = LinearLayout.LayoutParams(
+                    dp(themedContext, 44),
+                    dp(themedContext, 44)
+                )
+
+                // Add padding for better touch target
+                setPadding(
+                    dp(themedContext, 10),
+                    dp(themedContext, 10),
+                    dp(themedContext, 10),
+                    dp(themedContext, 10)
+                )
+
+                scaleType = ImageView.ScaleType.CENTER_INSIDE
             }
 
         header.addView(titleView)
@@ -246,12 +262,7 @@ class AdyenCardComponent(
         val container =
             LinearLayout(themedContext).apply {
                 orientation = LinearLayout.VERTICAL
-                setPadding(
-                    dp(themedContext, 16),
-                    dp(themedContext, 8),
-                    dp(themedContext, 16),
-                    dp(themedContext, 24)
-                )
+                setPadding(0,0,0,0)
                 addView(header)
                 addView(
                     adyenView,
@@ -279,6 +290,7 @@ class AdyenCardComponent(
             targets =
                 SheetChromeApplier.Targets(
                     sheet = container,
+                    header = header,
                     headerTitle = titleView,
                     headerClose = closeBtn
                 )
@@ -298,6 +310,13 @@ class AdyenCardComponent(
         } catch (e: Exception) {
             Logger.error(TAG, "Error hiding component", e)
         }
+    }
+
+    /**
+     * Destroy whole component, including all resources.
+     */
+    fun destroy() {
+        cleanup(destroy = true)
     }
 
     /** Creates card configuration from provided options */
@@ -342,8 +361,8 @@ class AdyenCardComponent(
             isHolderNameRequired = configuration?.optBoolean("showsHolderNameField") ?: false
             isStorePaymentFieldVisible =
                 configuration?.optBoolean("showsStorePaymentMethodField") ?: false
-            isHideCvc = !(configuration?.optBoolean("showsSecurityCodeField") ?: true)
-            isHideCvcStoredCard = !(configuration?.optBoolean("showsCvcInStoredCardField") ?: true)
+            isHideCvc = configuration?.optBoolean("showsSecurityCodeField", true)?.let { !it } ?: false
+            isHideCvcStoredCard = configuration?.optBoolean("showsCvcInStoredCardField", true)?.let { !it } ?: false
             supportedCardBrands =
                 configuration?.optJSONArray("allowedCardTypes")?.let { brands ->
                     List(brands.length()) { CardBrand(brands.getString(it)) }
@@ -415,8 +434,11 @@ class AdyenCardComponent(
     }
 
     /** Clean up component resources */
-    fun cleanup() {
-        activeComponent = null
+    fun cleanup(destroy: Boolean = false) {
+        if (destroy) {
+            component = null
+        }
+
         dialog = null
         paymentMethodName = null
 

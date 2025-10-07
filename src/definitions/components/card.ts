@@ -1,3 +1,4 @@
+import { CardConfiguration } from '@adyen/adyen-web';
 import type { BaseAdyenComponentOptions } from '..';
 import type { ComponentViewOptions, FormComponentStyle } from '../styles';
 
@@ -232,4 +233,102 @@ export interface CardComponentEvents {
    * ```
    */
   onCardChange: (data: CardChangeEventData) => void;
+}
+
+/**
+ * State of the native card component
+ * @group Card Component
+ */
+export interface NativeCardState {
+  /**
+   * Card brand (e.g., 'visa', 'mc', 'amex', etc.)
+   */
+  brand: string;
+
+  /**
+   * Component state (loading or submitted)
+   */
+  state: 'loading' | 'submitted';
+
+  /**
+   * Last four digits of the card number
+   */
+  lastFour: string;
+
+  /**
+   * Show "Add card" button immediately when rendering loading state
+   * @default false
+   */
+  showForceEditButton: boolean;
+}
+
+/**
+ * Native card component configuration options
+ *
+ * @group Card Component
+ */
+export interface NativeCardConfiguration {
+  /**
+   * Override card brand image `src` strings
+   * @example
+   * ```json
+   * { "mc": "https://example.com/mc.png", "visa": "https://example.com/visa.png" }
+   * ```
+   */
+  brandImages?: Record<string, string>;
+
+  /**
+   * i18n strings to use in Web presentation on native platforms.
+   * Fallbacks to English strings.
+   */
+  labels?: {
+    /**
+     * Label for the button to add a new card
+     * @default "Add card"
+     */
+    addCard?: string;
+
+    /**
+     * Title on top of filled card brand and number
+     * @default "Card:"
+     */
+    submittedCardTitle?: string;
+
+    /**
+     * Label for the button to change the payment method once filled
+     * @default "Change"
+     */
+    changePaymentMethod?: string;
+  };
+
+  /**
+   * Override default behaviour when the user taps "Edit" or "Add card" button.
+   * You can use this to present your own card form or handle the event differently.
+   *
+   * @default presents the native Card component form
+   * @example
+   * ```typescript
+   * async function onClickEdit() {
+   *   // Present your own card form or handle differently
+   * }
+   * ```
+   */
+  onClickEdit?: () => void;
+
+  /**
+   * Component options for the native bottom sheet card form presentation
+   */
+  componentOptions?: Omit<CardComponentOptions, 'amount' | 'countryCode' | 'currencyCode'>;
+}
+
+/**
+ * Extended Card component configuration including native options
+ *
+ * @group Card Component
+ * @see https://docs.adyen.com/payment-methods/cards/web-component/#optional-configuration
+ */
+export interface ExtendedCardConfiguration extends CardConfiguration {
+  nativeCard?: NativeCardConfiguration;
+  isDev?: boolean;
+  testNativePresentation?: boolean;
 }

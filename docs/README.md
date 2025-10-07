@@ -6,6 +6,9 @@
 - [CardComponentConfiguration](interfaces/CardComponentConfiguration.md)
 - [CardComponentMethods](interfaces/CardComponentMethods.md)
 - [CardComponentEvents](interfaces/CardComponentEvents.md)
+- [NativeCardState](interfaces/NativeCardState.md)
+- [NativeCardConfiguration](interfaces/NativeCardConfiguration.md)
+- [ExtendedCardConfiguration](interfaces/ExtendedCardConfiguration.md)
 - [AdyenPlugin](interfaces/AdyenPlugin.md)
 
 ## Styling
@@ -35,6 +38,7 @@
 - [CardBrandData](interfaces/CardBrandData.md)
 - [CardBrand](interfaces/CardBrand.md)
 - [BaseAdyenPlugin](interfaces/BaseAdyenPlugin.md)
+- [AdditionalDetailsEventData](interfaces/AdditionalDetailsEventData.md)
 - [PaymentSubmitEventData](interfaces/PaymentSubmitEventData.md)
 - [PaymentErrorEventData](interfaces/PaymentErrorEventData.md)
 - [ComponentHideEventData](interfaces/ComponentHideEventData.md)

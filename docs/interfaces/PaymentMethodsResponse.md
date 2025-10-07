@@ -1,6 +1,6 @@
 # Interface: PaymentMethodsResponse
 
-Defined in: [index.ts:33](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/index.ts#L33)
+Defined in: [src/definitions/index.ts:49](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L49)
 
 JSON response from Adyen API call
 
@@ -16,7 +16,7 @@ https://docs.adyen.com/api-explorer/Checkout/latest/post/paymentMethods for more
 paymentMethods: any[];
 ```
 
-Defined in: [index.ts:37](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/index.ts#L37)
+Defined in: [src/definitions/index.ts:53](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L53)
 
 Array of available payment methods.
 
@@ -28,6 +28,6 @@ Array of available payment methods.
 optional savedPaymentMethods: any[];
 ```
 
-Defined in: [index.ts:42](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/11440fe41a762b3d0bd5e9f1d1bfe680598119ee/src/definitions/index.ts#L42)
+Defined in: [src/definitions/index.ts:58](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f6b775642775e61e00bb60787472fc2c2f9bd045/src/definitions/index.ts#L58)
 
 The type of the payment method response, typically "PaymentMethods".

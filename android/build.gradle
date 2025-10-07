@@ -68,6 +68,8 @@ dependencies {
 
     // Adyen Android SDK
     implementation "com.adyen.checkout:card:$adyenVersion"
+    implementation "com.adyen.checkout:redirect:$adyenVersion"
+    implementation "com.adyen.checkout:action:$adyenVersion"
 
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"

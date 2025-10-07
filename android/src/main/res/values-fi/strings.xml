@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cardComponentTitle">Kortti</string>
+    <string name="threeds2ComponentTitle">Purchase Authentication</string>
+</resources>

@@ -14,4 +14,8 @@ export class AdyenWeb extends WebPlugin implements AdyenPlugin {
   async hideComponent(): Promise<void> {
     throw this.unavailable('method is not available on web, use Adyen Web SDK directly.');
   }
+
+  async destroyComponent(): Promise<void> {
+    throw this.unavailable('method is not available on web.');
+  }
 }

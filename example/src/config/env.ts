@@ -5,6 +5,8 @@ export const envConfig = {
     countryCode: import.meta.env.VITE_ADYEN_COUNTRY_CODE || 'NL',
     locale: import.meta.env.VITE_ADYEN_LOCALE || 'en-US',
   },
+  isDev: import.meta.env.VITE_IS_DEV === 'true' || false,
+  testNativePresentation: import.meta.env.VITE_TEST_NATIVE_PRESENTATION === 'true' || false,
 };
 
 // Validate on app startup
