@@ -1,6 +1,6 @@
 # Interface: BaseEvents
 
-Defined in: [src/definitions/index.ts:77](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/index.ts#L77)
+Defined in: [src/definitions/index.ts:77](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L77)
 
 Base events available for all Adyen components.
 
@@ -16,7 +16,7 @@ Base events available for all Adyen components.
 onAdditionalDetails: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:90](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/index.ts#L90)
+Defined in: [src/definitions/index.ts:90](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L90)
 
 Listens for payment `onAdditionalDetails` events.
 
@@ -52,7 +52,7 @@ Adyen.addListener('onAdditionalDetails', async (data) => {
 onSubmit: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:104](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/index.ts#L104)
+Defined in: [src/definitions/index.ts:104](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L104)
 
 Listens for payment `submit` events.
 
@@ -88,7 +88,7 @@ Adyen.addListener('onSubmit', async (data) => {
 onError: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:119](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/index.ts#L119)
+Defined in: [src/definitions/index.ts:119](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L119)
 
 Listens for payment and component `error` events.
 
@@ -124,7 +124,7 @@ Adyen.addListener('onError', async (data) => {
 onShow: () => void;
 ```
 
-Defined in: [src/definitions/index.ts:134](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/index.ts#L134)
+Defined in: [src/definitions/index.ts:134](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L134)
 
 Listens for component `present` events.
 
@@ -154,7 +154,7 @@ Adyen.addListener('onShow', async () => {
 onHide: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/index.ts#L149)
+Defined in: [src/definitions/index.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/4ec12391e08800da9ed0c6dd7ddc94c6929d4f96/src/definitions/index.ts#L149)
 
 Listens for component `dismiss` events.
 

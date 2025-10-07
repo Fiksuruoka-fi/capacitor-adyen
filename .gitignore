@@ -2,6 +2,11 @@
 dist
 node_modules
 
+# Test artifacts and coverage
+coverage
+*.lcov
+junit.xml
+
 # iOS files
 Pods
 Podfile.lock
