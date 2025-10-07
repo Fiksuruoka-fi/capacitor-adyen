@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AdyenTextInputStyle" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/adyen_surface</item>
+        <item name="boxStrokeWidth">@dimen/adyen_box_stroke_width</item>
+        <item name="boxStrokeColor">@color/adyen_textinput_stroke</item>
+        <item name="hintTextColor">@color/adyen_hint_text</item>
+        <item name="android:textColorHint">@color/adyen_hint_text</item>
+
+        <!-- Make focus visible for low-vision users -->
+        <item name="helperTextTextColor">@color/adyen_on_surface_variant</item>
+        <item name="errorTextColor">@color/adyen_error</item>
+    </style>
+</resources>

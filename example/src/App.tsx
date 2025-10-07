@@ -2,17 +2,25 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { AdyenCheckout, Core, type CoreConfiguration, type PaymentResponseData } from '@adyen/adyen-web';
 import { Capacitor } from '@capacitor/core';
-import { Adyen, type CardComponentOptions } from '@foodello/capacitor-adyen';
-import '@adyen/adyen-web/styles/adyen.css';
-import CardWithNativeSupport from './components/adyen/Card.jsx';
+import {
+  Adyen,
+  Card as CardWithNativeSupport,
+  type ExtendedCardConfiguration,
+  type CardComponentOptions,
+} from '@foodello/capacitor-adyen';
 import { useEffect, useRef, useState } from 'react';
 import { envConfig } from './config/env';
+
+import '@adyen/adyen-web/styles/adyen.css';
+import '@foodello/capacitor-adyen/dist/esm/styles.css';
 
 function App() {
   const environment = envConfig.adyen.environment;
   const clientKey = envConfig.adyen.clientKey;
   const countryCode = envConfig.adyen.countryCode;
   const locale = envConfig.adyen.locale;
+  const isDev = envConfig.isDev;
+  const testNativePresentation = envConfig.testNativePresentation;
 
   const PAYMENT_METHOD_JSON = {
     // Your payment methods response here
@@ -70,8 +78,10 @@ function App() {
     },
   };
 
-  const cardConfiguration = {
-    /** Your web card configuration here */
+  const cardConfiguration: ExtendedCardConfiguration = {
+    /** Your Adyen card configuration here */
+    isDev,
+    testNativePresentation,
   };
 
   const containerRef = useRef(null);
@@ -134,7 +144,7 @@ function App() {
           </p>
         </div>
 
-        {/* Web Card Component */}
+        {/* Default Hybrid Card Component */}
         <div className="max-w-2xl mx-auto mb-12">
           <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
             <CardHeader className="pb-4">
@@ -142,7 +152,11 @@ function App() {
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 Card Component
               </CardTitle>
-              <p className="text-sm text-slate-600">Web implementation - works on all platforms</p>
+              <p className="text-sm text-slate-600">
+                Default implementation - works on all platforms
+                <br />
+                <small>Loads form in web and opens native component on mobile</small>
+              </p>
             </CardHeader>
             <CardContent className="pt-0">
               <div ref={containerRef} className="min-h-[200px] rounded-lg border border-slate-200 bg-slate-50/50 p-4" />
@@ -170,12 +184,18 @@ function App() {
             <CardContent className="pt-0">
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 <Button
-                  onClick={() => presentCardComponent({})}
+                  onClick={() =>
+                    presentCardComponent({
+                      amount: 0, // Preauthorizing card requires zero amount
+                      countryCode: 'NL',
+                      currencyCode: 'EUR',
+                    })
+                  }
                   disabled={!Capacitor.isNativePlatform()}
                   className="h-auto py-4 px-6 flex-col items-start text-left bg-slate-900 hover:bg-slate-800"
                 >
                   <span className="font-semibold text-white">Default</span>
-                  <span className="text-xs text-slate-300 mt-1">Standard Adyen styling</span>
+                  <span className="text-xs text-slate-300 mt-1">Pre-authorize card only</span>
                 </Button>
 
                 <Button
@@ -183,7 +203,12 @@ function App() {
                     presentCardComponent({
                       amount: 2500,
                       currencyCode: 'EUR',
-                      countryCode: 'NL',
+                      countryCode: 'FI',
+                      configuration: {
+                        localizationParameters: {
+                          languageOverride: 'fi',
+                        },
+                      },
                       viewOptions: {
                         title: 'Quick Payment',
                         titleColor: '#1e293b',
@@ -197,6 +222,10 @@ function App() {
                         textField: {
                           titleColor: '#1e293b',
                           textColor: '#0f172a',
+                          tintColor: '#3b82f6',
+                        },
+                        switch: {
+                          titleColor: '#1e293b',
                           tintColor: '#3b82f6',
                         },
                       },
@@ -234,6 +263,10 @@ function App() {
                           backgroundColor: '#334155',
                           tintColor: '#10b981',
                           separatorColor: '#475569',
+                        },
+                        switch: {
+                          titleColor: '#f1f5f9',
+                          tintColor: '#10b981',
                         },
                         button: {
                           backgroundColor: '#10b981',
@@ -285,6 +318,10 @@ function App() {
                             weight: 'medium',
                           },
                         },
+                        switch: {
+                          titleColor: '#92400e',
+                          tintColor: '#f59e0b',
+                        },
                         button: {
                           backgroundColor: '#f59e0b',
                           textColor: '#ffffff',
@@ -311,10 +348,6 @@ function App() {
                       amount: 9999,
                       currencyCode: 'EUR',
                       countryCode: 'BE',
-                      configuration: {
-                        showsSecurityCodeField: false,
-                        supportedCardTypes: ['visa', 'mc'],
-                      },
                       viewOptions: {
                         title: 'Sky Theme Payment',
                         titleColor: '#0c4a6e',
@@ -363,9 +396,7 @@ function App() {
                   onClick={() =>
                     presentCardComponent({
                       configuration: {
-                        showsHolderNameField: false,
-                        showsSecurityCodeField: true,
-                        supportedCardTypes: ['visa'],
+                        allowedCardTypes: ['visa'],
                       },
                       viewOptions: {
                         title: 'Pink Theme',
@@ -391,6 +422,10 @@ function App() {
                             size: 16,
                             weight: 'regular',
                           },
+                        },
+                        switch: {
+                          titleColor: '#be185d',
+                          tintColor: '#ec4899',
                         },
                         hint: {
                           color: '#be185d',

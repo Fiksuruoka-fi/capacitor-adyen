@@ -9,7 +9,7 @@ import Capacitor
     private var paymentMethods: PaymentMethods?
     
     private var activePaymentComponent: PaymentComponent?
-    private lazy var componentFactory = ComponentFactory(bridge: self)
+    private lazy var cardComponent = AdyenCardComponent(bridge: self)
     
     // MARK: - Initialization
     public override init() {
@@ -48,7 +48,7 @@ import Capacitor
         configuration: [String: Any]? = nil,
         style: [String: Any]? = nil
     ) throws -> UIViewController {
-        return try componentFactory.createCardComponent(
+        return try cardComponent.create(
             amount: amount,
             countryCode: countryCode,
             currencyCode: currencyCode,

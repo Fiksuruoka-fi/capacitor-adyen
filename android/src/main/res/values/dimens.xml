@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="adyen_corner_radius">24dp</dimen>
+    <dimen name="adyen_button_min_height">48dp</dimen>
+    <dimen name="adyen_touch_target">48dp</dimen>
+    <dimen name="adyen_content_padding_h">16dp</dimen>
+    <dimen name="adyen_content_padding_v">16dp</dimen>
+    <dimen name="adyen_box_stroke_width">2dp</dimen>
+</resources>

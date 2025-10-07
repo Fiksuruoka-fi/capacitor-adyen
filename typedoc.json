@@ -1,0 +1,18 @@
+{
+  "entryPoints": ["src/definitions/index.ts"],
+  "tsconfig": "tsconfig.typedoc.json",
+  "plugin": ["typedoc-plugin-markdown"],
+  "out": "docs",
+  "readme": "none",
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "hidePageHeader": true,
+  "hideBreadcrumbs": true,
+  "hidePageTitle": false,
+  "useCodeBlocks": true,
+  "expandObjects": true,
+  "categorizeByGroup": true,
+  "groupOrder": ["Plugin Interface", "Card Component", "Styling", "Configuration", "Events"],
+  "kindSortOrder": ["Interface", "Class", "Enum", "TypeAlias", "Variable"],
+  "sort": ["source-order", "alphabetical"]
+}

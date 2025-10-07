@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AdyenNeutralTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Use semantic colors that swap in night mode -->
+        <item name="colorPrimary">@color/adyen_primary</item>
+        <item name="colorOnPrimary">@color/adyen_on_primary</item>
+        <item name="colorSurface">@color/adyen_surface</item>
+        <item name="colorOnSurface">@color/adyen_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/adyen_on_surface_variant</item>
+        <item name="colorOutline">@color/adyen_outline</item>
+
+        <!-- Components -->
+        <item name="textInputStyle">@style/AdyenTextInputStyle</item>
+        <item name="materialButtonStyle">@style/AdyenPrimaryButton</item>
+
+        <!-- Typography defaults that scale with user font size -->
+        <item name="textAppearanceBodyLarge">@style/AdyenTextBody</item>
+        <item name="textAppearanceTitleMedium">@style/AdyenTextTitle</item>
+
+        <!-- System bars readable in both modes -->
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+    </style>
+</resources>
+

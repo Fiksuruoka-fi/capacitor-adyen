@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Neutral, high-contrast defaults -->
+    <color name="adyen_primary">#1E1F22</color>
+    <color name="adyen_on_primary">#FFFFFF</color>
+
+    <color name="adyen_surface">#FFFFFF</color>
+    <color name="adyen_on_surface">#111315</color>
+    <color name="adyen_on_surface_variant">#42474E</color>
+
+    <!-- Strokes / separators -->
+    <color name="adyen_outline">#D5D7DB</color>
+    <color name="adyen_outline_variant">#B7BCC4</color>
+
+    <!-- States -->
+    <color name="adyen_error">#D32F2F</color>
+    <color name="adyen_disabled_text">#9AA0A6</color>
+    <color name="adyen_disabled_bg">#ECEFF3</color>
+
+    <!-- Scrim (dim behind sheet) -->
+    <color name="adyen_scrim">#80000000</color>
+</resources>

@@ -11,23 +11,11 @@ export class AdyenWeb extends WebPlugin implements AdyenPlugin {
     throw this.unavailable('method is not available on web, use Adyen Web SDK directly.');
   }
 
-  async presentDropInComponent(): Promise<void> {
-    throw this.unavailable('method is not available on web, use Adyen Web SDK directly.');
-  }
-
-  async presentIdealComponent(): Promise<void> {
-    throw this.unavailable('method is not available on web, use Adyen Web SDK directly.');
-  }
-
-  async presentPayPalComponent(): Promise<void> {
-    throw this.unavailable('method is not available on web, use Adyen Web SDK directly.');
-  }
-
-  async presentBancontactComponent(): Promise<void> {
-    throw this.unavailable('method is not available on web, use Adyen Web SDK directly.');
-  }
-
   async hideComponent(): Promise<void> {
     throw this.unavailable('method is not available on web, use Adyen Web SDK directly.');
+  }
+
+  async destroyComponent(): Promise<void> {
+    throw this.unavailable('method is not available on web.');
   }
 }
