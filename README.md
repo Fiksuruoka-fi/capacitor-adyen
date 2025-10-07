@@ -95,7 +95,7 @@ You can use component from this plugin to extend Adyen web component's behaviour
 
 ```typescript
 import { Capacitor} from '@capacitor/core';
-import { Adyen, type ExtendedCardConfiguration } from '@foodello/capacitor-adyen';
+import { Adyen, Card, type ExtendedCardConfiguration } from '@foodello/capacitor-adyen';
 import { AdyenCheckout, Core, type CoreConfiguration, type PaymentResponseData } from '@adyen/adyen-web';
 
 import '@adyen/adyen-web/styles/adyen.css'; // Import Adyen base styles
@@ -161,8 +161,8 @@ const checkoutCore = CoreConfiguration = {
     // Your custom configuration here
   };
 
-  // 6. Create Card component instance
-  const cardComponent = new CardWithNativeSupport(coreRef.current, cardConfiguration);
+  // 6. Create Card component instance (use extended version from this @foodello/capacitor-adyen package)
+  const cardComponent = new Card(coreRef.current, cardConfiguration);
   
   // 7. Mount the component to your container
   const wrapper = document.getElementById('card-container');
