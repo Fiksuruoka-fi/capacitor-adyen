@@ -1,6 +1,6 @@
 # Interface: PaymentErrorEventData
 
-Defined in: [src/definitions/index.ts:232](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/index.ts#L232)
+Defined in: [src/definitions/index.ts:232](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/index.ts#L232)
 
 ## Indexable
 
@@ -16,4 +16,4 @@ Defined in: [src/definitions/index.ts:232](https://github.com/Fiksuruoka-fi/capa
 message: string;
 ```
 
-Defined in: [src/definitions/index.ts:234](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/index.ts#L234)
+Defined in: [src/definitions/index.ts:234](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/index.ts#L234)

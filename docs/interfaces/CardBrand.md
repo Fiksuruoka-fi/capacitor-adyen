@@ -1,6 +1,6 @@
 # Interface: CardBrand
 
-Defined in: [src/definitions/components/card.ts:169](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L169)
+Defined in: [src/definitions/components/card.ts:170](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/components/card.ts#L170)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/definitions/components/card.ts:169](https://github.com/Fiksuruo
 type: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:173](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L173)
+Defined in: [src/definitions/components/card.ts:174](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/components/card.ts#L174)
 
 Card brand name, e.g., 'visa', 'mc', 'amex', etc.
 
@@ -22,6 +22,6 @@ Card brand name, e.g., 'visa', 'mc', 'amex', etc.
 isSupported: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:178](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L178)
+Defined in: [src/definitions/components/card.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/f7f5e96f21755ab2c8662363cc5f5c74dae6561a/src/definitions/components/card.ts#L179)
 
 Only on iOS
