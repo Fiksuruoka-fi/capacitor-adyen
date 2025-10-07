@@ -1,0 +1,139 @@
+name: Prepare Release PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: "Version bump strategy (auto|patch|minor|major|none)"
+        required: true
+        default: "auto"
+        type: choice
+        options:
+          - auto
+          - patch
+          - minor
+          - major
+          - none
+      preid:
+        description: "Prerelease ID (e.g., rc, beta). Leave empty for stable."
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install
+        run: npm ci
+
+      - name: Ensure standard-version
+        run: |
+          node -e "require.resolve('standard-version')" \
+          || npm i -D standard-version
+
+      - name: Configure Git author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Compute standard-version flags
+        id: flags
+        run: |
+          BUMP="${{ github.event.inputs.bump }}"
+          PREID="${{ github.event.inputs.preid }}"
+          # Skip tag AND commit so create-pull-request can handle the commit
+          FLAGS="--no-verify --skip.tag --skip.commit"
+
+          if [ "$BUMP" = "patch" ] || [ "$BUMP" = "minor" ] || [ "$BUMP" = "major" ]; then
+            FLAGS="$FLAGS --release-as $BUMP"
+          elif [ "$BUMP" = "none" ]; then
+            # Update changelog only; keep version as-is
+            FLAGS="$FLAGS --skip.bump"
+          fi
+
+            if [ -n "$PREID" ]; then
+              FLAGS="$FLAGS --prerelease $PREID"
+            fi
+
+          echo "flags=$FLAGS" >> "$GITHUB_OUTPUT"
+
+      - name: Run standard-version (write files, no tag, no commit)
+        run: |
+          set -e
+          echo "Running: standard-version ${{ steps.flags.outputs.flags }}"
+          npx standard-version ${{ steps.flags.outputs.flags }} || {
+            echo "standard-version exited non-zero (likely no new conventional commits). Continuing."
+          }
+          echo "Resulting version: $(node -p "require('./package.json').version")"
+
+      - name: Read version (post-change or existing)
+        id: ver
+        run: |
+          VER=$(node -p "require('./package.json').version")
+          echo "version=$VER" >> "$GITHUB_OUTPUT"
+
+      - name: Slice release notes from CHANGELOG.md
+        id: notes
+        shell: bash
+        run: |
+          TAG="v${{ steps.ver.outputs.version }}"
+          awk -v tag="## $TAG" '
+            $0 ~ tag {p=1; print; next}
+            p && /^## / {p=0}
+            p
+          ' CHANGELOG.md > RELEASE_NOTES.md || true
+
+          if [ ! -s RELEASE_NOTES.md ]; then
+            echo "No specific section found for $TAG; using top portion of CHANGELOG." >&2
+            head -n 200 CHANGELOG.md > RELEASE_NOTES.md
+          fi
+
+          # Provide file path as an output
+          echo "notes_file=RELEASE_NOTES.md" >> "$GITHUB_OUTPUT"
+
+          # Provide file contents as multi-line output (GitHub Actions safe)
+          {
+            echo 'release_notes<<EOF'
+            cat RELEASE_NOTES.md
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create PR with changes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: "release/prepare-v${{ steps.ver.outputs.version }}"
+          title: "chore(release): prepare v${{ steps.ver.outputs.version }}"
+          body: |
+            This PR prepares the release.
+
+            **Version:** v${{ steps.ver.outputs.version }}
+
+            - You can edit `CHANGELOG.md` and `package.json` before tagging.
+            - Once merged to `main`, a separate workflow will tag the commit and open a **draft GitHub Release**.
+
+            ---
+            **Proposed Release Notes (editable):**
+            ```
+            ${{ steps.notes.outputs.release_notes }}
+            ```
+          commit-message: "chore(release): prepare v${{ steps.ver.outputs.version }} (no tag)"
+          add-paths: |
+            CHANGELOG.md
+            package.json
+            package-lock.json
