@@ -12,7 +12,6 @@ import CardDetails from './CardDetails';
 import { h } from 'preact';
 import { createConsola } from 'consola';
 
-import '@adyen/adyen-web/styles/adyen.css';
 import './styles.scss';
 
 class Card extends AdyenCardComponent {

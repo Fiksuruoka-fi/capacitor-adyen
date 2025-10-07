@@ -25,7 +25,7 @@ type TextFieldStyleDefinition = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:59](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L59)
+Defined in: [src/definitions/styles.ts:59](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L59)
 
 Describes styling for a text field in the form. This includes styling
 for the title label, user input text, placeholder text, and trailing icon.
@@ -38,7 +38,7 @@ for the title label, user input text, placeholder text, and trailing icon.
 optional title: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:61](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L61)
+Defined in: [src/definitions/styles.ts:61](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L61)
 
 Styling for the field's title label.
 
@@ -50,7 +50,7 @@ Styling for the field's title label.
 optional titleColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:63](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L63)
+Defined in: [src/definitions/styles.ts:63](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L63)
 
 Colour of the title label (legacy shortcut).
 
@@ -62,7 +62,7 @@ Colour of the title label (legacy shortcut).
 optional titleFont: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:65](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L65)
+Defined in: [src/definitions/styles.ts:65](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L65)
 
 Font used for the title label (legacy shortcut).
 
@@ -74,7 +74,7 @@ Font used for the title label (legacy shortcut).
 optional text: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:68](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L68)
+Defined in: [src/definitions/styles.ts:68](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L68)
 
 Styling for the user-entered text.
 
@@ -86,7 +86,7 @@ Styling for the user-entered text.
 optional textColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:70](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L70)
+Defined in: [src/definitions/styles.ts:70](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L70)
 
 Colour of the user-entered text (legacy shortcut).
 
@@ -98,7 +98,7 @@ Colour of the user-entered text (legacy shortcut).
 optional textFont: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:72](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L72)
+Defined in: [src/definitions/styles.ts:72](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L72)
 
 Font for the user-entered text (legacy shortcut).
 
@@ -110,7 +110,7 @@ Font for the user-entered text (legacy shortcut).
 optional placeholder: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:75](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L75)
+Defined in: [src/definitions/styles.ts:75](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L75)
 
 Styling for the placeholder text.
 
@@ -122,7 +122,7 @@ Styling for the placeholder text.
 optional placeholderColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:77](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L77)
+Defined in: [src/definitions/styles.ts:77](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L77)
 
 Colour of the placeholder text (legacy shortcut).
 
@@ -134,7 +134,7 @@ Colour of the placeholder text (legacy shortcut).
 optional placeholderFont: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:79](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L79)
+Defined in: [src/definitions/styles.ts:79](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L79)
 
 Font for the placeholder text (legacy shortcut).
 
@@ -152,7 +152,7 @@ optional icon: {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:82](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L82)
+Defined in: [src/definitions/styles.ts:82](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L82)
 
 Styling for the trailing icon.
 
@@ -204,7 +204,7 @@ Corner radius of the icon container.
 optional tintColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:96](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L96)
+Defined in: [src/definitions/styles.ts:96](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L96)
 
 Tint colour applied to the text field (cursor/accent).
 
@@ -216,7 +216,7 @@ Tint colour applied to the text field (cursor/accent).
 optional separatorColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:98](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L98)
+Defined in: [src/definitions/styles.ts:98](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L98)
 
 Colour of the separator line beneath the text field.
 
@@ -228,7 +228,7 @@ Colour of the separator line beneath the text field.
 optional backgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:100](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L100)
+Defined in: [src/definitions/styles.ts:100](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L100)
 
 Background colour of the entire text field cell.
 
@@ -240,6 +240,6 @@ Background colour of the entire text field cell.
 optional errorColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:102](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/styles.ts#L102)
+Defined in: [src/definitions/styles.ts:102](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L102)
 
 Colour used to highlight error states.

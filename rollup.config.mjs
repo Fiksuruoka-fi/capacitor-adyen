@@ -1,4 +1,3 @@
-// rollup.config.mjs
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
@@ -9,65 +8,76 @@ import cssnano from 'cssnano';
 import postcss from 'rollup-plugin-postcss';
 import * as sass from 'sass-embedded';
 
-export default {
-  input: 'src/index.ts', // build from source (not dist/esm)
-  output: [
-    {
+const external = ['@capacitor/core', '@adyen/adyen-web', 'preact', 'preact/hooks'];
+
+const basePluginsTS = typescript({
+  tsconfig: './tsconfig.build.json',
+  declaration: true,
+  declarationDir: 'dist/esm',
+  rootDir: 'src',
+});
+
+const basePlugins = [nodeResolve({ browser: true }), commonjs(), replace({ preventAssignment: true }), terser()];
+
+export default [
+  // 1) ESM build: the only one that extracts CSS (+ small map)
+  {
+    input: 'src/index.ts',
+    external,
+    output: {
       dir: 'dist/esm',
       format: 'esm',
       sourcemap: true,
+      sourcemapExcludeSources: true,
       preserveModules: true,
       preserveModulesRoot: 'src',
     },
-    // Script-tag build (optional)
-    {
-      file: 'dist/plugin.js',
-      format: 'iife',
-      name: 'capacitorAdyen',
-      globals: {
-        '@capacitor/core': 'capacitorExports',
-        '@adyen/adyen-web': 'adyenWeb',
-        preact: 'preact',
-        'preact/hooks': 'preactHooks',
+    plugins: [
+      basePluginsTS,
+      postcss({
+        extract: 'styles.css',
+        sourceMap: { inline: false, annotation: false },
+        map: { inline: false, annotation: false, sourcesContent: false },
+        plugins: [autoprefixer(), cssnano()],
+        use: { sass },
+      }),
+      ...basePlugins,
+    ],
+  },
+  {
+    input: 'src/index.ts',
+    external,
+    output: [
+      {
+        file: 'dist/plugin.js',
+        format: 'iife',
+        name: 'capacitorAdyen',
+        globals: {
+          '@capacitor/core': 'capacitorExports',
+          '@adyen/adyen-web': 'adyenWeb',
+          preact: 'preact',
+          'preact/hooks': 'preactHooks',
+        },
+        sourcemap: true,
+        sourcemapExcludeSources: true,
+        inlineDynamicImports: true,
       },
-      sourcemap: true,
-      inlineDynamicImports: true,
-    },
-    // CJS build (optional)
-    {
-      file: 'dist/plugin.cjs.js',
-      format: 'cjs',
-      sourcemap: true,
-      inlineDynamicImports: true,
-    },
-  ],
-  external: ['@capacitor/core', '@adyen/adyen-web', 'preact', 'preact/hooks'],
-  plugins: [
-    nodeResolve({ browser: true }),
-    commonjs(),
-    typescript({
-      tsconfig: './tsconfig.build.json', // emit types to dist/esm
-      declaration: true,
-      declarationDir: 'dist/esm',
-      rootDir: 'src',
-    }),
-    postcss({
-      extract: 'styles.css',
-      sourceMap: true,
-      plugins: [autoprefixer(), cssnano()],
-      // Use a *preprocessor* so we call the modern API ourselves:
-      preprocessor: async (content, id) => {
-        if (id.endsWith('.scss') || id.endsWith('.sass')) {
-          const result = await sass.compileAsync(id, { style: 'expanded', sourceMap: true });
-          return { code: result.css, map: result.sourceMap };
-        }
-        return { code: content };
+      {
+        file: 'dist/plugin.cjs.js',
+        format: 'cjs',
+        sourcemap: true,
+        sourcemapExcludeSources: true,
+        inlineDynamicImports: true,
       },
-    }),
-    replace({
-      preventAssignment: true,
-      // (optional) any shims you used earlier
-    }),
-    terser(),
-  ],
-};
+    ],
+    plugins: [
+      basePluginsTS,
+      postcss({
+        extract: false,
+        sourceMap: false,
+        use: { sass },
+      }),
+      ...basePlugins,
+    ],
+  },
+];

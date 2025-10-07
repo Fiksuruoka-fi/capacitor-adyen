@@ -1,6 +1,6 @@
 # Interface: AdditionalDetailsEventData
 
-Defined in: [src/definitions/index.ts:217](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/index.ts#L217)
+Defined in: [src/definitions/index.ts:217](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L217)
 
 ## Indexable
 

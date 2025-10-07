@@ -1,6 +1,6 @@
 # Interface: CardComponentConfiguration
 
-Defined in: [src/definitions/components/card.ts:30](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L30)
+Defined in: [src/definitions/components/card.ts:31](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L31)
 
 Configuration options specific to the Card component.
 
@@ -17,7 +17,7 @@ Configuration options specific to the Card component.
 optional showsHolderNameField: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:35](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L35)
+Defined in: [src/definitions/components/card.ts:36](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L36)
 
 Display cardholder name input field
 
@@ -35,7 +35,7 @@ false
 optional showsSecurityCodeField: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:41](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L41)
+Defined in: [src/definitions/components/card.ts:42](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L42)
 
 Display security code input field
 
@@ -53,7 +53,7 @@ true
 optional showsStorePaymentMethodField: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:47](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L47)
+Defined in: [src/definitions/components/card.ts:48](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L48)
 
 Display store payment method checkbox
 
@@ -71,7 +71,7 @@ false
 optional allowedCardTypes: string[];
 ```
 
-Defined in: [src/definitions/components/card.ts:54](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L54)
+Defined in: [src/definitions/components/card.ts:55](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L55)
 
 Supported card types
 Same as `supportedCardTypes` on Android
@@ -88,7 +88,7 @@ Same as `supportedCardTypes` on Android
 optional showsSubmitButton: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:60](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L60)
+Defined in: [src/definitions/components/card.ts:61](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L61)
 
 Display submit button
 
@@ -106,7 +106,7 @@ true
 optional shopperReference: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:65](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L65)
+Defined in: [src/definitions/components/card.ts:66](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L66)
 
 Your unique shopper reference.
 
@@ -122,7 +122,7 @@ optional billingAddress: {
 };
 ```
 
-Defined in: [src/definitions/components/card.ts:70](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L70)
+Defined in: [src/definitions/components/card.ts:71](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L71)
 
 Billing address configuration
 
@@ -177,7 +177,7 @@ all countries supported by Adyen
 optional koreanAuthenticationMode: "auto" | "hide" | "show";
 ```
 
-Defined in: [src/definitions/components/card.ts:100](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L100)
+Defined in: [src/definitions/components/card.ts:101](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L101)
 
 For Korean cards, sets if security fields show in the payment form. Possible values:
   - show: show the fields.
@@ -196,7 +196,7 @@ For Korean cards, sets if security fields show in the payment form. Possible val
 optional socialSecurityNumberMode: "auto" | "hide" | "show";
 ```
 
-Defined in: [src/definitions/components/card.ts:109](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L109)
+Defined in: [src/definitions/components/card.ts:110](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L110)
 
 For Brazilian cards, sets if the CPF/CNPJ social security number field shows in the payment form. Possible values:
   - show: show the field.
@@ -219,7 +219,7 @@ optional localizationParameters: {
 };
 ```
 
-Defined in: [src/definitions/components/card.ts:112](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9b0313d4b12ecff6be224a053e54e78b3d689f08/src/definitions/components/card.ts#L112)
+Defined in: [src/definitions/components/card.ts:113](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L113)
 
 Localization parameters for the component
 
