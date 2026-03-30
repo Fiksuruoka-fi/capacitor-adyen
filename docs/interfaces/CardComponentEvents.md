@@ -1,6 +1,6 @@
 # Interface: CardComponentEvents
 
-Defined in: [src/definitions/components/card.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L207)
+Defined in: [src/definitions/components/card.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L207)
 
 ## Extended by
 
@@ -14,7 +14,7 @@ Defined in: [src/definitions/components/card.ts:207](https://github.com/Fiksuruo
 onCardSubmit: (data) => void;
 ```
 
-Defined in: [src/definitions/components/card.ts:221](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L221)
+Defined in: [src/definitions/components/card.ts:221](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L221)
 
 Listens for Card component `submit` events.
 
@@ -50,7 +50,7 @@ Adyen.addListener('onCardSubmit', async (data) => {
 onCardChange: (data) => void;
 ```
 
-Defined in: [src/definitions/components/card.ts:236](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L236)
+Defined in: [src/definitions/components/card.ts:236](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L236)
 
 Listens for Card component's `change` events.
 

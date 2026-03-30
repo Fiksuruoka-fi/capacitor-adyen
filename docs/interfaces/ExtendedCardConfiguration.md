@@ -1,6 +1,6 @@
 # Interface: ExtendedCardConfiguration
 
-Defined in: [src/definitions/components/card.ts:331](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L331)
+Defined in: [src/definitions/components/card.ts:331](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L331)
 
 Extended Card component configuration including native options
 
@@ -1661,7 +1661,7 @@ CardConfiguration.onOrderUpdated
 optional nativeCard: NativeCardConfiguration;
 ```
 
-Defined in: [src/definitions/components/card.ts:332](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L332)
+Defined in: [src/definitions/components/card.ts:332](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L332)
 
 ***
 
@@ -1671,7 +1671,7 @@ Defined in: [src/definitions/components/card.ts:332](https://github.com/Fiksuruo
 optional isDev: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:333](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L333)
+Defined in: [src/definitions/components/card.ts:333](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L333)
 
 ***
 
@@ -1681,4 +1681,4 @@ Defined in: [src/definitions/components/card.ts:333](https://github.com/Fiksuruo
 optional testNativePresentation: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:334](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L334)
+Defined in: [src/definitions/components/card.ts:334](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L334)

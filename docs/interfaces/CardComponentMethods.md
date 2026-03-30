@@ -1,6 +1,6 @@
 # Interface: CardComponentMethods
 
-Defined in: [src/definitions/components/card.ts:183](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L183)
+Defined in: [src/definitions/components/card.ts:183](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L183)
 
 ## Extended by
 
@@ -14,7 +14,7 @@ Defined in: [src/definitions/components/card.ts:183](https://github.com/Fiksuruo
 presentCardComponent(options?): Promise<void>;
 ```
 
-Defined in: [src/definitions/components/card.ts:203](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L203)
+Defined in: [src/definitions/components/card.ts:203](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L203)
 
 Creates a Adyen Card component for handling card payments.
 
