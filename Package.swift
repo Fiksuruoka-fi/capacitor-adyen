@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-  name: "CapacitorAdyen",
+  name: "FoodelloCapacitorAdyen",
   platforms: [.iOS(.v15)],
   products: [
     .library(
-      name: "CapacitorAdyen",
+      name: "FoodelloCapacitorAdyen",
       targets: ["AdyenPlugin"])
   ],
   dependencies: [
