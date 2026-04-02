@@ -1,6 +1,6 @@
 # Interface: BaseAdyenComponentOptions
 
-Defined in: [src/definitions/index.ts:65](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/index.ts#L65)
+Defined in: [src/definitions/index.ts:65](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L65)
 
 Base options for Adyen components.
 
@@ -16,7 +16,7 @@ Base options for Adyen components.
 optional amount: number;
 ```
 
-Defined in: [src/definitions/index.ts:66](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/index.ts#L66)
+Defined in: [src/definitions/index.ts:66](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L66)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [src/definitions/index.ts:66](https://github.com/Fiksuruoka-fi/capac
 optional countryCode: string;
 ```
 
-Defined in: [src/definitions/index.ts:68](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/index.ts#L68)
+Defined in: [src/definitions/index.ts:68](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L68)
 
 ISO-3166-1 alpha-2 format
 
@@ -38,6 +38,6 @@ ISO-3166-1 alpha-2 format
 optional currencyCode: string;
 ```
 
-Defined in: [src/definitions/index.ts:70](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/index.ts#L70)
+Defined in: [src/definitions/index.ts:70](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L70)
 
 ISO 4217 currency code

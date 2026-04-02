@@ -16,7 +16,7 @@ type ComponentViewOptions = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:5](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/styles.ts#L5)
+Defined in: [src/definitions/styles.ts:5](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L5)
 
 Options for customizing the appearance of the component navbar's view.
 
@@ -28,7 +28,7 @@ Options for customizing the appearance of the component navbar's view.
 optional title: string;
 ```
 
-Defined in: [src/definitions/styles.ts:7](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/styles.ts#L7)
+Defined in: [src/definitions/styles.ts:7](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L7)
 
 Custom text for the title
 
@@ -40,7 +40,7 @@ Custom text for the title
 optional titleColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:9](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/styles.ts#L9)
+Defined in: [src/definitions/styles.ts:9](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L9)
 
 Color for the title text
 
@@ -52,7 +52,7 @@ Color for the title text
 optional titleBackgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:11](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/styles.ts#L11)
+Defined in: [src/definitions/styles.ts:11](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L11)
 
 Title bar's background color
 
@@ -64,7 +64,7 @@ Title bar's background color
 optional titleTintColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:13](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/styles.ts#L13)
+Defined in: [src/definitions/styles.ts:13](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L13)
 
 Tint color for buttons in the title bar
 
@@ -76,7 +76,7 @@ Tint color for buttons in the title bar
 optional showsCloseButton: boolean;
 ```
 
-Defined in: [src/definitions/styles.ts:15](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/styles.ts#L15)
+Defined in: [src/definitions/styles.ts:15](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L15)
 
 Whether to show a close button in the title bar
 
@@ -88,7 +88,7 @@ Whether to show a close button in the title bar
 optional closeButtonText: string;
 ```
 
-Defined in: [src/definitions/styles.ts:17](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/styles.ts#L17)
+Defined in: [src/definitions/styles.ts:17](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L17)
 
 Custom text for the close button
 
@@ -104,7 +104,7 @@ optional ios: {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:19](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/0e19236823a007dd09c9876ed28b8e1e5b19a059/src/definitions/styles.ts#L19)
+Defined in: [src/definitions/styles.ts:19](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L19)
 
 iOS specific styling options to override defaults
 
