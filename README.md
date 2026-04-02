@@ -230,7 +230,7 @@ See [example](example) -folder for a full example of how to extend Adyen's web C
 
 ## Interface: AdditionalDetailsEventData
 
-Defined in: [src/definitions/index.ts:217](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L217)
+Defined in: [src/definitions/index.ts:217](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L217)
 
 #### Indexable
 
@@ -240,7 +240,7 @@ Defined in: [src/definitions/index.ts:217](https://github.com/Fiksuruoka-fi/capa
 
 ## Interface: AdyenEvents
 
-Defined in: [src/definitions/index.ts:156](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L156)
+Defined in: [src/definitions/index.ts:156](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L156)
 
 All available Adyen events
 
@@ -256,7 +256,7 @@ All available Adyen events
 onCardSubmit: (data) => void;
 ```
 
-Defined in: [src/definitions/components/card.ts:221](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L221)
+Defined in: [src/definitions/components/card.ts:221](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L221)
 
 Listens for Card component `submit` events.
 
@@ -296,7 +296,7 @@ Adyen.addListener('onCardSubmit', async (data) => {
 onCardChange: (data) => void;
 ```
 
-Defined in: [src/definitions/components/card.ts:236](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L236)
+Defined in: [src/definitions/components/card.ts:236](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L236)
 
 Listens for Card component's `change` events.
 
@@ -336,7 +336,7 @@ Adyen.addListener('onCardChange', async (data) => {
 onAdditionalDetails: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:90](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L90)
+Defined in: [src/definitions/index.ts:90](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L90)
 
 Listens for payment `onAdditionalDetails` events.
 
@@ -376,7 +376,7 @@ Adyen.addListener('onAdditionalDetails', async (data) => {
 onSubmit: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:104](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L104)
+Defined in: [src/definitions/index.ts:104](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L104)
 
 Listens for payment `submit` events.
 
@@ -416,7 +416,7 @@ Adyen.addListener('onSubmit', async (data) => {
 onError: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:119](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L119)
+Defined in: [src/definitions/index.ts:119](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L119)
 
 Listens for payment and component `error` events.
 
@@ -456,7 +456,7 @@ Adyen.addListener('onError', async (data) => {
 onShow: () => void;
 ```
 
-Defined in: [src/definitions/index.ts:134](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L134)
+Defined in: [src/definitions/index.ts:134](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L134)
 
 Listens for component `present` events.
 
@@ -490,7 +490,7 @@ Adyen.addListener('onShow', async () => {
 onHide: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L149)
+Defined in: [src/definitions/index.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L149)
 
 Listens for component `dismiss` events.
 
@@ -524,7 +524,7 @@ Adyen.addListener('onHide', async (data) => {
 
 ## Interface: AdyenPlugin
 
-Defined in: [src/definitions/index.ts:212](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L212)
+Defined in: [src/definitions/index.ts:212](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L212)
 
 #### Extends
 
@@ -538,7 +538,7 @@ Defined in: [src/definitions/index.ts:212](https://github.com/Fiksuruoka-fi/capa
 presentCardComponent(options?): Promise<void>;
 ```
 
-Defined in: [src/definitions/components/card.ts:203](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L203)
+Defined in: [src/definitions/components/card.ts:203](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L203)
 
 Creates a Adyen Card component for handling card payments.
 
@@ -586,7 +586,7 @@ await Adyen.presentCardComponent({
 setCurrentPaymentMethods(options): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L179)
+Defined in: [src/definitions/index.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L179)
 
 Set current available payment methods for the Adyen components.
 
@@ -636,7 +636,7 @@ await Adyen.setCurrentPaymentMethods({
 hideComponent(): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:193](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L193)
+Defined in: [src/definitions/index.ts:193](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L193)
 
 Hides the currently presented Adyen component, if any.
 
@@ -669,7 +669,7 @@ await Adyen.hideComponent();
 destroyComponent(): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L207)
+Defined in: [src/definitions/index.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L207)
 
 Destroys the currently selected Adyen component, if any.
 
@@ -702,7 +702,7 @@ await Adyen.destroyComponent();
 addListener<E>(eventName, listener): Promise<PluginListenerHandle>;
 ```
 
-Defined in: [src/definitions/index.ts:209](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L209)
+Defined in: [src/definitions/index.ts:209](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L209)
 
 #### Type Parameters
 
@@ -730,7 +730,7 @@ Defined in: [src/definitions/index.ts:209](https://github.com/Fiksuruoka-fi/capa
 
 ## Interface: BaseAdyenComponentOptions
 
-Defined in: [src/definitions/index.ts:65](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L65)
+Defined in: [src/definitions/index.ts:65](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L65)
 
 Base options for Adyen components.
 
@@ -746,7 +746,7 @@ Base options for Adyen components.
 optional amount: number;
 ```
 
-Defined in: [src/definitions/index.ts:66](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L66)
+Defined in: [src/definitions/index.ts:66](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L66)
 
 ***
 
@@ -756,7 +756,7 @@ Defined in: [src/definitions/index.ts:66](https://github.com/Fiksuruoka-fi/capac
 optional countryCode: string;
 ```
 
-Defined in: [src/definitions/index.ts:68](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L68)
+Defined in: [src/definitions/index.ts:68](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L68)
 
 ISO-3166-1 alpha-2 format
 
@@ -768,13 +768,13 @@ ISO-3166-1 alpha-2 format
 optional currencyCode: string;
 ```
 
-Defined in: [src/definitions/index.ts:70](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L70)
+Defined in: [src/definitions/index.ts:70](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L70)
 
 ISO 4217 currency code
 
 ## Interface: BaseAdyenPlugin
 
-Defined in: [src/definitions/index.ts:158](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L158)
+Defined in: [src/definitions/index.ts:158](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L158)
 
 #### Extended by
 
@@ -788,7 +788,7 @@ Defined in: [src/definitions/index.ts:158](https://github.com/Fiksuruoka-fi/capa
 setCurrentPaymentMethods(options): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L179)
+Defined in: [src/definitions/index.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L179)
 
 Set current available payment methods for the Adyen components.
 
@@ -834,7 +834,7 @@ await Adyen.setCurrentPaymentMethods({
 hideComponent(): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:193](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L193)
+Defined in: [src/definitions/index.ts:193](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L193)
 
 Hides the currently presented Adyen component, if any.
 
@@ -863,7 +863,7 @@ await Adyen.hideComponent();
 destroyComponent(): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L207)
+Defined in: [src/definitions/index.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L207)
 
 Destroys the currently selected Adyen component, if any.
 
@@ -892,7 +892,7 @@ await Adyen.destroyComponent();
 addListener<E>(eventName, listener): Promise<PluginListenerHandle>;
 ```
 
-Defined in: [src/definitions/index.ts:209](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L209)
+Defined in: [src/definitions/index.ts:209](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L209)
 
 #### Type Parameters
 
@@ -916,7 +916,7 @@ Defined in: [src/definitions/index.ts:209](https://github.com/Fiksuruoka-fi/capa
 
 ## Interface: BaseEvents
 
-Defined in: [src/definitions/index.ts:77](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L77)
+Defined in: [src/definitions/index.ts:77](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L77)
 
 Base events available for all Adyen components.
 
@@ -932,7 +932,7 @@ Base events available for all Adyen components.
 onAdditionalDetails: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:90](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L90)
+Defined in: [src/definitions/index.ts:90](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L90)
 
 Listens for payment `onAdditionalDetails` events.
 
@@ -968,7 +968,7 @@ Adyen.addListener('onAdditionalDetails', async (data) => {
 onSubmit: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:104](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L104)
+Defined in: [src/definitions/index.ts:104](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L104)
 
 Listens for payment `submit` events.
 
@@ -1004,7 +1004,7 @@ Adyen.addListener('onSubmit', async (data) => {
 onError: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:119](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L119)
+Defined in: [src/definitions/index.ts:119](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L119)
 
 Listens for payment and component `error` events.
 
@@ -1040,7 +1040,7 @@ Adyen.addListener('onError', async (data) => {
 onShow: () => void;
 ```
 
-Defined in: [src/definitions/index.ts:134](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L134)
+Defined in: [src/definitions/index.ts:134](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L134)
 
 Listens for component `present` events.
 
@@ -1070,7 +1070,7 @@ Adyen.addListener('onShow', async () => {
 onHide: (data) => void;
 ```
 
-Defined in: [src/definitions/index.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L149)
+Defined in: [src/definitions/index.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L149)
 
 Listens for component `dismiss` events.
 
@@ -1100,7 +1100,7 @@ Adyen.addListener('onHide', async (data) => {
 
 ## Interface: CardBrand
 
-Defined in: [src/definitions/components/card.ts:170](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L170)
+Defined in: [src/definitions/components/card.ts:170](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L170)
 
 #### Properties
 
@@ -1110,7 +1110,7 @@ Defined in: [src/definitions/components/card.ts:170](https://github.com/Fiksuruo
 type: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:174](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L174)
+Defined in: [src/definitions/components/card.ts:174](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L174)
 
 Card brand name, e.g., 'visa', 'mc', 'amex', etc.
 
@@ -1122,13 +1122,13 @@ Card brand name, e.g., 'visa', 'mc', 'amex', etc.
 isSupported: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L179)
+Defined in: [src/definitions/components/card.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L179)
 
 Only on iOS
 
 ## Interface: CardBrandData
 
-Defined in: [src/definitions/components/card.ts:157](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L157)
+Defined in: [src/definitions/components/card.ts:157](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L157)
 
 #### Properties
 
@@ -1138,7 +1138,7 @@ Defined in: [src/definitions/components/card.ts:157](https://github.com/Fiksuruo
 cardBrands: CardBrand | CardBrand[];
 ```
 
-Defined in: [src/definitions/components/card.ts:162](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L162)
+Defined in: [src/definitions/components/card.ts:162](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L162)
 
 iOS: List of detected card brands
 Android: Detected card brand
@@ -1151,13 +1151,13 @@ Android: Detected card brand
 primaryBrand: CardBrand;
 ```
 
-Defined in: [src/definitions/components/card.ts:167](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L167)
+Defined in: [src/definitions/components/card.ts:167](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L167)
 
 First card brand in the list (iOS) or the detected brand (Android)
 
 ## Interface: CardChangeEventData
 
-Defined in: [src/definitions/components/card.ts:145](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L145)
+Defined in: [src/definitions/components/card.ts:145](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L145)
 
 #### Properties
 
@@ -1167,7 +1167,7 @@ Defined in: [src/definitions/components/card.ts:145](https://github.com/Fiksuruo
 optional cardBrands: CardBrandData;
 ```
 
-Defined in: [src/definitions/components/card.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L149)
+Defined in: [src/definitions/components/card.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L149)
 
 Card brand information
 
@@ -1179,13 +1179,13 @@ Card brand information
 optional cardBIN: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:154](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L154)
+Defined in: [src/definitions/components/card.ts:154](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L154)
 
 Bank Identification Number (BIN) of the card
 
 ## Interface: CardComponentConfiguration
 
-Defined in: [src/definitions/components/card.ts:31](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L31)
+Defined in: [src/definitions/components/card.ts:31](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L31)
 
 Configuration options specific to the Card component.
 
@@ -1202,7 +1202,7 @@ Configuration options specific to the Card component.
 optional showsHolderNameField: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:36](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L36)
+Defined in: [src/definitions/components/card.ts:36](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L36)
 
 Display cardholder name input field
 
@@ -1220,7 +1220,7 @@ false
 optional showsSecurityCodeField: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:42](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L42)
+Defined in: [src/definitions/components/card.ts:42](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L42)
 
 Display security code input field
 
@@ -1238,7 +1238,7 @@ true
 optional showsStorePaymentMethodField: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:48](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L48)
+Defined in: [src/definitions/components/card.ts:48](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L48)
 
 Display store payment method checkbox
 
@@ -1256,7 +1256,7 @@ false
 optional allowedCardTypes: string[];
 ```
 
-Defined in: [src/definitions/components/card.ts:55](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L55)
+Defined in: [src/definitions/components/card.ts:55](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L55)
 
 Supported card types
 Same as `supportedCardTypes` on Android
@@ -1273,7 +1273,7 @@ Same as `supportedCardTypes` on Android
 optional showsSubmitButton: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:61](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L61)
+Defined in: [src/definitions/components/card.ts:61](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L61)
 
 Display submit button
 
@@ -1291,7 +1291,7 @@ true
 optional shopperReference: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:66](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L66)
+Defined in: [src/definitions/components/card.ts:66](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L66)
 
 Your unique shopper reference.
 
@@ -1307,7 +1307,7 @@ optional billingAddress: {
 };
 ```
 
-Defined in: [src/definitions/components/card.ts:71](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L71)
+Defined in: [src/definitions/components/card.ts:71](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L71)
 
 Billing address configuration
 
@@ -1359,10 +1359,10 @@ all countries supported by Adyen
 #### koreanAuthenticationMode?
 
 ```ts
-optional koreanAuthenticationMode: "auto" | "hide" | "show";
+optional koreanAuthenticationMode: "auto" | "show" | "hide";
 ```
 
-Defined in: [src/definitions/components/card.ts:101](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L101)
+Defined in: [src/definitions/components/card.ts:101](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L101)
 
 For Korean cards, sets if security fields show in the payment form. Possible values:
   - show: show the fields.
@@ -1378,10 +1378,10 @@ For Korean cards, sets if security fields show in the payment form. Possible val
 #### socialSecurityNumberMode?
 
 ```ts
-optional socialSecurityNumberMode: "auto" | "hide" | "show";
+optional socialSecurityNumberMode: "auto" | "show" | "hide";
 ```
 
-Defined in: [src/definitions/components/card.ts:110](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L110)
+Defined in: [src/definitions/components/card.ts:110](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L110)
 
 For Brazilian cards, sets if the CPF/CNPJ social security number field shows in the payment form. Possible values:
   - show: show the field.
@@ -1404,7 +1404,7 @@ optional localizationParameters: {
 };
 ```
 
-Defined in: [src/definitions/components/card.ts:113](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L113)
+Defined in: [src/definitions/components/card.ts:113](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L113)
 
 Localization parameters for the component
 
@@ -1448,7 +1448,7 @@ https://adyen.github.io/adyen-ios/5.20.1/documentation/adyen/localization/
 
 ## Interface: CardComponentEvents
 
-Defined in: [src/definitions/components/card.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L207)
+Defined in: [src/definitions/components/card.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L207)
 
 #### Extended by
 
@@ -1462,7 +1462,7 @@ Defined in: [src/definitions/components/card.ts:207](https://github.com/Fiksuruo
 onCardSubmit: (data) => void;
 ```
 
-Defined in: [src/definitions/components/card.ts:221](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L221)
+Defined in: [src/definitions/components/card.ts:221](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L221)
 
 Listens for Card component `submit` events.
 
@@ -1498,7 +1498,7 @@ Adyen.addListener('onCardSubmit', async (data) => {
 onCardChange: (data) => void;
 ```
 
-Defined in: [src/definitions/components/card.ts:236](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L236)
+Defined in: [src/definitions/components/card.ts:236](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L236)
 
 Listens for Card component's `change` events.
 
@@ -1528,7 +1528,7 @@ Adyen.addListener('onCardChange', async (data) => {
 
 ## Interface: CardComponentMethods
 
-Defined in: [src/definitions/components/card.ts:183](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L183)
+Defined in: [src/definitions/components/card.ts:183](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L183)
 
 #### Extended by
 
@@ -1542,7 +1542,7 @@ Defined in: [src/definitions/components/card.ts:183](https://github.com/Fiksuruo
 presentCardComponent(options?): Promise<void>;
 ```
 
-Defined in: [src/definitions/components/card.ts:203](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L203)
+Defined in: [src/definitions/components/card.ts:203](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L203)
 
 Creates a Adyen Card component for handling card payments.
 
@@ -1580,7 +1580,7 @@ await Adyen.presentCardComponent({
 
 ## Interface: CardComponentOptions
 
-Defined in: [src/definitions/components/card.ts:10](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L10)
+Defined in: [src/definitions/components/card.ts:10](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L10)
 
 Options for creating a Adyen Card component.
 
@@ -1596,7 +1596,7 @@ Options for creating a Adyen Card component.
 optional amount: number;
 ```
 
-Defined in: [src/definitions/components/card.ts:12](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L12)
+Defined in: [src/definitions/components/card.ts:12](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L12)
 
 Payment amount in minor currency units (e.g., cents)
 
@@ -1612,7 +1612,7 @@ Payment amount in minor currency units (e.g., cents)
 optional countryCode: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:14](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L14)
+Defined in: [src/definitions/components/card.ts:14](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L14)
 
 ISO 3166-1 alpha-2 country code (e.g., 'US', 'NL')
 
@@ -1628,7 +1628,7 @@ ISO 3166-1 alpha-2 country code (e.g., 'US', 'NL')
 optional currencyCode: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:16](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L16)
+Defined in: [src/definitions/components/card.ts:16](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L16)
 
 ISO 4217 currency code (e.g., 'USD', 'EUR')
 
@@ -1644,7 +1644,7 @@ ISO 4217 currency code (e.g., 'USD', 'EUR')
 optional configuration: CardComponentConfiguration;
 ```
 
-Defined in: [src/definitions/components/card.ts:18](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L18)
+Defined in: [src/definitions/components/card.ts:18](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L18)
 
 Card component behaviour configuration
 
@@ -1656,7 +1656,7 @@ Card component behaviour configuration
 optional style: FormComponentStyle;
 ```
 
-Defined in: [src/definitions/components/card.ts:20](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L20)
+Defined in: [src/definitions/components/card.ts:20](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L20)
 
 Card-specific styling options
 
@@ -1668,13 +1668,13 @@ Card-specific styling options
 optional viewOptions: ComponentViewOptions;
 ```
 
-Defined in: [src/definitions/components/card.ts:22](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L22)
+Defined in: [src/definitions/components/card.ts:22](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L22)
 
 View options for the component's presentation layout
 
 ## Interface: CardSubmitEventData
 
-Defined in: [src/definitions/components/card.ts:133](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L133)
+Defined in: [src/definitions/components/card.ts:133](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L133)
 
 #### Properties
 
@@ -1684,7 +1684,7 @@ Defined in: [src/definitions/components/card.ts:133](https://github.com/Fiksuruo
 lastFour: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:137](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L137)
+Defined in: [src/definitions/components/card.ts:137](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L137)
 
 Last four digits of the card number
 
@@ -1696,13 +1696,13 @@ Last four digits of the card number
 finalBIN: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:142](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L142)
+Defined in: [src/definitions/components/card.ts:142](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L142)
 
 Final Bank Identification Number (BIN) of the card
 
 ## Interface: ComponentHideEventData
 
-Defined in: [src/definitions/index.ts:237](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L237)
+Defined in: [src/definitions/index.ts:237](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L237)
 
 #### Properties
 
@@ -1712,11 +1712,11 @@ Defined in: [src/definitions/index.ts:237](https://github.com/Fiksuruoka-fi/capa
 reason: "user_gesture";
 ```
 
-Defined in: [src/definitions/index.ts:238](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L238)
+Defined in: [src/definitions/index.ts:238](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L238)
 
 ## Interface: ExtendedCardConfiguration
 
-Defined in: [src/definitions/components/card.ts:331](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L331)
+Defined in: [src/definitions/components/card.ts:331](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L331)
 
 Extended Card component configuration including native options
 
@@ -1736,7 +1736,7 @@ https://docs.adyen.com/payment-methods/cards/web-component/#optional-configurati
 optional order: Order;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:627
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3490
 
 #### Inherited from
 
@@ -1751,13 +1751,13 @@ CardConfiguration.order
 ```ts
 optional modules: {
   srPanel?: SRPanel;
-  analytics?: AnalyticsModule;
+  analytics?: IAnalytics;
   resources?: Resources;
   risk?: RiskElement;
 };
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:628
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3491
 
 #### srPanel?
 
@@ -1768,7 +1768,7 @@ optional srPanel: SRPanel;
 #### analytics?
 
 ```ts
-optional analytics: AnalyticsModule;
+optional analytics: IAnalytics;
 ```
 
 #### resources?
@@ -1797,12 +1797,30 @@ CardConfiguration.modules
 optional isDropin: boolean;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:634
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3500
+
+Identifies if the Element is the DropIn element
 
 #### Inherited from
 
 ```ts
 CardConfiguration.isDropin
+```
+
+***
+
+#### paymentMethodId?
+
+```ts
+optional paymentMethodId: string;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3519
+
+#### Inherited from
+
+```ts
+CardConfiguration.paymentMethodId
 ```
 
 ***
@@ -1813,7 +1831,7 @@ CardConfiguration.isDropin
 optional environment: string;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:696
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3522
 
 #### Inherited from
 
@@ -1829,7 +1847,7 @@ CardConfiguration.environment
 optional session: Session;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:697
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3523
 
 #### Inherited from
 
@@ -1845,7 +1863,7 @@ CardConfiguration.session
 optional onComplete: (state, element) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:698
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3524
 
 #### Parameters
 
@@ -1875,7 +1893,7 @@ CardConfiguration.onComplete
 optional isInstantPayment: boolean;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:699
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3525
 
 #### Inherited from
 
@@ -1891,7 +1909,7 @@ CardConfiguration.isInstantPayment
 optional icon: string;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:723
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3549
 
 #### Inherited from
 
@@ -1907,7 +1925,7 @@ CardConfiguration.icon
 optional amount: PaymentAmount;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:724
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3550
 
 #### Inherited from
 
@@ -1920,10 +1938,10 @@ CardConfiguration.amount
 #### secondaryAmount?
 
 ```ts
-optional secondaryAmount: PaymentAmountExtended;
+optional secondaryAmount: PaymentAmount;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:725
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3551
 
 #### Inherited from
 
@@ -1939,7 +1957,7 @@ CardConfiguration.secondaryAmount
 optional showPayButton: boolean;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:730
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3556
 
 Show/Hide pay button
 
@@ -1963,7 +1981,7 @@ CardConfiguration.showPayButton
 optional originalAction: PaymentAction;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:757
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:3583
 
 Reference to the action object found in a /payments response. This, in most cases, is passed on to the onActionHandled callback
 
@@ -1975,974 +1993,13 @@ CardConfiguration.originalAction
 
 ***
 
-#### autoFocus?
-
-```ts
-optional autoFocus: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:775
-
-Automatically shift the focus from one field to another. Usually happens from a valid Expiry Date field to the Security Code field,
-but some BINS also allow us to know that the PAN is complete, in which case we can shift focus to the date field
-
-#### Default Value
-
-`true`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.autoFocus
-```
-
-***
-
-#### billingAddressAllowedCountries?
-
-```ts
-optional billingAddressAllowedCountries: string[];
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:780
-
-Config t olimit the countries that will show in the country dropdown
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.billingAddressAllowedCountries
-```
-
-***
-
-#### billingAddressMode?
-
-```ts
-optional billingAddressMode: "none" | "full" | "partial";
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:787
-
-If billingAddressRequired is set to true, you can set this to partial to require the shopper's postal code instead of the full address.
-
-#### Default Value
-
-```ts
-full
-
-- merchant set config option
-```
-
-#### Inherited from
-
-```ts
-CardConfiguration.billingAddressMode
-```
-
-***
-
-#### billingAddressRequired?
-
-```ts
-optional billingAddressRequired: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:794
-
-Show Address fields
-
-#### Default Value
-
-`false`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.billingAddressRequired
-```
-
-***
-
-#### billingAddressRequiredFields?
-
-```ts
-optional billingAddressRequiredFields: string[];
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:799
-
-Config to specify which address field are required
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.billingAddressRequiredFields
-```
-
-***
-
-#### brandsConfiguration?
-
-```ts
-optional brandsConfiguration: CardBrandsConfiguration;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:816
-
-Configuration specific to brands
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.brandsConfiguration
-```
-
-***
-
-#### challengeWindowSize?
-
-```ts
-optional challengeWindowSize: "01" | "02" | "03" | "04" | "05";
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:830
-
-Defines the size of the challenge Component
-
-01: [250px, 400px]
-02: [390px, 400px]
-03: [500px, 600px]
-04: [600px, 400px]
-05: [100%, 100%]
-
-#### Default Value
-
-```ts
-'02'
-
-- merchant set config option
-```
-
-#### Inherited from
-
-```ts
-CardConfiguration.challengeWindowSize
-```
-
-***
-
-#### clickToPayConfiguration?
-
-```ts
-optional clickToPayConfiguration: ClickToPayProps;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:835
-
-Configuration for Click to Pay
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.clickToPayConfiguration
-```
-
-***
-
-#### fastlaneConfiguration?
-
-```ts
-optional fastlaneConfiguration: FastlaneSignupConfiguration;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:839
-
-Configuration for displaying the Fastlane consent UI.
-
-#### Inherited from
-
-```ts
-CardConfiguration.fastlaneConfiguration
-```
-
-***
-
-#### data?
-
-```ts
-optional data: {
-  holderName?: string;
-  billingAddress?: Partial<AddressData>;
-};
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:854
-
-Object that contains placeholder information that you can use to prefill fields.
-- merchant set config option
-
-#### holderName?
-
-```ts
-optional holderName: string;
-```
-
-#### billingAddress?
-
-```ts
-optional billingAddress: Partial<AddressData>;
-```
-
-#### Inherited from
-
-```ts
-CardConfiguration.data
-```
-
-***
-
-#### disableIOSArrowKeys?
-
-```ts
-optional disableIOSArrowKeys: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:870
-
-Turn on the procedure to force the arrow keys on an iOS soft keyboard to always be disabled
-
-#### Default Value
-
-`false`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.disableIOSArrowKeys
-```
-
-***
-
-#### disclaimerMessage?
-
-```ts
-optional disclaimerMessage: DisclaimerMsgObject;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:875
-
-Object to configure the message and text for a disclaimer message, added after the Card input fields
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.disclaimerMessage
-```
-
-***
-
-#### doBinLookup?
-
-```ts
-optional doBinLookup: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:882
-
-Allow binLookup process to occur
-
-#### Default Value
-
-`true`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.doBinLookup
-```
-
-***
-
-#### enableStoreDetails?
-
-```ts
-optional enableStoreDetails: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:887
-
-Config option related to whether we set storePaymentMethod in the card data, and showing/hiding the "store details" checkbox
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.enableStoreDetails
-```
-
-***
-
-#### exposeExpiryDate?
-
-```ts
-optional exposeExpiryDate: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:897
-
-Allows SF to return an unencrypted expiryDate
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.exposeExpiryDate
-```
-
-***
-
-#### forceCompat?
-
-```ts
-optional forceCompat: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:902
-
-Force securedFields to use the 'compat' version of JWE. (Use case: running custom http:// test environment
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.forceCompat
-```
-
-***
-
-#### hasHolderName?
-
-```ts
-optional hasHolderName: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:919
-
-Show/hide the card holder name field
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.hasHolderName
-```
-
-***
-
-#### hideCVC?
-
-```ts
-optional hideCVC: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:929
-
-Show/hide the Security Code field
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.hideCVC
-```
-
-***
-
-#### holderNameRequired?
-
-```ts
-optional holderNameRequired: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:934
-
-Whether the card holder name field will be required
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.holderNameRequired
-```
-
-***
-
-#### installmentOptions?
-
-```ts
-optional installmentOptions: InstallmentOptions;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:944
-
-Configure the installment options for the card
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.installmentOptions
-```
-
-***
-
-#### keypadFix?
-
-```ts
-optional keypadFix: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:951
-
-Implements a workaround for iOS/Safari bug where keypad doesn't retract when SF paymentMethod is no longer active
-
-#### Default Value
-
-`true`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.keypadFix
-```
-
-***
-
-#### legacyInputMode?
-
-```ts
-optional legacyInputMode: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:963
-
-For some scenarios make the card input fields (PAN, Expiry Date, Security Code) have type="tel" rather than type="text" inputmode="numeric"
-
-#### Default Value
-
-`false`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.legacyInputMode
-```
-
-***
-
-#### maskSecurityCode?
-
-```ts
-optional maskSecurityCode: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:970
-
-Adds type="password" to the Security code input field, causing its value to be masked
-
-#### Default Value
-
-`false`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.maskSecurityCode
-```
-
-***
-
-#### minimumExpiryDate?
-
-```ts
-optional minimumExpiryDate: string;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:976
-
-Specify the minimum expiry date that will be considered valid
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.minimumExpiryDate
-```
-
-***
-
-#### onAddressLookup?
-
-```ts
-optional onAddressLookup: OnAddressLookupType;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:987
-
-Function used to perform 3rd party Address lookup
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.onAddressLookup
-```
-
-***
-
-#### onAddressSelected?
-
-```ts
-optional onAddressSelected: OnAddressSelectedType;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:992
-
-Function used to handle the selected address from 3rd party Address lookup
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.onAddressSelected
-```
-
-***
-
-#### onBinLookup()?
-
-```ts
-optional onBinLookup: (event) => void;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:997
-
-After binLookup call - provides the brand(s) we detect the user is entering, and if we support the brand(s)
-- merchant set config option
-
-#### Parameters
-
-##### event
-
-`CardBinLookupData`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-```ts
-CardConfiguration.onBinLookup
-```
-
-***
-
-#### onBinValue()?
-
-```ts
-optional onBinValue: (event) => void;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1002
-
-Provides the BIN Number of the card (up to 6 digits), called as the user types in the PAN.
-- merchant set config option
-
-#### Parameters
-
-##### event
-
-`CardBinValueData`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-```ts
-CardConfiguration.onBinValue
-```
-
-***
-
-#### onBlur()?
-
-```ts
-optional onBlur: (event) => void;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1007
-
-Called when a field loses focus.
-- merchant set config option
-
-#### Parameters
-
-##### event
-
-`CardFocusData` | `ComponentFocusObject`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-```ts
-CardConfiguration.onBlur
-```
-
-***
-
-#### onBrand()?
-
-```ts
-optional onBrand: (event) => void;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1012
-
-Called once we detect the card brand.
-- merchant set config option
-
-#### Parameters
-
-##### event
-
-`CardBrandData`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-```ts
-CardConfiguration.onBrand
-```
-
-***
-
-#### onConfigSuccess()?
-
-```ts
-optional onConfigSuccess: (event) => void;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1017
-
-Called once the card input fields are ready to use.
-- merchant set config option
-
-#### Parameters
-
-##### event
-
-`CardConfigSuccessData`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-```ts
-CardConfiguration.onConfigSuccess
-```
-
-***
-
-#### onAllValid()?
-
-```ts
-optional onAllValid: (event) => void;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1022
-
-Called when *all* the securedFields becomes valid
- Also called again if one of the fields moves out of validity.
-
-#### Parameters
-
-##### event
-
-`CardAllValidData`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-```ts
-CardConfiguration.onAllValid
-```
-
-***
-
-#### onFieldValid()?
-
-```ts
-optional onFieldValid: (event) => void;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1028
-
-Called when a field becomes valid and also if a valid field changes and becomes invalid.
-For the card number field, it returns the last 4 digits of the card number.
-- merchant set config option
-
-#### Parameters
-
-##### event
-
-`CardFieldValidData`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-```ts
-CardConfiguration.onFieldValid
-```
-
-***
-
-#### onFocus()?
-
-```ts
-optional onFocus: (event) => void;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1033
-
-Called when a field gains focus.
-- merchant set config option
-
-#### Parameters
-
-##### event
-
-`CardFocusData` | `ComponentFocusObject`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-```ts
-CardConfiguration.onFocus
-```
-
-***
-
-#### onLoad()?
-
-```ts
-optional onLoad: (event) => void;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1038
-
-Called once all the card input fields have been created but are not yet ready to use.
-- merchant set config option
-
-#### Parameters
-
-##### event
-
-`CardLoadData`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-```ts
-CardConfiguration.onLoad
-```
-
-***
-
-#### placeholders?
-
-```ts
-optional placeholders: Partial<Record<PlaceholderKeys, string>>;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1043
-
-Configure placeholder text for holderName, cardNumber, expirationDate, securityCode and password.
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.placeholders
-```
-
-***
-
-#### positionHolderNameOnTop?
-
-```ts
-optional positionHolderNameOnTop: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1050
-
-Position holder name above card number field (instead of having it after the security code field)
-
-#### Default Value
-
-`false`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.positionHolderNameOnTop
-```
-
-***
-
-#### showBrandIcon?
-
-```ts
-optional showBrandIcon: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1057
-
-Show/hide the brand logo when the card brand has been recognized
-
-#### Default Value
-
-`true`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.showBrandIcon
-```
-
-***
-
-#### showContextualElement?
-
-```ts
-optional showContextualElement: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1064
-
-Show/hide the contextual text under each form field. The contextual text is to assist shoppers filling in the payment form.
-
-#### Default Value
-
-`true`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.showContextualElement
-```
-
-***
-
-#### showInstallmentAmounts?
-
-```ts
-optional showInstallmentAmounts: boolean;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1071
-
-Set whether to show installments broken down into amounts or months
-
-#### Default Value
-
-`true`
-
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.showInstallmentAmounts
-```
-
-***
-
-#### styles?
-
-```ts
-optional styles: StylesObject;
-```
-
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:1086
-
-Object to configure the styling of the inputs in the iframes that are used to present the PAN, Expiry Date & Security Code fields
-- merchant set config option
-
-#### Inherited from
-
-```ts
-CardConfiguration.styles
-```
-
-***
-
 #### beforeRedirect()?
 
 ```ts
 optional beforeRedirect: (resolve, reject, redirectData) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:5981
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6228
 
 Called before the page redirect happens.
 Allows you to perform any sort of action before redirecting the shopper to another page.
@@ -2986,10 +2043,10 @@ CardConfiguration.beforeRedirect
 #### beforeSubmit()?
 
 ```ts
-optional beforeSubmit: (state, component, actions) => void;
+optional beforeSubmit: (state, component, actions) => void | Promise<void>;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:5996
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6243
 
 Called when the shopper selects the Pay button (it only works on Sessions flow)
 
@@ -3012,7 +2069,7 @@ For example, you can add shopper details like 'billingAddress', 'deliveryAddress
 
 #### Returns
 
-`void`
+`void` \| `Promise`\<`void`\>
 
 #### Inherited from
 
@@ -3028,7 +2085,7 @@ CardConfiguration.beforeSubmit
 optional onPaymentCompleted: (data, component?) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6005
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6252
 
 Called when the payment succeeds.
 
@@ -3062,7 +2119,7 @@ CardConfiguration.onPaymentCompleted
 optional onPaymentFailed: (data?, component?) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6015
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6262
 
 Called when the payment fails.
 
@@ -3099,7 +2156,7 @@ CardConfiguration.onPaymentFailed
 optional onSubmit: (state, component, actions) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6026
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6273
 
 Callback used in the Advanced flow to perform the /payments API call
 
@@ -3138,7 +2195,7 @@ CardConfiguration.onSubmit
 optional onAdditionalDetails: (state, component, actions) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6037
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6284
 
 Callback used in the Advanced flow to perform the /payments/details API call.
 
@@ -3179,7 +2236,7 @@ CardConfiguration.onAdditionalDetails
 optional onActionHandled: (actionHandled) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6053
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6300
 
 Callback called when an action (for example a QR code or 3D Secure 2 authentication screen) is shown to the shopper.
 
@@ -3207,7 +2264,7 @@ CardConfiguration.onActionHandled
 optional onChange: (state, component) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6054
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6301
 
 #### Parameters
 
@@ -3237,7 +2294,7 @@ CardConfiguration.onChange
 optional onError: (error, component?) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6063
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6310
 
 Callback called in two different scenarios:
 - when a critical error happened (network error; implementation error; script failed to load)
@@ -3271,7 +2328,7 @@ CardConfiguration.onError
 optional onEnterKeyPressed: (activeElement, component) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6070
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6317
 
 Called when a Component detects, or is told by a SecuredField, that the Enter key has been pressed.
 - merchant set config option
@@ -3304,7 +2361,7 @@ CardConfiguration.onEnterKeyPressed
 optional onPaymentMethodsRequest: (data, actions) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6080
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6327
 
 Callback called when it is required to fetch/update the payment methods list.
 It is currently used mainly on Giftcard flow (Partial orders), since the payment method list might change depending on the amount left to be paid
@@ -3345,7 +2402,7 @@ CardConfiguration.onPaymentMethodsRequest
 optional onOrderUpdated: (data) => void;
 ```
 
-Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6090
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6337
 
 Called when the gift card balance is less than the transaction amount.
 Returns an Order object that includes the remaining amount to be paid.
@@ -3371,13 +2428,1017 @@ CardConfiguration.onOrderUpdated
 
 ***
 
+#### autoFocus?
+
+```ts
+optional autoFocus: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6900
+
+Automatically shift the focus from one field to another. Usually happens from a valid Expiry Date field to the Security Code field,
+but some BINS also allow us to know that the PAN is complete, in which case we can shift focus to the date field
+
+#### Default Value
+
+`true`
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.autoFocus
+```
+
+***
+
+#### billingAddressAllowedCountries?
+
+```ts
+optional billingAddressAllowedCountries: string[];
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6905
+
+Config t olimit the countries that will show in the country dropdown
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.billingAddressAllowedCountries
+```
+
+***
+
+#### billingAddressMode?
+
+```ts
+optional billingAddressMode: "none" | "full" | "partial";
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6912
+
+If billingAddressRequired is set to true, you can set this to partial to require the shopper's postal code instead of the full address.
+
+#### Default Value
+
+```ts
+full
+
+- merchant set config option
+```
+
+#### Inherited from
+
+```ts
+CardConfiguration.billingAddressMode
+```
+
+***
+
+#### billingAddressRequired?
+
+```ts
+optional billingAddressRequired: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6919
+
+Show Address fields
+
+#### Default Value
+
+`false`
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.billingAddressRequired
+```
+
+***
+
+#### billingAddressRequiredFields?
+
+```ts
+optional billingAddressRequiredFields: string[];
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6924
+
+Config to specify which address field are required
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.billingAddressRequiredFields
+```
+
+***
+
+#### brandsConfiguration?
+
+```ts
+optional brandsConfiguration: CardBrandsConfiguration;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6941
+
+Configuration specific to brands
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.brandsConfiguration
+```
+
+***
+
+#### challengeWindowSize?
+
+```ts
+optional challengeWindowSize: ChallengeWindowSize;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6955
+
+Defines the size of the challenge Component
+
+01: [250px, 400px]
+02: [390px, 400px]
+03: [500px, 600px]
+04: [600px, 400px]
+05: [100%, 100%]
+
+#### Default Value
+
+```ts
+'02'
+
+- merchant set config option
+```
+
+#### Inherited from
+
+```ts
+CardConfiguration.challengeWindowSize
+```
+
+***
+
+#### clickToPayConfiguration?
+
+```ts
+optional clickToPayConfiguration: ClickToPayProps;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6960
+
+Configuration for Click to Pay
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.clickToPayConfiguration
+```
+
+***
+
+#### fastlaneConfiguration?
+
+```ts
+optional fastlaneConfiguration: FastlaneSignupConfiguration;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6964
+
+Configuration for displaying the Fastlane consent UI.
+
+#### Inherited from
+
+```ts
+CardConfiguration.fastlaneConfiguration
+```
+
+***
+
+#### data?
+
+```ts
+optional data: {
+  holderName?: string;
+  billingAddress?: Partial<AddressData>;
+};
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6979
+
+Object that contains placeholder information that you can use to prefill fields.
+- merchant set config option
+
+#### holderName?
+
+```ts
+optional holderName: string;
+```
+
+#### billingAddress?
+
+```ts
+optional billingAddress: Partial<AddressData>;
+```
+
+#### Inherited from
+
+```ts
+CardConfiguration.data
+```
+
+***
+
+#### disableIOSArrowKeys?
+
+```ts
+optional disableIOSArrowKeys: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:6995
+
+Turn on the procedure to force the arrow keys on an iOS soft keyboard to always be disabled
+
+#### Default Value
+
+`false`
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.disableIOSArrowKeys
+```
+
+***
+
+#### disclaimerMessage?
+
+```ts
+optional disclaimerMessage: DisclaimerMsgObject;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7000
+
+Object to configure the message and text for a disclaimer message, added after the Card input fields
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.disclaimerMessage
+```
+
+***
+
+#### doBinLookup?
+
+```ts
+optional doBinLookup: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7007
+
+Allow binLookup process to occur
+
+#### Default Value
+
+`true`
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.doBinLookup
+```
+
+***
+
+#### enableStoreDetails?
+
+```ts
+optional enableStoreDetails: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7012
+
+Config option related to whether we set storePaymentMethod in the card data, and showing/hiding the "store details" checkbox
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.enableStoreDetails
+```
+
+***
+
+#### exposeExpiryDate?
+
+```ts
+optional exposeExpiryDate: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7022
+
+Allows SF to return an unencrypted expiryDate
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.exposeExpiryDate
+```
+
+***
+
+#### forceCompat?
+
+```ts
+optional forceCompat: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7027
+
+Force securedFields to use the 'compat' version of JWE. (Use case: running custom http:// test environment
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.forceCompat
+```
+
+***
+
+#### fundingSource?
+
+```ts
+optional fundingSource: FundingSourceKeys;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7034
+
+Funding source field populated when 'splitCardFundingSources' is configured in `sessions/` call
+This value is automatically set in Drop-in integration. For standalone integration, it can be set manually.
+When provided, it ensures the component loads configuration specific to that funding source (e.g. credit, debit, prepaid)
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.fundingSource
+```
+
+***
+
+#### hasHolderName?
+
+```ts
+optional hasHolderName: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7046
+
+Show/hide the card holder name field
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.hasHolderName
+```
+
+***
+
+#### hideCVC?
+
+```ts
+optional hideCVC: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7056
+
+Show/hide the Security Code field
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.hideCVC
+```
+
+***
+
+#### holderNameRequired?
+
+```ts
+optional holderNameRequired: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7061
+
+Whether the card holder name field will be required
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.holderNameRequired
+```
+
+***
+
+#### installmentOptions?
+
+```ts
+optional installmentOptions: InstallmentOptions;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7071
+
+Configure the installment options for the card
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.installmentOptions
+```
+
+***
+
+#### keypadFix?
+
+```ts
+optional keypadFix: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7078
+
+Implements a workaround for iOS/Safari bug where keypad doesn't retract when SF paymentMethod is no longer active
+
+#### Default Value
+
+`true`
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.keypadFix
+```
+
+***
+
+#### legacyInputMode?
+
+```ts
+optional legacyInputMode: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7090
+
+For some scenarios make the card input fields (PAN, Expiry Date, Security Code) have type="tel" rather than type="text" inputmode="numeric"
+
+#### Default Value
+
+`false`
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.legacyInputMode
+```
+
+***
+
+#### maskSecurityCode?
+
+```ts
+optional maskSecurityCode: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7097
+
+Adds type="password" to the Security code input field, causing its value to be masked
+
+#### Default Value
+
+`false`
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.maskSecurityCode
+```
+
+***
+
+#### minimumExpiryDate?
+
+```ts
+optional minimumExpiryDate: string;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7103
+
+Specify the minimum expiry date that will be considered valid
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.minimumExpiryDate
+```
+
+***
+
+#### onAddressLookup?
+
+```ts
+optional onAddressLookup: OnAddressLookupType;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7114
+
+Function used to perform 3rd party Address lookup
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.onAddressLookup
+```
+
+***
+
+#### onAddressSelected?
+
+```ts
+optional onAddressSelected: OnAddressSelectedType;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7119
+
+Function used to handle the selected address from 3rd party Address lookup
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.onAddressSelected
+```
+
+***
+
+#### onBinLookup()?
+
+```ts
+optional onBinLookup: (event) => void;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7124
+
+After binLookup call - provides the brand(s) we detect the user is entering, and if we support the brand(s)
+- merchant set config option
+
+#### Parameters
+
+##### event
+
+`CardBinLookupData`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+```ts
+CardConfiguration.onBinLookup
+```
+
+***
+
+#### onBinValue()?
+
+```ts
+optional onBinValue: (event) => void;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7129
+
+Provides the BIN Number of the card (up to 6 digits), called as the user types in the PAN.
+- merchant set config option
+
+#### Parameters
+
+##### event
+
+`CardBinValueData`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+```ts
+CardConfiguration.onBinValue
+```
+
+***
+
+#### onBlur()?
+
+```ts
+optional onBlur: (event) => void;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7134
+
+Called when a field loses focus.
+- merchant set config option
+
+#### Parameters
+
+##### event
+
+`CardFocusData` | `ComponentFocusObject`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+```ts
+CardConfiguration.onBlur
+```
+
+***
+
+#### onBrand()?
+
+```ts
+optional onBrand: (event) => void;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7139
+
+Called once we detect the card brand.
+- merchant set config option
+
+#### Parameters
+
+##### event
+
+`CardBrandData`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+```ts
+CardConfiguration.onBrand
+```
+
+***
+
+#### onConfigSuccess()?
+
+```ts
+optional onConfigSuccess: (event) => void;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7144
+
+Called once the card input fields are ready to use.
+- merchant set config option
+
+#### Parameters
+
+##### event
+
+`CardConfigSuccessData`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+```ts
+CardConfiguration.onConfigSuccess
+```
+
+***
+
+#### onAllValid()?
+
+```ts
+optional onAllValid: (event) => void;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7149
+
+Called when *all* the securedFields becomes valid
+ Also called again if one of the fields moves out of validity.
+
+#### Parameters
+
+##### event
+
+`CardAllValidData`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+```ts
+CardConfiguration.onAllValid
+```
+
+***
+
+#### onFieldValid()?
+
+```ts
+optional onFieldValid: (event) => void;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7155
+
+Called when a field becomes valid and also if a valid field changes and becomes invalid.
+For the card number field, it returns the last 4 digits of the card number.
+- merchant set config option
+
+#### Parameters
+
+##### event
+
+`CardFieldValidData`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+```ts
+CardConfiguration.onFieldValid
+```
+
+***
+
+#### onFocus()?
+
+```ts
+optional onFocus: (event) => void;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7160
+
+Called when a field gains focus.
+- merchant set config option
+
+#### Parameters
+
+##### event
+
+`CardFocusData` | `ComponentFocusObject`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+```ts
+CardConfiguration.onFocus
+```
+
+***
+
+#### onLoad()?
+
+```ts
+optional onLoad: (event) => void;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7165
+
+Called once all the card input fields have been created but are not yet ready to use.
+- merchant set config option
+
+#### Parameters
+
+##### event
+
+`CardLoadData`
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+```ts
+CardConfiguration.onLoad
+```
+
+***
+
+#### placeholders?
+
+```ts
+optional placeholders: Partial<Record<PlaceholderKeys, string>>;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7170
+
+Configure placeholder text for holderName, cardNumber, expirationDate, securityCode and password.
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.placeholders
+```
+
+***
+
+#### positionHolderNameOnTop?
+
+```ts
+optional positionHolderNameOnTop: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7177
+
+Position holder name above card number field (instead of having it after the security code field)
+
+#### Default Value
+
+`false`
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.positionHolderNameOnTop
+```
+
+***
+
+#### showBrandIcon?
+
+```ts
+optional showBrandIcon: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7184
+
+Show/hide the brand logo when the card brand has been recognized
+
+#### Default Value
+
+`true`
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.showBrandIcon
+```
+
+***
+
+#### showContextualElement?
+
+```ts
+optional showContextualElement: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7191
+
+Show/Hide contextual element next to the logo
+
+#### Default Value
+
+```ts
+true
+
+- merchant set config option
+```
+
+#### Inherited from
+
+```ts
+CardConfiguration.showContextualElement
+```
+
+***
+
+#### showInstallmentAmounts?
+
+```ts
+optional showInstallmentAmounts: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7198
+
+Set whether to show installments broken down into amounts or months
+
+#### Default Value
+
+`true`
+
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.showInstallmentAmounts
+```
+
+***
+
+#### styles?
+
+```ts
+optional styles: StylesObject;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7213
+
+Object to configure the styling of the inputs in the iframes that are used to present the PAN, Expiry Date & Security Code fields
+- merchant set config option
+
+#### Inherited from
+
+```ts
+CardConfiguration.styles
+```
+
+***
+
+#### trimTrailingSeparator?
+
+```ts
+optional trimTrailingSeparator: boolean;
+```
+
+Defined in: node\_modules/@adyen/adyen-web/dist/es/index.d.ts:7224
+
+For the PAN field: If the card number is now at one of it's valid lengths and the formatting process has added a separator
+to the end of the string... delete the separator
+- merchant set config option. Defaults to true
+
+#### Inherited from
+
+```ts
+CardConfiguration.trimTrailingSeparator
+```
+
+***
+
 #### nativeCard?
 
 ```ts
 optional nativeCard: NativeCardConfiguration;
 ```
 
-Defined in: [src/definitions/components/card.ts:332](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L332)
+Defined in: [src/definitions/components/card.ts:332](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L332)
 
 ***
 
@@ -3387,7 +3448,7 @@ Defined in: [src/definitions/components/card.ts:332](https://github.com/Fiksuruo
 optional isDev: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:333](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L333)
+Defined in: [src/definitions/components/card.ts:333](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L333)
 
 ***
 
@@ -3397,11 +3458,11 @@ Defined in: [src/definitions/components/card.ts:333](https://github.com/Fiksuruo
 optional testNativePresentation: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:334](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L334)
+Defined in: [src/definitions/components/card.ts:334](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L334)
 
 ## Interface: NativeCardConfiguration
 
-Defined in: [src/definitions/components/card.ts:271](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L271)
+Defined in: [src/definitions/components/card.ts:271](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L271)
 
 Native card component configuration options
 
@@ -3413,7 +3474,7 @@ Native card component configuration options
 optional brandImages: Record<string, string>;
 ```
 
-Defined in: [src/definitions/components/card.ts:279](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L279)
+Defined in: [src/definitions/components/card.ts:279](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L279)
 
 Override card brand image `src` strings
 
@@ -3435,7 +3496,7 @@ optional labels: {
 };
 ```
 
-Defined in: [src/definitions/components/card.ts:285](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L285)
+Defined in: [src/definitions/components/card.ts:285](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L285)
 
 i18n strings to use in Web presentation on native platforms.
 Fallbacks to English strings.
@@ -3490,7 +3551,7 @@ Label for the button to change the payment method once filled
 optional onClickEdit: () => void;
 ```
 
-Defined in: [src/definitions/components/card.ts:317](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L317)
+Defined in: [src/definitions/components/card.ts:317](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L317)
 
 Override default behaviour when the user taps "Edit" or "Add card" button.
 You can use this to present your own card form or handle the event differently.
@@ -3521,13 +3582,13 @@ async function onClickEdit() {
 optional componentOptions: Omit<CardComponentOptions, "countryCode" | "amount" | "currencyCode">;
 ```
 
-Defined in: [src/definitions/components/card.ts:322](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L322)
+Defined in: [src/definitions/components/card.ts:322](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L322)
 
 Component options for the native bottom sheet card form presentation
 
 ## Interface: NativeCardState
 
-Defined in: [src/definitions/components/card.ts:243](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L243)
+Defined in: [src/definitions/components/card.ts:243](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L243)
 
 State of the native card component
 
@@ -3539,7 +3600,7 @@ State of the native card component
 brand: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:247](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L247)
+Defined in: [src/definitions/components/card.ts:247](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L247)
 
 Card brand (e.g., 'visa', 'mc', 'amex', etc.)
 
@@ -3551,7 +3612,7 @@ Card brand (e.g., 'visa', 'mc', 'amex', etc.)
 state: "loading" | "submitted";
 ```
 
-Defined in: [src/definitions/components/card.ts:252](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L252)
+Defined in: [src/definitions/components/card.ts:252](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L252)
 
 Component state (loading or submitted)
 
@@ -3563,7 +3624,7 @@ Component state (loading or submitted)
 lastFour: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:257](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L257)
+Defined in: [src/definitions/components/card.ts:257](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L257)
 
 Last four digits of the card number
 
@@ -3575,7 +3636,7 @@ Last four digits of the card number
 showForceEditButton: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:263](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L263)
+Defined in: [src/definitions/components/card.ts:263](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L263)
 
 Show "Add card" button immediately when rendering loading state
 
@@ -3587,7 +3648,7 @@ false
 
 ## Interface: PaymentErrorEventData
 
-Defined in: [src/definitions/index.ts:232](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L232)
+Defined in: [src/definitions/index.ts:232](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L232)
 
 #### Indexable
 
@@ -3603,11 +3664,11 @@ Defined in: [src/definitions/index.ts:232](https://github.com/Fiksuruoka-fi/capa
 message: string;
 ```
 
-Defined in: [src/definitions/index.ts:234](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L234)
+Defined in: [src/definitions/index.ts:234](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L234)
 
 ## Interface: PaymentMethodsResponse
 
-Defined in: [src/definitions/index.ts:49](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L49)
+Defined in: [src/definitions/index.ts:49](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L49)
 
 JSON response from Adyen API call
 
@@ -3623,7 +3684,7 @@ https://docs.adyen.com/api-explorer/Checkout/latest/post/paymentMethods for more
 paymentMethods: any[];
 ```
 
-Defined in: [src/definitions/index.ts:53](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L53)
+Defined in: [src/definitions/index.ts:53](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L53)
 
 Array of available payment methods.
 
@@ -3635,13 +3696,13 @@ Array of available payment methods.
 optional savedPaymentMethods: any[];
 ```
 
-Defined in: [src/definitions/index.ts:58](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L58)
+Defined in: [src/definitions/index.ts:58](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L58)
 
 The type of the payment method response, typically "PaymentMethods".
 
 ## Interface: PaymentSubmitEventData
 
-Defined in: [src/definitions/index.ts:221](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L221)
+Defined in: [src/definitions/index.ts:221](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L221)
 
 #### Properties
 
@@ -3653,7 +3714,7 @@ paymentMethod: {
 };
 ```
 
-Defined in: [src/definitions/index.ts:222](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L222)
+Defined in: [src/definitions/index.ts:222](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L222)
 
 #### Index Signature
 
@@ -3669,7 +3730,7 @@ Defined in: [src/definitions/index.ts:222](https://github.com/Fiksuruoka-fi/capa
 componentType: "card";
 ```
 
-Defined in: [src/definitions/index.ts:225](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L225)
+Defined in: [src/definitions/index.ts:225](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L225)
 
 ***
 
@@ -3681,7 +3742,7 @@ optional browserInfo: {
 };
 ```
 
-Defined in: [src/definitions/index.ts:226](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L226)
+Defined in: [src/definitions/index.ts:226](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L226)
 
 #### userAgent
 
@@ -3700,7 +3761,7 @@ optional order: {
 };
 ```
 
-Defined in: [src/definitions/index.ts:227](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L227)
+Defined in: [src/definitions/index.ts:227](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L227)
 
 #### orderData
 
@@ -3725,7 +3786,7 @@ optional amount: {
 };
 ```
 
-Defined in: [src/definitions/index.ts:228](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L228)
+Defined in: [src/definitions/index.ts:228](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L228)
 
 #### value
 
@@ -3747,7 +3808,7 @@ currency: string;
 optional storePaymentMethod: boolean;
 ```
 
-Defined in: [src/definitions/index.ts:229](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/index.ts#L229)
+Defined in: [src/definitions/index.ts:229](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/index.ts#L229)
 
 ## Type: ButtonStyleDefinition
 
@@ -3760,7 +3821,7 @@ type ButtonStyleDefinition = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:131](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L131)
+Defined in: [src/definitions/styles.ts:131](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L131)
 
 Defines the styling for a button. These definitions map to
 `FormButtonItemStyle.main` in the iOS SDK. All fields are optional.
@@ -3773,7 +3834,7 @@ Defines the styling for a button. These definitions map to
 optional font: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:133](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L133)
+Defined in: [src/definitions/styles.ts:133](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L133)
 
 Font used for the button's title.
 
@@ -3785,7 +3846,7 @@ Font used for the button's title.
 optional textColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:135](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L135)
+Defined in: [src/definitions/styles.ts:135](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L135)
 
 Colour of the button title text.
 
@@ -3797,7 +3858,7 @@ Colour of the button title text.
 optional backgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:137](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L137)
+Defined in: [src/definitions/styles.ts:137](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L137)
 
 Main background colour of the button.
 
@@ -3809,7 +3870,7 @@ Main background colour of the button.
 optional cornerRadius: number;
 ```
 
-Defined in: [src/definitions/styles.ts:139](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L139)
+Defined in: [src/definitions/styles.ts:139](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L139)
 
 Corner radius to round the button's corners.
 
@@ -3831,7 +3892,7 @@ type ComponentViewOptions = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:5](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L5)
+Defined in: [src/definitions/styles.ts:5](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L5)
 
 Options for customizing the appearance of the component navbar's view.
 
@@ -3843,7 +3904,7 @@ Options for customizing the appearance of the component navbar's view.
 optional title: string;
 ```
 
-Defined in: [src/definitions/styles.ts:7](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L7)
+Defined in: [src/definitions/styles.ts:7](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L7)
 
 Custom text for the title
 
@@ -3855,7 +3916,7 @@ Custom text for the title
 optional titleColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:9](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L9)
+Defined in: [src/definitions/styles.ts:9](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L9)
 
 Color for the title text
 
@@ -3867,7 +3928,7 @@ Color for the title text
 optional titleBackgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:11](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L11)
+Defined in: [src/definitions/styles.ts:11](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L11)
 
 Title bar's background color
 
@@ -3879,7 +3940,7 @@ Title bar's background color
 optional titleTintColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:13](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L13)
+Defined in: [src/definitions/styles.ts:13](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L13)
 
 Tint color for buttons in the title bar
 
@@ -3891,7 +3952,7 @@ Tint color for buttons in the title bar
 optional showsCloseButton: boolean;
 ```
 
-Defined in: [src/definitions/styles.ts:15](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L15)
+Defined in: [src/definitions/styles.ts:15](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L15)
 
 Whether to show a close button in the title bar
 
@@ -3903,7 +3964,7 @@ Whether to show a close button in the title bar
 optional closeButtonText: string;
 ```
 
-Defined in: [src/definitions/styles.ts:17](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L17)
+Defined in: [src/definitions/styles.ts:17](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L17)
 
 Custom text for the close button
 
@@ -3919,7 +3980,7 @@ optional ios: {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:19](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L19)
+Defined in: [src/definitions/styles.ts:19](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L19)
 
 iOS specific styling options to override defaults
 
@@ -3957,7 +4018,7 @@ type FontDefinition = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:31](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L31)
+Defined in: [src/definitions/styles.ts:31](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L31)
 
 Defines a font used within a text element. Both fields are optional; if
 omitted, the default system font is used.
@@ -3970,7 +4031,7 @@ omitted, the default system font is used.
 optional size: number;
 ```
 
-Defined in: [src/definitions/styles.ts:33](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L33)
+Defined in: [src/definitions/styles.ts:33](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L33)
 
 The font size in points.
 
@@ -3990,7 +4051,7 @@ optional weight:
   | "black";
 ```
 
-Defined in: [src/definitions/styles.ts:35](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L35)
+Defined in: [src/definitions/styles.ts:35](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L35)
 
 Weight name matching iOS font weights.
 
@@ -4014,7 +4075,7 @@ type FormComponentStyle = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:148](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L148)
+Defined in: [src/definitions/styles.ts:148](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L148)
 
 Combined style configuration for forms. Includes top-level colours and
 nested sub-styles for various form elements. All keys are optional and
@@ -4028,7 +4089,7 @@ unknown keys are ignored.
 optional backgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:150](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L150)
+Defined in: [src/definitions/styles.ts:150](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L150)
 
 Background colour applied to the entire form.
 
@@ -4040,7 +4101,7 @@ Background colour applied to the entire form.
 optional tintColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:152](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L152)
+Defined in: [src/definitions/styles.ts:152](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L152)
 
 Tint colour applied to accent elements within the form.
 
@@ -4052,7 +4113,7 @@ Tint colour applied to accent elements within the form.
 optional separatorColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:154](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L154)
+Defined in: [src/definitions/styles.ts:154](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L154)
 
 Colour of separators between form rows.
 
@@ -4064,7 +4125,7 @@ Colour of separators between form rows.
 optional header: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:157](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L157)
+Defined in: [src/definitions/styles.ts:157](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L157)
 
 Styling for the header text (section title).
 
@@ -4076,7 +4137,7 @@ Styling for the header text (section title).
 optional textField: TextFieldStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:159](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L159)
+Defined in: [src/definitions/styles.ts:159](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L159)
 
 Styling for text input fields.
 
@@ -4088,7 +4149,7 @@ Styling for text input fields.
 optional switch: SwitchStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:162](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L162)
+Defined in: [src/definitions/styles.ts:162](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L162)
 
 Styling for toggle rows. Both `switch` and `toggle` keys are supported.
 
@@ -4100,7 +4161,7 @@ Styling for toggle rows. Both `switch` and `toggle` keys are supported.
 optional toggle: SwitchStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:163](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L163)
+Defined in: [src/definitions/styles.ts:163](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L163)
 
 ***
 
@@ -4110,7 +4171,7 @@ Defined in: [src/definitions/styles.ts:163](https://github.com/Fiksuruoka-fi/cap
 optional hint: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:166](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L166)
+Defined in: [src/definitions/styles.ts:166](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L166)
 
 Styling for hint labels (usually under a field).
 
@@ -4122,7 +4183,7 @@ Styling for hint labels (usually under a field).
 optional footnote: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:168](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L168)
+Defined in: [src/definitions/styles.ts:168](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L168)
 
 Styling for footnote labels at the bottom of the form.
 
@@ -4134,7 +4195,7 @@ Styling for footnote labels at the bottom of the form.
 optional linkText: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:170](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L170)
+Defined in: [src/definitions/styles.ts:170](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L170)
 
 Styling for inline link text in informational messages.
 
@@ -4146,7 +4207,7 @@ Styling for inline link text in informational messages.
 optional button: ButtonStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:173](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L173)
+Defined in: [src/definitions/styles.ts:173](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L173)
 
 Styling for the primary action button. You may use either `button` or `mainButton`.
 
@@ -4158,7 +4219,7 @@ Styling for the primary action button. You may use either `button` or `mainButto
 optional mainButton: ButtonStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:175](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L175)
+Defined in: [src/definitions/styles.ts:175](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L175)
 
 Styling for the primary action button. Same as `button`.
 
@@ -4170,7 +4231,7 @@ Styling for the primary action button. Same as `button`.
 optional secondaryButton: ButtonStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:177](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L177)
+Defined in: [src/definitions/styles.ts:177](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L177)
 
 Styling for a secondary action button.
 
@@ -4187,7 +4248,7 @@ type SwitchStyleDefinition = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:111](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L111)
+Defined in: [src/definitions/styles.ts:111](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L111)
 
 Styling for a toggle (switch) row. Supports a title style and colours for
 tint, separator and background. This type is used for both the `switch` and
@@ -4201,7 +4262,7 @@ tint, separator and background. This type is used for both the `switch` and
 optional title: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:113](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L113)
+Defined in: [src/definitions/styles.ts:113](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L113)
 
 Styling for the title label next to the toggle.
 
@@ -4213,7 +4274,7 @@ Styling for the title label next to the toggle.
 optional titleColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:115](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L115)
+Defined in: [src/definitions/styles.ts:115](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L115)
 
 Colour of the title label (legacy shortcut).
 
@@ -4225,7 +4286,7 @@ Colour of the title label (legacy shortcut).
 optional titleFont: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:117](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L117)
+Defined in: [src/definitions/styles.ts:117](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L117)
 
 Font for the title label (legacy shortcut).
 
@@ -4237,7 +4298,7 @@ Font for the title label (legacy shortcut).
 optional tintColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:119](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L119)
+Defined in: [src/definitions/styles.ts:119](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L119)
 
 Tint colour of the toggle when turned on.
 
@@ -4249,7 +4310,7 @@ Tint colour of the toggle when turned on.
 optional separatorColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:121](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L121)
+Defined in: [src/definitions/styles.ts:121](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L121)
 
 Colour of the separator line beneath the toggle row.
 
@@ -4261,7 +4322,7 @@ Colour of the separator line beneath the toggle row.
 optional backgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:123](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L123)
+Defined in: [src/definitions/styles.ts:123](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L123)
 
 Background colour of the toggle row.
 
@@ -4292,7 +4353,7 @@ type TextFieldStyleDefinition = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:59](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L59)
+Defined in: [src/definitions/styles.ts:59](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L59)
 
 Describes styling for a text field in the form. This includes styling
 for the title label, user input text, placeholder text, and trailing icon.
@@ -4305,7 +4366,7 @@ for the title label, user input text, placeholder text, and trailing icon.
 optional title: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:61](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L61)
+Defined in: [src/definitions/styles.ts:61](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L61)
 
 Styling for the field's title label.
 
@@ -4317,7 +4378,7 @@ Styling for the field's title label.
 optional titleColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:63](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L63)
+Defined in: [src/definitions/styles.ts:63](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L63)
 
 Colour of the title label (legacy shortcut).
 
@@ -4329,7 +4390,7 @@ Colour of the title label (legacy shortcut).
 optional titleFont: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:65](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L65)
+Defined in: [src/definitions/styles.ts:65](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L65)
 
 Font used for the title label (legacy shortcut).
 
@@ -4341,7 +4402,7 @@ Font used for the title label (legacy shortcut).
 optional text: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:68](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L68)
+Defined in: [src/definitions/styles.ts:68](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L68)
 
 Styling for the user-entered text.
 
@@ -4353,7 +4414,7 @@ Styling for the user-entered text.
 optional textColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:70](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L70)
+Defined in: [src/definitions/styles.ts:70](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L70)
 
 Colour of the user-entered text (legacy shortcut).
 
@@ -4365,7 +4426,7 @@ Colour of the user-entered text (legacy shortcut).
 optional textFont: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:72](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L72)
+Defined in: [src/definitions/styles.ts:72](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L72)
 
 Font for the user-entered text (legacy shortcut).
 
@@ -4377,7 +4438,7 @@ Font for the user-entered text (legacy shortcut).
 optional placeholder: TextStyleDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:75](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L75)
+Defined in: [src/definitions/styles.ts:75](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L75)
 
 Styling for the placeholder text.
 
@@ -4389,7 +4450,7 @@ Styling for the placeholder text.
 optional placeholderColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:77](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L77)
+Defined in: [src/definitions/styles.ts:77](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L77)
 
 Colour of the placeholder text (legacy shortcut).
 
@@ -4401,7 +4462,7 @@ Colour of the placeholder text (legacy shortcut).
 optional placeholderFont: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:79](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L79)
+Defined in: [src/definitions/styles.ts:79](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L79)
 
 Font for the placeholder text (legacy shortcut).
 
@@ -4419,7 +4480,7 @@ optional icon: {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:82](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L82)
+Defined in: [src/definitions/styles.ts:82](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L82)
 
 Styling for the trailing icon.
 
@@ -4471,7 +4532,7 @@ Corner radius of the icon container.
 optional tintColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:96](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L96)
+Defined in: [src/definitions/styles.ts:96](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L96)
 
 Tint colour applied to the text field (cursor/accent).
 
@@ -4483,7 +4544,7 @@ Tint colour applied to the text field (cursor/accent).
 optional separatorColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:98](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L98)
+Defined in: [src/definitions/styles.ts:98](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L98)
 
 Colour of the separator line beneath the text field.
 
@@ -4495,7 +4556,7 @@ Colour of the separator line beneath the text field.
 optional backgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:100](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L100)
+Defined in: [src/definitions/styles.ts:100](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L100)
 
 Background colour of the entire text field cell.
 
@@ -4507,7 +4568,7 @@ Background colour of the entire text field cell.
 optional errorColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:102](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L102)
+Defined in: [src/definitions/styles.ts:102](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L102)
 
 Colour used to highlight error states.
 
@@ -4522,7 +4583,7 @@ type TextStyleDefinition = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:43](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L43)
+Defined in: [src/definitions/styles.ts:43](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L43)
 
 Describes common text styling. Applicable to labels, hints, footers, etc.
 You can combine colour, font, background and text alignment.
@@ -4535,7 +4596,7 @@ You can combine colour, font, background and text alignment.
 optional color: string;
 ```
 
-Defined in: [src/definitions/styles.ts:45](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L45)
+Defined in: [src/definitions/styles.ts:45](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L45)
 
 Hex colour string for the text (e.g. '#FF0000' or 'FFFFFF').
 
@@ -4547,7 +4608,7 @@ Hex colour string for the text (e.g. '#FF0000' or 'FFFFFF').
 optional font: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:47](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L47)
+Defined in: [src/definitions/styles.ts:47](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L47)
 
 Font specification for the text.
 
@@ -4559,7 +4620,7 @@ Font specification for the text.
 optional backgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:49](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L49)
+Defined in: [src/definitions/styles.ts:49](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L49)
 
 Background colour behind the text.
 
@@ -4571,7 +4632,7 @@ Background colour behind the text.
 optional textAlignment: "left" | "center" | "right" | "justified" | "natural";
 ```
 
-Defined in: [src/definitions/styles.ts:51](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/styles.ts#L51)
+Defined in: [src/definitions/styles.ts:51](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/styles.ts#L51)
 
 Alignment for the text within its container.
 

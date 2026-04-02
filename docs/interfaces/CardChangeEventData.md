@@ -1,6 +1,6 @@
 # Interface: CardChangeEventData
 
-Defined in: [src/definitions/components/card.ts:145](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L145)
+Defined in: [src/definitions/components/card.ts:145](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L145)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/definitions/components/card.ts:145](https://github.com/Fiksuruo
 optional cardBrands: CardBrandData;
 ```
 
-Defined in: [src/definitions/components/card.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L149)
+Defined in: [src/definitions/components/card.ts:149](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L149)
 
 Card brand information
 
@@ -22,6 +22,6 @@ Card brand information
 optional cardBIN: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:154](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/ec0298b54122e01d83010c917a8a16a8b41bbdb4/src/definitions/components/card.ts#L154)
+Defined in: [src/definitions/components/card.ts:154](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/9bbc469fa6af985adbd0ccdfc8d3a29333ed65cb/src/definitions/components/card.ts#L154)
 
 Bank Identification Number (BIN) of the card

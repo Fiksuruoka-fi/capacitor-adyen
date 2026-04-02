@@ -1,5 +1,8 @@
 import { Card as AdyenCardComponent, type ICore } from '@adyen/adyen-web';
 import { Capacitor, type PluginListenerHandle } from '@capacitor/core';
+import { createConsola } from 'consola';
+import { h } from 'preact';
+
 import { Adyen } from '../../bridge';
 import type {
   CardComponentOptions,
@@ -8,9 +11,8 @@ import type {
   NativeCardState,
   PaymentSubmitEventData,
 } from '../../definitions';
+
 import CardDetails from './CardDetails';
-import { h } from 'preact';
-import { createConsola } from 'consola';
 
 import './styles.scss';
 
@@ -351,7 +353,7 @@ class Card extends AdyenCardComponent {
     this.onHideListener = undefined;
   };
 
-  mount(domNode: HTMLElement | string) {
+  mount(domNode: HTMLElement | string): this {
     if (this.isNative && !this.isNativeComponentOpen) {
       this.presentNativeComponent().catch((error) => {
         this.logger.error('Native component mount error:', error);
@@ -362,7 +364,7 @@ class Card extends AdyenCardComponent {
     return super.mount(domNode);
   }
 
-  unmount() {
+  unmount(): this {
     if (this.isNativeComponentOpen) {
       Adyen.hideComponent()
         .then(() => {
@@ -381,7 +383,7 @@ class Card extends AdyenCardComponent {
     return super.unmount();
   }
 
-  render() {
+  render(): h.JSX.Element {
     if (!this.isNative) return super.render();
     return this.renderNativeCard();
   }

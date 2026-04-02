@@ -1,7 +1,9 @@
 import { h, Component } from 'preact';
 import type { JSX } from 'preact';
-import Spinner from '../Spinner';
+
 import Button from '../Button';
+import Spinner from '../Spinner';
+
 
 interface CardDetailsProps {
   ref: (ref: any) => void;
@@ -125,12 +127,12 @@ class CardDetails extends Component<CardDetailsProps, CardDetailsState> {
           { className: 'card-component__content' },
           Spinner({}),
           showForceEditButton &&
-            h(Button, {
-              variant: 'action',
-              onClick: onClickEdit,
-              ariaLabel: labelConfig.addCard,
-              children: labelConfig.addCard,
-            }),
+          h(Button, {
+            variant: 'action',
+            onClick: onClickEdit,
+            ariaLabel: labelConfig.addCard,
+            children: labelConfig.addCard,
+          }),
         ),
       );
     }
@@ -152,15 +154,15 @@ class CardDetails extends Component<CardDetailsProps, CardDetailsState> {
             'div',
             { className: 'card-details__content' },
             brandImage &&
-              h('img', {
-                className: 'card-details__image',
-                src: brandImage,
-                alt: brand,
-                width: 40,
-                loading: 'lazy',
-                onError: handleImageError,
-              }),
-            h('span', { className: 'card-details__number' }, `•••• •••• •••• ${lastFour || '••••'}`),
+            h('img', {
+              className: 'card-details__image',
+              src: brandImage,
+              alt: brand,
+              width: 40,
+              loading: 'lazy',
+              onError: handleImageError,
+            }),
+            h('span', { className: 'card-details__number' }, `•••• ${lastFour || '••••'}`),
           ),
         ),
         h(Button, {

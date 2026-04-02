@@ -1,6 +1,6 @@
 {
   "name": "@foodello/capacitor-adyen",
-  "version": "7.0.1",
+  "version": "8.0.0",
   "description": "Adyen components integration for Capacitor.js",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -37,7 +37,7 @@
   },
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
-    "verify:ios": "xcodebuild -scheme CapacitorAdyen -destination generic/platform=iOS",
+    "verify:ios": "xcodebuild -scheme FoodelloCapacitorAdyen -destination generic/platform=iOS",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
@@ -54,10 +54,10 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@capacitor/android": "^7.0.0",
-    "@capacitor/cli": "^7.4.3",
-    "@capacitor/core": "^7.0.0",
-    "@capacitor/ios": "^7.0.0",
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/cli": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/ios": "^8.0.0",
     "@ionic/eslint-config": "^0.4.0",
     "@ionic/prettier-config": "^4.0.0",
     "@ionic/swiftlint-config": "^2.0.0",
@@ -65,27 +65,32 @@
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.2",
     "@rollup/plugin-replace": "^6.0.2",
-    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-terser": "^1.0.0",
     "@rollup/plugin-typescript": "^12.1.4",
     "autoprefixer": "^10.4.21",
+    "baseline-browser-mapping": "^2.10.13",
     "consola": "^3.4.2",
     "cssnano": "^7.1.1",
-    "eslint": "^8.57.0",
-    "prettier": "^3.4.2",
-    "prettier-plugin-java": "^2.6.6",
-    "rimraf": "^6.0.1",
-    "rollup": "^4.30.1",
+    "eslint": "^8.57.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-java": "^2.8.1",
+    "rimraf": "^6.1.0",
+    "rollup": "^4.53.2",
     "rollup-plugin-postcss": "^4.0.2",
     "sass-embedded": "^1.93.2",
     "standard-version": "^9.5.0",
     "swiftlint": "^2.0.0",
     "typedoc": "^0.28.13",
     "typedoc-plugin-markdown": "^4.9.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@adyen/adyen-web": "^6.22.0",
-    "@capacitor/core": ">=7.0.0"
+    "@adyen/adyen-web": "^6.33.0",
+    "@capacitor/core": ">=8.0.0"
+  },
+  "overrides": {
+    "lodash": "4.18.1",
+    "lodash-es": "4.18.1"
   },
   "prettier": "@ionic/prettier-config",
   "swiftlint": "@ionic/swiftlint-config",
