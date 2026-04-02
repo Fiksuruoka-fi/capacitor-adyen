@@ -68,6 +68,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.4",
     "autoprefixer": "^10.4.21",
+    "baseline-browser-mapping": "^2.10.13",
     "consola": "^3.4.2",
     "cssnano": "^7.1.1",
     "eslint": "^8.57.1",

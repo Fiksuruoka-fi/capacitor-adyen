@@ -1,6 +1,6 @@
 # Interface: AdyenPlugin
 
-Defined in: [src/definitions/index.ts:212](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L212)
+Defined in: [src/definitions/index.ts:212](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L212)
 
 ## Extends
 
@@ -14,7 +14,7 @@ Defined in: [src/definitions/index.ts:212](https://github.com/Fiksuruoka-fi/capa
 presentCardComponent(options?): Promise<void>;
 ```
 
-Defined in: [src/definitions/components/card.ts:203](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L203)
+Defined in: [src/definitions/components/card.ts:203](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/components/card.ts#L203)
 
 Creates a Adyen Card component for handling card payments.
 
@@ -62,7 +62,7 @@ await Adyen.presentCardComponent({
 setCurrentPaymentMethods(options): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L179)
+Defined in: [src/definitions/index.ts:179](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L179)
 
 Set current available payment methods for the Adyen components.
 
@@ -112,7 +112,7 @@ await Adyen.setCurrentPaymentMethods({
 hideComponent(): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:193](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L193)
+Defined in: [src/definitions/index.ts:193](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L193)
 
 Hides the currently presented Adyen component, if any.
 
@@ -145,7 +145,7 @@ await Adyen.hideComponent();
 destroyComponent(): Promise<void>;
 ```
 
-Defined in: [src/definitions/index.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L207)
+Defined in: [src/definitions/index.ts:207](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L207)
 
 Destroys the currently selected Adyen component, if any.
 
@@ -178,7 +178,7 @@ await Adyen.destroyComponent();
 addListener<E>(eventName, listener): Promise<PluginListenerHandle>;
 ```
 
-Defined in: [src/definitions/index.ts:209](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L209)
+Defined in: [src/definitions/index.ts:209](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L209)
 
 #### Type Parameters
 

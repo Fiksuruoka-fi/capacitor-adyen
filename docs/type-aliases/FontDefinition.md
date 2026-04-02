@@ -14,7 +14,7 @@ type FontDefinition = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:31](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/styles.ts#L31)
+Defined in: [src/definitions/styles.ts:31](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/styles.ts#L31)
 
 Defines a font used within a text element. Both fields are optional; if
 omitted, the default system font is used.
@@ -27,7 +27,7 @@ omitted, the default system font is used.
 optional size: number;
 ```
 
-Defined in: [src/definitions/styles.ts:33](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/styles.ts#L33)
+Defined in: [src/definitions/styles.ts:33](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/styles.ts#L33)
 
 The font size in points.
 
@@ -47,6 +47,6 @@ optional weight:
   | "black";
 ```
 
-Defined in: [src/definitions/styles.ts:35](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/styles.ts#L35)
+Defined in: [src/definitions/styles.ts:35](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/styles.ts#L35)
 
 Weight name matching iOS font weights.

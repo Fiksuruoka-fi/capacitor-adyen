@@ -1,6 +1,6 @@
 # Interface: PaymentSubmitEventData
 
-Defined in: [src/definitions/index.ts:221](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L221)
+Defined in: [src/definitions/index.ts:221](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L221)
 
 ## Properties
 
@@ -12,7 +12,7 @@ paymentMethod: {
 };
 ```
 
-Defined in: [src/definitions/index.ts:222](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L222)
+Defined in: [src/definitions/index.ts:222](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L222)
 
 #### Index Signature
 
@@ -28,7 +28,7 @@ Defined in: [src/definitions/index.ts:222](https://github.com/Fiksuruoka-fi/capa
 componentType: "card";
 ```
 
-Defined in: [src/definitions/index.ts:225](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L225)
+Defined in: [src/definitions/index.ts:225](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L225)
 
 ***
 
@@ -40,7 +40,7 @@ optional browserInfo: {
 };
 ```
 
-Defined in: [src/definitions/index.ts:226](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L226)
+Defined in: [src/definitions/index.ts:226](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L226)
 
 #### userAgent
 
@@ -59,7 +59,7 @@ optional order: {
 };
 ```
 
-Defined in: [src/definitions/index.ts:227](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L227)
+Defined in: [src/definitions/index.ts:227](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L227)
 
 #### orderData
 
@@ -84,7 +84,7 @@ optional amount: {
 };
 ```
 
-Defined in: [src/definitions/index.ts:228](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L228)
+Defined in: [src/definitions/index.ts:228](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L228)
 
 #### value
 
@@ -106,4 +106,4 @@ currency: string;
 optional storePaymentMethod: boolean;
 ```
 
-Defined in: [src/definitions/index.ts:229](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/index.ts#L229)
+Defined in: [src/definitions/index.ts:229](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/index.ts#L229)

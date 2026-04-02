@@ -9,7 +9,7 @@ type ButtonStyleDefinition = {
 };
 ```
 
-Defined in: [src/definitions/styles.ts:131](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/styles.ts#L131)
+Defined in: [src/definitions/styles.ts:131](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/styles.ts#L131)
 
 Defines the styling for a button. These definitions map to
 `FormButtonItemStyle.main` in the iOS SDK. All fields are optional.
@@ -22,7 +22,7 @@ Defines the styling for a button. These definitions map to
 optional font: FontDefinition;
 ```
 
-Defined in: [src/definitions/styles.ts:133](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/styles.ts#L133)
+Defined in: [src/definitions/styles.ts:133](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/styles.ts#L133)
 
 Font used for the button's title.
 
@@ -34,7 +34,7 @@ Font used for the button's title.
 optional textColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:135](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/styles.ts#L135)
+Defined in: [src/definitions/styles.ts:135](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/styles.ts#L135)
 
 Colour of the button title text.
 
@@ -46,7 +46,7 @@ Colour of the button title text.
 optional backgroundColor: string;
 ```
 
-Defined in: [src/definitions/styles.ts:137](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/styles.ts#L137)
+Defined in: [src/definitions/styles.ts:137](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/styles.ts#L137)
 
 Main background colour of the button.
 
@@ -58,6 +58,6 @@ Main background colour of the button.
 optional cornerRadius: number;
 ```
 
-Defined in: [src/definitions/styles.ts:139](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/styles.ts#L139)
+Defined in: [src/definitions/styles.ts:139](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/styles.ts#L139)
 
 Corner radius to round the button's corners.

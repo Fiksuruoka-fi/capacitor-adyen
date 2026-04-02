@@ -1,6 +1,6 @@
 # Interface: ExtendedCardConfiguration
 
-Defined in: [src/definitions/components/card.ts:331](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L331)
+Defined in: [src/definitions/components/card.ts:331](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/components/card.ts#L331)
 
 Extended Card component configuration including native options
 
@@ -1722,7 +1722,7 @@ CardConfiguration.trimTrailingSeparator
 optional nativeCard: NativeCardConfiguration;
 ```
 
-Defined in: [src/definitions/components/card.ts:332](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L332)
+Defined in: [src/definitions/components/card.ts:332](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/components/card.ts#L332)
 
 ***
 
@@ -1732,7 +1732,7 @@ Defined in: [src/definitions/components/card.ts:332](https://github.com/Fiksuruo
 optional isDev: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:333](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L333)
+Defined in: [src/definitions/components/card.ts:333](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/components/card.ts#L333)
 
 ***
 
@@ -1742,4 +1742,4 @@ Defined in: [src/definitions/components/card.ts:333](https://github.com/Fiksuruo
 optional testNativePresentation: boolean;
 ```
 
-Defined in: [src/definitions/components/card.ts:334](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L334)
+Defined in: [src/definitions/components/card.ts:334](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/173bc35172b7d5084011214502239dc81cf5d48f/src/definitions/components/card.ts#L334)
