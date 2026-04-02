@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.0.0](https://github.com/Fiksuruoka-fi/capacitor-adyen/compare/v8.0.0...v9.0.0) (2026-04-02)
+
 ### [7.0.1](https://github.com/Fiksuruoka-fi/capacitor-adyen/compare/v7.0.0...v7.0.1) (2025-10-07)
 
 
