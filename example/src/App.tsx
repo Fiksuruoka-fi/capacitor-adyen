@@ -134,7 +134,7 @@ function App() {
   // native Adyen Card component when component is mounted.
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -159,7 +159,7 @@ function App() {
               </p>
             </CardHeader>
             <CardContent className="pt-0">
-              <div ref={containerRef} className="min-h-[200px] rounded-lg border border-slate-200 bg-slate-50/50 p-4" />
+              <div ref={containerRef} className="min-h-50 rounded-lg border border-slate-200 bg-slate-50/50 p-4" />
             </CardContent>
           </Card>
         </div>
