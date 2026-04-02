@@ -87,6 +87,10 @@
   flex-direction: row;
   align-items: start;
   justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 
   &--loading {
     flex-direction: column;
@@ -102,6 +106,7 @@
     align-items: center;
     justify-content: space-between;
     flex: 1;
+    min-width: 0;
     gap: var(--adyen-sdk-spacer-070);
   }
 
@@ -125,7 +130,9 @@
 }
 
 .card-details {
-  flex-shrink: 0;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
 
   &__title {
     margin: 0;
@@ -140,6 +147,7 @@
     display: flex;
     align-items: center;
     gap: var(--adyen-sdk-spacer-040);
+    min-width: 0;
   }
 
   &__image {
@@ -157,5 +165,6 @@
     font-size: var(--adyen-sdk-text-subtitle-font-size);
     line-height: var(--adyen-sdk-text-subtitle-line-height);
     font-weight: var(--adyen-sdk-text-body-font-weight);
+    white-space: nowrap;
   }
 }

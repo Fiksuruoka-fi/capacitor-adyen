@@ -1,6 +1,6 @@
 # Interface: CardSubmitEventData
 
-Defined in: [src/definitions/components/card.ts:133](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L133)
+Defined in: [src/definitions/components/card.ts:133](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L133)
 
 ## Properties
 
@@ -10,7 +10,7 @@ Defined in: [src/definitions/components/card.ts:133](https://github.com/Fiksuruo
 lastFour: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:137](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L137)
+Defined in: [src/definitions/components/card.ts:137](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L137)
 
 Last four digits of the card number
 
@@ -22,6 +22,6 @@ Last four digits of the card number
 finalBIN: string;
 ```
 
-Defined in: [src/definitions/components/card.ts:142](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L142)
+Defined in: [src/definitions/components/card.ts:142](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L142)
 
 Final Bank Identification Number (BIN) of the card

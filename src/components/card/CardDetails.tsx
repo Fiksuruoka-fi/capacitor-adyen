@@ -162,7 +162,7 @@ class CardDetails extends Component<CardDetailsProps, CardDetailsState> {
               loading: 'lazy',
               onError: handleImageError,
             }),
-            h('span', { className: 'card-details__number' }, `•••• •••• •••• ${lastFour || '••••'}`),
+            h('span', { className: 'card-details__number' }, `•••• ${lastFour || '••••'}`),
           ),
         ),
         h(Button, {

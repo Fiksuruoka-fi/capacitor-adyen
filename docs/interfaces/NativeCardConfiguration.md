@@ -1,6 +1,6 @@
 # Interface: NativeCardConfiguration
 
-Defined in: [src/definitions/components/card.ts:271](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L271)
+Defined in: [src/definitions/components/card.ts:271](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L271)
 
 Native card component configuration options
 
@@ -12,7 +12,7 @@ Native card component configuration options
 optional brandImages: Record<string, string>;
 ```
 
-Defined in: [src/definitions/components/card.ts:279](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L279)
+Defined in: [src/definitions/components/card.ts:279](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L279)
 
 Override card brand image `src` strings
 
@@ -34,7 +34,7 @@ optional labels: {
 };
 ```
 
-Defined in: [src/definitions/components/card.ts:285](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L285)
+Defined in: [src/definitions/components/card.ts:285](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L285)
 
 i18n strings to use in Web presentation on native platforms.
 Fallbacks to English strings.
@@ -89,7 +89,7 @@ Label for the button to change the payment method once filled
 optional onClickEdit: () => void;
 ```
 
-Defined in: [src/definitions/components/card.ts:317](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L317)
+Defined in: [src/definitions/components/card.ts:317](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L317)
 
 Override default behaviour when the user taps "Edit" or "Add card" button.
 You can use this to present your own card form or handle the event differently.
@@ -120,6 +120,6 @@ async function onClickEdit() {
 optional componentOptions: Omit<CardComponentOptions, "countryCode" | "amount" | "currencyCode">;
 ```
 
-Defined in: [src/definitions/components/card.ts:322](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/c6a486a524c9ed35b89e219b69168715cd015f5e/src/definitions/components/card.ts#L322)
+Defined in: [src/definitions/components/card.ts:322](https://github.com/Fiksuruoka-fi/capacitor-adyen/blob/50819c26b74f49bb6fdd850c6acfd223dd8aee02/src/definitions/components/card.ts#L322)
 
 Component options for the native bottom sheet card form presentation
