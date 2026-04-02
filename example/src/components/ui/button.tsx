@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import type { JSX, ComponentChildren } from 'preact';
+import type { JSX, ComponentChildren, ButtonHTMLAttributes } from 'preact';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
@@ -32,7 +32,7 @@ const buttonVariants = cva(
   },
 );
 
-interface ButtonProps extends Omit<JSX.HTMLAttributes<HTMLButtonElement>, 'size'>, VariantProps<typeof buttonVariants> {
+interface ButtonProps extends Omit<ButtonHTMLAttributes, 'size'>, VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   children?: ComponentChildren;
 }
